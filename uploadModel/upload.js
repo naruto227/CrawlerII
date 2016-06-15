@@ -12,7 +12,7 @@ var rule = new schedule.RecurrenceRule();
 var conn = mysql.createConnection(config.db);
 var page = 0;
 
-exports.uploadSerivce = function (tablename) {
+exports.uploadServe = function (tablename) {
     if (page == 0) {
         sub(tablename);
     }

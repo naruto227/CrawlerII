@@ -55,7 +55,7 @@ myEvents.on('updateOther', function () {
 });
 
  myEvents.on('gameover',function(){
-   uploadService.uploadService('sixrooms');
+   uploadService.uploadServe('sixrooms');
 });
 
 
