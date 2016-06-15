@@ -1,0 +1,1611 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie oldie ie6" lang="zh"><![endif]-->
+<!--[if IE 7]><html class="ie oldie ie7" lang="zh"><![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="zh"><![endif]-->
+<!--[if IE 9]><html class="ie ie9" lang="zh"><![endif]-->
+<!--[if gt IE 10]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>花椒直播 -美颜直播，疯狂卖萌 - 高颜值的直播App</title>
+    <meta property="qc:admins" content="2450377506605121176375" />
+    <link rel="icon" href="http://p7.qhimg.com/d/inn/e95686a7/favicon-32x32.png"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="花椒直播,美颜直播,疯狂卖萌,直播,手机直播,美女直播,花椒,最新直播,现场直播,才艺直播,生活直播">
+    <meta name="description" content="花椒直播，一个聚集超高颜值明星大咖、美女帅哥、热门网红、校花校草、逗比萌妹的手机直播社交平台，这里有明星发布会、花边新闻、才艺展示、生活趣闻、聊天互动、唱歌跳舞等等海量内容。花椒直播，全球首创萌颜直播，创造最萌潮流。">
+
+
+    <link type="text/css" rel="stylesheet" href="http://s3.qhimg.com/static/e243569df38dff3e,b7f9846d816bb502,79ce5f78efb7b095.css" />
+
+
+    <link type="text/css" rel="stylesheet" href="http://s0.qhimg.com/static/8bc7eb7270c5bf3d.css" />
+
+
+    <script>
+        var HJ_JS_CONF = window.HJ_JS_CONF || {};
+        HJ_JS_CONF.hdType = '1080p';
+        HJ_JS_CONF.apiConf = {"login_api":{"getLoginUserInfo":"http:\/\/webh.huajiao.com\/user\/getLoginUserInfo"},"follow_api":"http:\/\/www.huajiao.com\/follow\/"};
+    </script>
+
+
+    <script>
+        // 需处理的直播id list。在首页和播放页面使用
+        var _RELATE_ID_LIST = [6370356,6467893,6567845,6654981,6747159,6836338,7927096,8021453,8121385,8223733,8229254,8320355,8406746,8499791,8590334,8680037,8780552,8878002,8963841,9048539,9134671,10051304,10136907,10232103];
+    </script>
+
+
+</head>
+<body>
+<div class="wrapper">
+
+
+
+
+
+
+    <div id="doc-hd" class="header double" data-bk="doc-header">
+        <div class="topbar">
+            <div class="container clearfix">
+                <div class="hd-logo"><a href="http://www.huajiao.com" class="links"></a></div>
+
+                <div class="hd-login">
+                    <div class="no-login">
+                        <i class="icon-avatar"></i>
+                        <a href="###" class="tologin">登录/注册</a>
+                        <i class="icon-level"></i>
+                        <i class="icon-more"></i>
+                    </div>
+                    <div class="already-login hide">
+                        <a class="link" href="">
+                            <i class="icon-avatar">
+                                <img src="http://static.huajiao.com/huajiao/web/static/images/avatar.png?_584" alt="">
+                            </i>
+                            <span class="nickname"></span>
+                        </a>
+                        <i class="icon-level"></i>
+                        <i class="icon-more"></i>
+                        <div class="userinfo">
+                            <div class="userinfo_up"></div>
+                            <div class="userinfo_down">
+                                <div class="userinfo_name">
+                                    <div class="logout">【退出登录】</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="huajiaodou">
+                        <a class="btn-huajiaodou" href="https://zhifu.huajiao.com/charge" target="_blank">充值</a>
+                        <a class="btn-huajiaodou" href="http://www.huajiao.com/economic/pc/cash.html" target="_blank">提现</a>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <div class="search-hd"></div>
+                    <div class="search-bd">
+                        <form class="search-form" action="/search" target="_top" method="get" name="search-form">
+                            <div class="search-input-wrap">
+                                <input name="q" class="search-input" autocomplete="off" tabindex="0" placeholder="请输入用户名、用户ID或直播标题">
+                                <input type="submit" class="search-submit-btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="search-ft">
+                        <div id="suggest-container" class="suggest-container">
+                            <div class="suggest-bd"></div>
+                            <div class="suggest-ft"></div>
+                        </div>
+                    </div>
+                </div>                        <!--
+下线时将下面div元素的style改为"display:none;"
+上线时将下面div元素的style改为"display:block;"X35
+图片尺寸120X35
+-->
+                <div id="top-header-position" class="top-header-position" style="display:none;" bk>
+                    <a target="_blank" href="http://www.huajiao.com/l/16438288?realtime">
+                        <img src="http://p7.qhimg.com/t01c6adf832235a4b05.png"/>
+                    </a>
+                </div>        </div>
+        </div>
+        <div class="container">    <ul class="hd-nav">
+            <li class="item">
+                <a href="/" class="current">首页</a>
+            </li>
+            <li class="item"><a href="/user" class="" target="">我的关注</a></li>
+            <li class="item"><a href="/category/1" class="" target="">明星来了</a></li>
+            <li class="item"><a href="/category/2" class="" target="">女神驾到</a></li>
+            <li class="item"><a href="/category/5" class="" target="">国民男神</a></li>
+            <li class="item"><a href="/category/3" class="" target="">高清直播</a></li>
+            <li class="item"><a href="/zt/supergirl2016" class="" target="_blank">超级女声</a></li>
+            <li class="item"><a href="/recommend/mingxingricheng" class="" target="_blank">明星日程</a></li>
+            <li class="item"><a href="/channel/52" class="" target="">聚椒现场</a></li>
+            <li class="item"><a href="/channel/51" class="" target="">椒点访谈</a></li>
+            <li class="item"><a href="/pc/pictures" class="" target="">精彩瞬间</a></li>
+            <li class="item"><a href="http://bbs.360safe.com/forum-3050-1.html" class="" target="_blank">社区</a></li>
+
+        </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+        (function(){
+            window._DATA = {"feed":[{"feed":{"sn":"_LC_RE_3038495614657294130667176_OX","paused":"N","position":"Y","m3u8":"","subtitle":" ","liveCache":0,"image":"http:\/\/image.huajiao.com\/6e159346fecef42bce1704ea4a950290.jpg","publishtime":"2016-06-12 19:03:36","title":"","duration":0,"width":"360","height":"640","device":"iPhone 6s Plus","network":"Wi-Fi","location":"\u5317\u4eac\u5e02","relateid":16937998,"favorited":false,"praises":128282,"watches":31636,"reposts":0,"replies":0},"author":{"uid":"30384956","nickname":"\u6e05\u534e\u9009\u7f8e\u4e9a\u519b\u55b5\u54aa\u54aa","avatar":"http:\/\/image.huajiao.com\/6e159346fecef42bce1704ea4a950290-100_100.jpg","followed":false,"verified":false,"verifiedinfo":{"credentials":"\u6e05\u534e\u9644\u5b9e\u9a8c\u73ed_\u9009\u7f8e\u4e9a\u519b_\u7f8e\u56fdtop30\u91d1\u878d&amp;\u97f3\u4e50\u3002\n\u6562\u4e8e\u7d20\u989c\u76f4\u9762\u4eba\u751f\u3002\u5531\u6b4c\u3001\u5f39\u7434\u3001\u767e\u79d1\u8bb2\u5802\u3002\n\u699c\u4e00+\u79c1\u4eba\u5fae\u4fe1\u3002","type":0,"realname":"\u6e05\u534e\u9009\u7f8e\u4e9a\u519b\u55b5\u54aa\u54aa","status":0,"error":"","official":false},"exp":85531,"level":14,"medal":[],"userCache":1465743714,"balance":0,"es_nickname":"\u6e05\u534e\u9009\u7f8e\u4e9a\u519b\u55b5\u54aa\u54aa","followings":"30","followers":"11815"},"type":1,"creatime":"2016-06-12 19:03:36","relay":{"usign":"9eea4decffc1550e85f750ea4de90340","channel":"live_huajiao_v2"},"screen_type":3},{"feed":{"sn":"_LC_RE_2274312014657391470708744_OX","paused":"N","position":"Y","m3u8":"","subtitle":" ","liveCache":0,"image":"http:\/\/image.huajiao.com\/9596ff6d181bcbeb57a0545f3d1ab786.jpg","publishtime":"2016-06-12 21:45:48","title":"","duration":0,"width":"360","height":"640","device":"iPhone 6s","network":"Wi-Fi","location":"\u5317\u4eac\u5e02","relateid":16965596,"favorited":false,"praises":79765,"watches":7181,"reposts":0,"replies":0},"author":{"uid":"22743120","nickname":"\u4e4c\u9f9f\u541b_","avatar":"http:\/\/image.huajiao.com\/9596ff6d181bcbeb57a0545f3d1ab786-100_100.jpg","followed":false,"verified":true,"verifiedinfo":{"credentials":"\u6f6e\u6d41\u4e3b\u64ad\uff0c\u7f51\u7edc\u7ea2\u4eba","type":1,"realname":"\u4e4c\u9f9f\u541b_","status":3,"error":"","official":false},"exp":1017522,"level":24,"medal":[{"kind":"tuhao","medal":"2"}],"userCache":1465743719,"balance":0,"es_nickname":"\u4e4c\u9f9f\u541b_","followings":"86","followers":"18479"},"type":1,"creatime":"2016-06-12 21:45:48","relay":{"usign":"d5cdf1edf4d21a179f83e8db2754763a","channel":"live_huajiao_v2"},"screen_type":3},{"feed":{"sn":"_LC_ps1_3443895814657406380715654_OX","paused":"N","position":"Y","m3u8":"","subtitle":" ","liveCache":0,"image":"http:\/\/image.huajiao.com\/da1673dbaf8e2256d56782e8aba6baa9.jpg","publishtime":"2016-06-12 22:10:38","title":"","duration":0,"width":"360","height":"640","device":"iPhone 6","network":"Wi-Fi","location":"\u6d59\u6c5f\u7701\u91d1\u534e\u5e02","relateid":16969814,"favorited":false,"praises":16520,"watches":7114,"reposts":0,"replies":0},"author":{"uid":"34438958","nickname":"\u996d\u996d\ud83d\udc30flora","avatar":"http:\/\/image.huajiao.com\/da1673dbaf8e2256d56782e8aba6baa9-100_100.jpg","followed":false,"verified":false,"verifiedinfo":{"credentials":"\u5fae\u535a-littleflora-\ud83c\udf88\ud83c\udf88\u699c\u524d\u4e09\u53ef\u4ee5\u95ee\u6211\u8981\u5fae\u4fe1\uff0c\u7231\u4f60\u4eec\u54e6\u4e48\u4e48\u54d2","type":0,"realname":"\u996d\u996d\ud83d\udc30flora","status":0,"error":"","official":false},"exp":15802,"level":9,"medal":[],"userCache":1465743719,"balance":0,"es_nickname":"\u996d\u996d\ud83d\udc30flora","followings":"26","followers":"4511"},"type":1,"creatime":"2016-06-12 22:10:38","relay":{"usign":"b85d7d43a88a5a03f6f628507052f665","channel":"live_huajiao_v2"},"screen_type":3},{"feed":{"sn":"_LC_RE_2828891614657406230715599_OX","paused":"N","position":"Y","m3u8":"","subtitle":" ","liveCache":0,"image":"http:\/\/image.huajiao.com\/40612bf7f5764ab554dbe8e82d950f8e.jpg","publishtime":"2016-06-12 22:10:48","title":"\u5be1\u5987\uff0c\u9b3c","duration":0,"width":"360","height":"640","device":"\u4e09\u661fGALAXY S6 Edge(sm-g9250)","network":"wifi","location":"\u5317\u4eac\u5e02","relateid":16969840,"favorited":false,"praises":63233,"watches":23066,"reposts":0,"replies":0},"author":{"uid":"28288916","nickname":"\ud83d\udc39 \u5f90\u5fb7\u4eae","avatar":"http:\/\/image.huajiao.com\/767ac7500454c00076dde4dbbfbc557c-100_100.jpg","followed":false,"verified":true,"verifiedinfo":{"credentials":"\u9f39\u9f20\u5bb6\u65cf\u6210\u5458 \n\u8457\u540d\u76f8\u58f0\u6f14\u5458\u3001\u4e3b\u6301\u4eba\u3001\u4e66\u753b\u5bb6\n\u5fae\u535a\u5e10\u53f7\uff1a\u5f90\u5fb7\u4eae\n\u5fae\u4fe1\u516c\u4f17\u53f7\uff1a\u9f39\u9f20\u5bb6\u65cf","type":1,"realname":"\ud83d\udc39 \u5f90\u5fb7\u4eae","status":3,"error":"","official":false},"exp":6164,"level":7,"medal":[],"userCache":1465743718,"balance":0,"es_nickname":"\ud83d\udc39 \u5f90\u5fb7\u4eae","followings":"24","followers":"283012"},"type":1,"creatime":"2016-06-12 22:10:48","relay":{"usign":"32a5ad0140197d722667a22005d11f0a","channel":"live_huajiao_v2"},"screen_type":3}]};
+
+            var jsConf = window.HJ_JS_CONF || {};
+            jsConf.playerUrls = {"playerUrl":"http:\/\/s0.qhimg.com\/static\/2d8c003b3ecbd61d\/player.swf","playerFlash":"http:\/\/s1.qhimg.com\/static\/db3e04bd6db0bbba.swf","screenApi":"http:\/\/webh.huajiao.com\/screenshot\/upload","getScreenshot":"http:\/\/www.huajiao.com\/pc\/screenshot","voteApi":"http:\/\/webh.huajiao.com\/screenshot\/vote"};
+            window.HJ_JS_CONF = jsConf;
+        })();
+    </script>
+    <div id="doc-bd">
+        <div class="container clearfix">
+            <div id="living-slider" class="clearfix" bk>
+                <div class="obs-player" style="margin-bottom:15px;">
+                    <div id="player"></div>
+                    <div id="author-info" class="mini" data-bk="player-author-info">
+                        <a class="link" href="/user/uid" target="_blank">
+                            <div class="avatar">
+                                <img src="#avatar"/>
+                            </div>
+                        </a>
+                        <div class="base-info">
+                            <a class="link" href="/user/uid" target="_blank">
+                                <h3>nickname</h3>
+                            </a>
+                            <p class="author-id">ID uid</p>
+                            <p class="watches"><span>观看数</span> <strong>0</strong></p>
+                        </div>
+                        <div class="follow">
+                            <a href="###" class="btn-follow">+关注</a>
+                        </div>
+                        <div class="counts clearfix">
+                            <div class="follows">
+                                <h4>0</h4>
+                                <p>关注</p>
+                            </div>
+                            <div class="fans">
+                                <h4>0</h4>
+                                <p>粉丝</p>
+                            </div>
+                            <div class="praises">
+                                <h4>0</h4>
+                                <p>赞</p>
+                            </div>
+                        </div>
+                        <div class="currency hide"><span>花椒币</span><strong>0</strong></div>
+                        <div class="watches"><span>观看数</span><strong>0</strong></div>
+                        <a class="switch" href="###">展开</a>
+                    </div>
+                    <div id="player-praises" data-bk="player-praises">
+                        <div class="bubble"></div>
+                        <a href="###" class="praises"><span></span></a>
+                    </div>
+                    <a href="#" class="enter-link">进入直播间</a>
+                    <div class="qrcode" id="download-qrcode">
+                        <img src="http://p5.qhimg.com/t016fac3e2d09a481be.png" alt="二维码"/>
+                        <p>扫一扫 手机看直播</p>
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+                <div class="living-switch">
+                    <ul>
+                        <li class="current" data-id="16937998">
+                            <img src="http://image.huajiao.com/6e159346fecef42bce1704ea4a950290-160_130.jpg"/>
+                            <a class="mask">
+                                <span class="arrow"></span>
+                            </a>
+                            <p class="author">清华选美亚军喵咪咪 的直播</p>
+                        </li>
+                        <li  data-id="16965596">
+                            <img src="http://image.huajiao.com/9596ff6d181bcbeb57a0545f3d1ab786-160_130.jpg"/>
+                            <a class="mask">
+                                <span class="arrow"></span>
+                            </a>
+                            <p class="author">乌龟君_ 的直播</p>
+                        </li>
+                        <li  data-id="16969814">
+                            <img src="http://image.huajiao.com/da1673dbaf8e2256d56782e8aba6baa9-160_130.jpg"/>
+                            <a class="mask">
+                                <span class="arrow"></span>
+                            </a>
+                            <p class="author">饭饭🐰flora 的直播</p>
+                        </li>
+                        <li  data-id="16969840">
+                            <img src="http://image.huajiao.com/40612bf7f5764ab554dbe8e82d950f8e-160_130.jpg"/>
+                            <a class="mask">
+                                <span class="arrow"></span>
+                            </a>
+                            <p>寡妇，鬼</p>
+                        </li>
+                    </ul>
+                    <span class="opacity-bg"></span>
+                </div>
+            </div>
+            <div class="main clearfix">
+                <div id="focuspic" class="focuspic feed-list" bk>
+                    <ul class="list">
+
+                        <li class="special live feed">
+                            <a class="link clearfix" target="_blank" href="http://www.huajiao.com/l/16956178">
+                                <img class="screenshot" src="http://image.huajiao.com/a575c9ec2a849ed54422942a1e7c1ebc-400_400.jpg"/>
+                                <p class="user">
+                                    <span class="username">开开在努力</span>
+                                    <span class="watches"><span class="sub">11184</span></span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="normal live feed">
+                            <a class="link clearfix" target="_blank" href="http://www.huajiao.com/l/16958663">
+                                <img class="screenshot" src="http://image.huajiao.com/0662a4aaebda58a480648bcf875e13e9-230_191.jpg"/>
+                                <p class="user">
+                                    <span class="username">D5🎤龍西西CATER!C</span>
+                                    <span class="watches"><span class="sub">10072</span></span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="normal live feed">
+                            <a class="link clearfix" target="_blank" href="http://www.huajiao.com/l/16974816">
+                                <img class="screenshot" src="http://image.huajiao.com/b2c9f9941668600a020f068f670e928b-230_191.jpg"/>
+                                <p class="user">
+                                    <span class="username">L-橘子</span>
+                                    <span class="watches"><span class="sub">259</span></span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="normal live feed">
+                            <a class="link clearfix" target="_blank" href="http://www.huajiao.com/l/16913279">
+                                <img class="screenshot" src="http://image.huajiao.com/d9a412a87bb8f9b621b2ba9a108f2b7e-230_191.jpg"/>
+                                <p class="user">
+                                    <span class="username">哎哟🎈兔子</span>
+                                    <span class="watches"><span class="sub">66572</span></span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="normal live feed">
+                            <a class="link clearfix" target="_blank" href="http://www.huajiao.com/l/16973078">
+                                <img class="screenshot" src="http://image.huajiao.com/eb5efcd62a08f5a46d1ac65b512afc17-230_191.jpg"/>
+                                <p class="user">
+                                    <span class="username">小软M</span>
+                                    <span class="watches"><span class="sub">807</span></span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 正在直播 -->
+                <div class="g-box feed-list" id="living" bk>
+                    <div class="box-hd">
+                        <h2 class="box-title"><span class="icon"></span>正在直播</h2>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+                            <li class="feed live">
+                                <a class="link" href="/l/16976851" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/249fb766c95518bc6fe8581407b8e647-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/249fb766c95518bc6fe8581407b8e647-100_100.jpg">
+                                        <span class="username">网白纯纯👸🏻</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            遇见就是精彩
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16948650" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/e76bf6349c7c6a1e3bfaeb7dc3138cf5-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e76bf6349c7c6a1e3bfaeb7dc3138cf5-100_100.jpg">
+                                        <span class="username">黄子萱Evil</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>Starry_Sky 说：</em>                                        你们俩..........
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16949005" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/248a6d8cc7781d890699667ff4222506-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/248a6d8cc7781d890699667ff4222506-100_100.jpg">
+                                        <span class="username">霸道<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">校花🌸</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>二妹啊<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">（求关注） 说：</em>                                        欢迎进来的宝宝，喜欢主播的加关注不迷路！
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16955247" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d84f917f8e9ec3aca81c253690683d40-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d84f917f8e9ec3aca81c253690683d40-100_100.jpg">
+                                        <span class="username">阳阳姐</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>我老公，，。？ 说：</em>                                        你在成都哪个区？
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16970990" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-100_100.jpg">
+                                        <span class="username">乔治•马晓辉</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>我爱绿川花学姐 说：</em>                                        🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16971085" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/eefd9ce123d15bbdfad3cbd81b591203-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/eefd9ce123d15bbdfad3cbd81b591203-100_100.jpg">
+                                        <span class="username">丫蛋楠楠</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            此处应该有互动
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16962526" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d09f900e2d2a9d640b2392db316c8f9e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d09f900e2d2a9d640b2392db316c8f9e-100_100.jpg">
+                                        <span class="username">-  单良 * 💋</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>小屎壳郎 说：</em>                                        我顶着这个头像跑骚，一个男主播笑抽了
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16974904" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1899739aa90cd0a26e7e0f2a1cd6da7c-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1899739aa90cd0a26e7e0f2a1cd6da7c-100_100.jpg">
+                                        <span class="username">傅小凡同学</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>乔妹爱直播 说：</em>                                        主播最帅，快来跟我们玩吧
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16966777" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/323c30e2d4ab9d84b8fa5b64c9dff3d3-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/323c30e2d4ab9d84b8fa5b64c9dff3d3-100_100.jpg">
+                                        <span class="username">🌺楚大仙_</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em><img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png"><img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">Marry—恩宠【主播】 说：</em>                                        欢迎来到直播间，最浪漫的三个字不是我爱你💗，而是刷礼物🎁🎉，点点关注💋💋ㄧ试成主顾👆😍按按屏幕让爱心充满整个屏幕❤️💛💚💙💜💝💘💖💗主播爱你呦😘🤘再次欢迎大家来到直播间。有豆的小🎁礼物刷一拨。喜欢主播的点点关注。
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16970406" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/8381e027fc9f2a0ce1375e8fe860e4d8-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/8381e027fc9f2a0ce1375e8fe860e4d8-100_100.jpg">
+                                        <span class="username">💄漠燃liza💋</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            走过路过，不要错过
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16966299" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1a8ac9dbb5564162e4ed70d697b77d5e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1a8ac9dbb5564162e4ed70d697b77d5e-100_100.jpg">
+                                        <span class="username">張捷思💙Jas</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>爱到最美是陪伴1b69b 说：</em>                                        主播  21岁 四川绵阳人 北京体育大学 大三 体育管理专业 每天晚上给大家钢琴弹唱 擅长英文歌 中文歌会一点点 希望大家可以多多关注张有才 关注不迷路 有礼物可以刷刷小礼物 没礼物的可以多多点赞 主播唱歌的时候 大家6起来 谢谢 帮助主播上热门 谢谢大家😊！
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16947981" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/88fb04f44c358e964ef249710f0614e2-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/88fb04f44c358e964ef249710f0614e2-100_100.jpg">
+                                        <span class="username">曦曦～Daisy</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em> 官 人★若 杨   说：</em>                                        👯👯👯👯👯👯👯
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16969035" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/bf555f3a2e93253281599113ad96b96a-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/bf555f3a2e93253281599113ad96b96a-100_100.jpg">
+                                        <span class="username">陈卤蛋</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            走过路过，不要错过
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16949304" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/e1548930fcb78ed3bb9b1dfe2f3ddd5d-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e1548930fcb78ed3bb9b1dfe2f3ddd5d-100_100.jpg">
+                                        <span class="username">杨小怡啦啦啦</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>美美D昊昊哥 说：</em>                                        我外婆也是上海的对我超好
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="feed live">
+                                <a class="link" href="/l/16968311" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/8e052388d507a6b5030cd3aed4b91942-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/8e052388d507a6b5030cd3aed4b91942-100_100.jpg">
+                                        <span class="username">🌸张一一</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            此处应该有互动
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 分类推荐 -->
+                <div class="g-box feed-list" data-bk="star">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p6.qhimg.com/t0113b3e6d1a9e24761.png" class="tag" alt="明星来了" />明星来了</h2>
+                        <a class="box-more" href="/category/1">查看更多 &gt;&gt;</a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16977025" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/6107c975256628a388d54b7d7d04b445-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6107c975256628a388d54b7d7d04b445-100_100.jpg">
+                                        <span class="username">韩国少女团队Blackqueen</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            主要看气质
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16976998" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d1c31a746d92641eb683a94a13ab071c-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d1c31a746d92641eb683a94a13ab071c-100_100.jpg">
+                                        <span class="username">张迁赫</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            走过路过，不要错过
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16976124" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/6953590b5c8ed098f6d87c93fa845254-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6953590b5c8ed098f6d87c93fa845254-100_100.jpg">
+                                        <span class="username">本山传媒高明娥</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>海🐵峰 说：</em>                                            姨我好几天没看见您，想您
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16971281" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/90aed0df81c6fcbafb68c30ca8fc6815-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/90aed0df81c6fcbafb68c30ca8fc6815-100_100.jpg">
+                                        <span class="username">【本山传媒】蔡晓樂</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>别惹娜娜 说：</em>                                            😍😍😍😍😍😍
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16971233" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/497b2739784a741cab84cbea87f7c212-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/497b2739784a741cab84cbea87f7c212-100_100.jpg">
+                                        <span class="username">沐奕杉</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            我什么都不知道，你进来再说。
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16970990" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-100_100.jpg">
+                                        <span class="username">乔治•马晓辉</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>我爱绿川花学姐 说：</em>                                            🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16969840" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/40612bf7f5764ab554dbe8e82d950f8e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/767ac7500454c00076dde4dbbfbc557c-100_100.jpg">
+                                        <span class="username">🐹 徐德亮</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>B-boy峰少 说：</em>                                            徐老师可以设置几个管理员
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16967843" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/b77ae9ae134ab1f6c3c8a9e3b47380a9-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/b77ae9ae134ab1f6c3c8a9e3b47380a9-100_100.jpg">
+                                        <span class="username">德格玛雅</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>-c9d5a 说：</em>                                            好喜欢今天的文章
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16965946" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/7a394ef6986dff3dd2d7fec6baaf27ac-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/7a394ef6986dff3dd2d7fec6baaf27ac-100_100.jpg">
+                                        <span class="username">万昊辰</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            此处应该有互动
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16964352" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1de1148d49bb741bd45f051b792bc429-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1de1148d49bb741bd45f051b792bc429-100_100.jpg">
+                                        <span class="username">本山传媒（小牡丹）</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>微笑的快乐 说：</em>                                            二嫂，唱首咱吨里的人呗
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="g-box feed-list" data-bk="women">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p5.qhimg.com/t01c170b9c2e2931986.png" class="tag" alt="女神驾到" />女神驾到</h2>
+                        <a class="box-more" href="/category/2">查看更多 &gt;&gt;</a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16937998" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/6e159346fecef42bce1704ea4a950290-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6e159346fecef42bce1704ea4a950290-100_100.jpg">
+                                        <span class="username">清华选美亚军喵咪咪</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            主要看气质
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16969814" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/da1673dbaf8e2256d56782e8aba6baa9-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/da1673dbaf8e2256d56782e8aba6baa9-100_100.jpg">
+                                        <span class="username">饭饭🐰flora</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>淡夏浅忆 说：</em>                                            几岁啦 小妹妹
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16974816" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/b2c9f9941668600a020f068f670e928b-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/b2c9f9941668600a020f068f670e928b-100_100.jpg">
+                                        <span class="username">L-橘子</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            我什么都不知道，你进来再说。
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16913279" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d9a412a87bb8f9b621b2ba9a108f2b7e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d9a412a87bb8f9b621b2ba9a108f2b7e-100_100.jpg">
+                                        <span class="username">哎哟🎈兔子</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            你开心就好
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16973078" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/eb5efcd62a08f5a46d1ac65b512afc17-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/eb5efcd62a08f5a46d1ac65b512afc17-100_100.jpg">
+                                        <span class="username">小软M</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            遇见就是精彩
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16976851" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/249fb766c95518bc6fe8581407b8e647-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/249fb766c95518bc6fe8581407b8e647-100_100.jpg">
+                                        <span class="username">网白纯纯👸🏻</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            走过路过，不要错过
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16948650" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/e76bf6349c7c6a1e3bfaeb7dc3138cf5-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e76bf6349c7c6a1e3bfaeb7dc3138cf5-100_100.jpg">
+                                        <span class="username">黄子萱Evil</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>Starry_Sky 说：</em>                                            你们俩..........
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16949005" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/248a6d8cc7781d890699667ff4222506-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/248a6d8cc7781d890699667ff4222506-100_100.jpg">
+                                        <span class="username">霸道<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">校花🌸</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>二妹啊<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">（求关注） 说：</em>                                            欢迎进来的宝宝，喜欢主播的加关注不迷路！
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16955247" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d84f917f8e9ec3aca81c253690683d40-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d84f917f8e9ec3aca81c253690683d40-100_100.jpg">
+                                        <span class="username">阳阳姐</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>我老公，，。？ 说：</em>                                            你在成都哪个区？
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16971085" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/eefd9ce123d15bbdfad3cbd81b591203-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/eefd9ce123d15bbdfad3cbd81b591203-100_100.jpg">
+                                        <span class="username">丫蛋楠楠</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            主要看气质
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="g-box feed-list" data-bk="men">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p1.qhimg.com/t010e56c5c305bb0864.png" class="tag" alt="国民男神" />国民男神</h2>
+                        <a class="box-more" href="/category/5">查看更多 &gt;&gt;</a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16965596" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/9596ff6d181bcbeb57a0545f3d1ab786-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/9596ff6d181bcbeb57a0545f3d1ab786-100_100.jpg">
+                                        <span class="username">乌龟君_</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            遇见就是精彩
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16969840" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/40612bf7f5764ab554dbe8e82d950f8e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/767ac7500454c00076dde4dbbfbc557c-100_100.jpg">
+                                        <span class="username">🐹 徐德亮</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>B-boy峰少 说：</em>                                            徐老师可以设置几个管理员
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16956178" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/a575c9ec2a849ed54422942a1e7c1ebc-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/a575c9ec2a849ed54422942a1e7c1ebc-100_100.jpg">
+                                        <span class="username">开开在努力</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>❤开开家<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2764-fe0f.png">_（173*） 说：</em>                                            关注主播，点歌小礼物🎁走起～点赞不要停～
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16958663" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/0662a4aaebda58a480648bcf875e13e9-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/0662a4aaebda58a480648bcf875e13e9-100_100.jpg">
+                                        <span class="username">D5🎤龍西西CATER!C</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>D5🐨场控麻麻。 说：</em>                                            一直就在你腿上卧着
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16970990" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/f428124ddbf11454fc5b660156c211f8-100_100.jpg">
+                                        <span class="username">乔治•马晓辉</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>我爱绿川花学姐 说：</em>                                            🚲🚲🚲🚲🚲🚲🚲🚲🚲🚲
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16962526" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/d09f900e2d2a9d640b2392db316c8f9e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/d09f900e2d2a9d640b2392db316c8f9e-100_100.jpg">
+                                        <span class="username">-  单良 * 💋</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>小屎壳郎 说：</em>                                            我顶着这个头像跑骚，一个男主播笑抽了
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16974904" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1899739aa90cd0a26e7e0f2a1cd6da7c-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1899739aa90cd0a26e7e0f2a1cd6da7c-100_100.jpg">
+                                        <span class="username">傅小凡同学</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>乔妹爱直播 说：</em>                                            主播最帅，快来跟我们玩吧
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16966299" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1a8ac9dbb5564162e4ed70d697b77d5e-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1a8ac9dbb5564162e4ed70d697b77d5e-100_100.jpg">
+                                        <span class="username">張捷思💙Jas</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>爱到最美是陪伴1b69b 说：</em>                                            主播  21岁 四川绵阳人 北京体育大学 大三 体育管理专业 每天晚上给大家钢琴弹唱 擅长英文歌 中文歌会一点点 希望大家可以多多关注张有才 关注不迷路 有礼物可以刷刷小礼物 没礼物的可以多多点赞 主播唱歌的时候 大家6起来 谢谢 帮助主播上热门 谢谢大家😊！
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16961376" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/ad0269dc0b4462da0a2414053949fa92-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/ad0269dc0b4462da0a2414053949fa92-100_100.jpg">
+                                        <span class="username">💠俊王府💠 吳元俊</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>💠俊王府💠 場控🔹金毛 说：</em>                                            @💠俊王府💠 嘟嘟 恭喜
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16970078" target="_blank">
+                                    <img class="screenshot" src="http://image.huajiao.com/1377c6064889b1ca663571433c04236c-172_245.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/1377c6064889b1ca663571433c04236c-100_100.jpg">
+                                        <span class="username">李<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">嘟嘟</span>
+                                    </p>
+                                    <div class="comment">
+                                        <div class="comment-inner">
+                                            <em>怡茜很可怕🌚<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">（李嘟嘟） 说：</em>                                            😂😂😂😂😂😂
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="g-box feed-list" data-bk="hdlive">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p8.qhimg.com/t015b1ca43fabdf4e5f.png" class="tag" alt="高清直播" />高清直播</h2>
+                        <a class="box-more" href="/category/3">查看更多 &gt;&gt;</a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16915675" target="_blank">
+                                    <img class="screenshot" src="http://p7.qhimg.com/t010d198098f0add571.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/10bd19599f2d6e354b9868f6d6063228-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">成龙新片发布会现场</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16771125" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t01cf09a93ca7e3779f.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/10bd19599f2d6e354b9868f6d6063228-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">《寒战2》官方记者会</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16667897" target="_blank">
+                                    <img class="screenshot" src="http://p5.qhimg.com/t0134ebd2b22985bbf9.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6fc6b4ffc68a7882fa25f56d11c75710-100_100.jpg">
+                                        <span class="username">南乔说</span>
+                                    </p>
+                                    <p class="title">爆椒欧洲杯第一期6/10</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/15234786" target="_blank">
+                                    <img class="screenshot" src="http://p8.qhimg.com/t011ee7edbc2003f630.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6b77f2f35630b4331b2d0e45485a6ead-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">《三少爷的剑》定档七夕</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/14692993" target="_blank">
+                                    <img class="screenshot" src="http://p3.qhimg.com/t01c103c5f7479490ff.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/8c4691e409010b4835689f019adcabc2-100_100.jpg">
+                                        <span class="username">SOHO3Q</span>
+                                    </p>
+                                    <p class="title">潘谈会《姚明来了》</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/14408292" target="_blank">
+                                    <img class="screenshot" src="http://p3.qhimg.com/t01104727757244ea91.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/059f749d5dbfae0d4ec2678b422b7f2f-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">电影《妖医》发布会</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/14373761" target="_blank">
+                                    <img class="screenshot" src="http://p1.qhimg.com/t01296e6fb91b7745e3.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/60e5a350defe6a28a143ea61c1a88a6e-100_100.jpg">
+                                        <span class="username">创业黑马学院</span>
+                                    </p>
+                                    <p class="title">黑马成长营13期开营典礼</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/14265107" target="_blank">
+                                    <img class="screenshot" src="http://p5.qhimg.com/t01b04f6a8981f2408f.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/af8957e91e30a054ea5679ad635ded03-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">两大男神彭于晏吴京亮相《危城》发布会</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/13465032" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t013a69d22944fadf20.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/0914b5256911448ba0acc26a507089bf-100_100.jpg">
+                                        <span class="username">huajiaoyule</span>
+                                    </p>
+                                    <p class="title">《钢刀》发布会</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/13379533" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t0124b11e374a23ffd6.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/9eef2213352fe221ff87e798d3702f47-100_100.jpg">
+                                        <span class="username">360娱乐</span>
+                                    </p>
+                                    <p class="title">《愤怒的小鸟》电影首映礼</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="g-box feed-list" data-bk="hdlive">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p7.qhimg.com/t0113cc1459a232447e.png" class="tag" alt="超级女声" />超级女声</h2>
+                        <a class="box-more" href="/zt/supergirl2016">查看更多 &gt;&gt;</a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed live">
+                                <a class="link" href="/l/16875138" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t011b56a82ef1f7f9e2.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e202be632b2c9d08a20cd25f48900227-100_100.jpg">
+                                        <span class="username">2016超级女声</span>
+                                    </p>
+                                    <p class="title">超级女声-女声学院全景直播6/12</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16735828" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t0169d446838c5efb58.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e202be632b2c9d08a20cd25f48900227-100_100.jpg">
+                                        <span class="username">2016超级女声</span>
+                                    </p>
+                                    <p class="title">超级女声-女声学院全景直播6/11</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16588829" target="_blank">
+                                    <img class="screenshot" src="http://p8.qhimg.com/t01fcd97cd38ccc5dde.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/5fa79c97800f80f02d45b4c4abc821ab-100_100.jpg">
+                                        <span class="username">2016超级女声</span>
+                                    </p>
+                                    <p class="title">超级女声 女声学院全景直播6/10</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16435807" target="_blank">
+                                    <img class="screenshot" src="http://p2.qhimg.com/t01d37e35c50b7642b6.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/5fa79c97800f80f02d45b4c4abc821ab-100_100.jpg">
+                                        <span class="username">2016超级女声</span>
+                                    </p>
+                                    <p class="title">超级女声 女声学院全景直播6/09</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16291400" target="_blank">
+                                    <img class="screenshot" src="http://p2.qhimg.com/t01433c1109119062c1.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/e142c0be42e120d2e2086e61a8e5cde3-100_100.jpg">
+                                        <span class="username">2016超级女声</span>
+                                    </p>
+                                    <p class="title">超级女声 女声学院全景直播6/08</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="g-box feed-list" data-bk="hdlive">
+                    <div class="box-hd">
+                        <h2 class="box-title"><img src="http://p8.qhimg.com/t018816a2afe4464a3c.png" class="tag" alt="音乐达人" />音乐达人</h2>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="list">
+
+                            <li class="feed review">
+                                <a class="link" href="/l/16873230" target="_blank">
+                                    <img class="screenshot" src="http://p0.qhimg.com/t0112b105e78ba7314b.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/3f7ee1f829b6d9b15f7f0ee63dc8c4fb-100_100.jpg">
+                                        <span class="username">弹古筝的李乐乐💕✨</span>
+                                    </p>
+                                    <p class="title">美女弹古筝</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/15587013" target="_blank">
+                                    <img class="screenshot" src="http://p7.qhimg.com/t010982ca66810a9728.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/ac86becbd771c8d66c6379ccfd2d7726-100_100.jpg">
+                                        <span class="username">王子吊吊</span>
+                                    </p>
+                                    <p class="title">歌手王子</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/15506957" target="_blank">
+                                    <img class="screenshot" src="http://p5.qhimg.com/t01e37b7b24302034d1.jpg">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/eb7781279c0a680d033bbef911eb6b79-100_100.jpg">
+                                        <span class="username">歌手庄妮</span>
+                                    </p>
+                                    <p class="title">歌手庄妮</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/15115961" target="_blank">
+                                    <img class="screenshot" src="http://p3.qhimg.com/t01c1a1f7904695555b.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/31ffcc82f94dec33165ae7c6d5ab8da1-100_100.jpg">
+                                        <span class="username">古筝bbox阿哲</span>
+                                    </p>
+                                    <p class="title">古筝+bbox</p>
+                                </a>
+                            </li>
+
+                            <li class="feed review">
+                                <a class="link" href="/l/14735003" target="_blank">
+                                    <img class="screenshot" src="http://p1.qhimg.com/t014e1c644b9f258fb9.png">
+                                    <p class="user">
+                                        <img class="avatar" src="http://image.huajiao.com/6e36d0b757a9ebbb2dba934ac25edbdb-100_100.jpg">
+                                        <span class="username">方成辉</span>
+                                    </p>
+                                    <p class="title">电钢琴演奏</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="side clearfix">
+                <div class="download">
+                    <div class="headline">
+                        <a href="http://www.huajiao.com/l/16650025" target="_blank">
+                            <img src="http://p0.qhimg.com/t012589dc3be79d8d54.jpg" width="100%" alt="" />
+                            <div class="logo-slogan"></div>
+                        </a>
+                    </div>
+                    <div class="btns clearfix">
+                        <a href="http://www.huajiao.com/mobile/downloadjump?src=pc_index_android" class="btn-android" target="_blank"></a>
+                        <a href="http://www.huajiao.com/mobile/downloadjump?src=pc_index_ios" class="btn-iphone" target="_blank"></a>
+                    </div>
+                    <dl class="qrcode">
+                        <dt class="title"><span>或扫描二维码下载花椒直播APP</span></dt>
+                        <dd class="pic">
+                            <img src="http://p3.qhimg.com/t0180e3e5f9d2f3423f.png" alt="" />
+                        </dd>
+                    </dl>
+                </div>            <div class="sidebar">
+                <div class="g-box" id="topic-plan">
+                    <div class="box-hd">
+                        <h2 class="box-title"><span class="icon"></span>专题策划</h2>
+                        <a href="" class="box-more"></a>
+                    </div>
+                    <div class="box-bd">
+                        <div class="topic">
+                            <div class="pic">
+                                <a href="http://www.huajiao.com/zt/supergirl2016" target="_blank">
+                                    <img src="http://p1.qhimg.com/t01ac0457a856558499.jpg " width="245" height="130" alt="" />
+                                    <span class="mask"></span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title"><a href="http://www.huajiao.com/zt/supergirl2016" target="_blank">超级女声 养成期全景直播</a></h3>
+                                <p class="desc">　历经5个月层层筛选，超女100强从61万选手中脱颖而出。接下来，百强选手们将进入比赛的第二阶段——“养成”阶段。每天24小时全程全景直播，精彩不间断！</p>
+                                <p class="more">
+                                    <a href="http://www.huajiao.com/zt/supergirl2016" target="_blank">查看详情</a>
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="topics">
+
+                            <li><a href="http://www.huajiao.com/l/16934498" target="_blank"><img src="http://p4.qhimg.com/t01f8dd87f132aece71.png"></a></li>
+
+
+                            <li><a href="http://www.huajiao.com/l/16931633" target="_blank"><img src="http://p3.qhimg.com/t01f953c7b8eec2410d.jpg"></a></li>
+
+                            <li><a href="http://www.huajiao.com/user/34920529" target="_blank"><img src="http://p0.qhimg.com/t01f208cd4a012b648c.jpg"></a></li>
+
+
+
+
+                            <li><a href="http://www.huajiao.com/l/16904677" target="_blank"><img src="http://p8.qhimg.com/t01c60e714824cd9997.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16819363" target="_blank"><img src="http://p0.qhimg.com/t01269159c426eb9c02.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16791911" target="_blank"><img src="http://p0.qhimg.com/t01fb57bef3172edd8f.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16771002" target="_blank"><img src="http://p8.qhimg.com/t016d03204aa6c07dc8.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16621817" target="_blank"><img src="http://p5.qhimg.com/t015d052a89a4e0b3c9.jpg"></a></li>
+
+                            <li><a href="http://www.huajiao.com/l/16618408" target="_blank"><img src="http://p2.qhimg.com/t01950e7fb1bede6e26.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16366301" target="_blank"><img src="http://p0.qhimg.com/t01295e239a047f3c4a.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16361748" target="_blank"><img src="http://p0.qhimg.com/t010af565c8fb410a0e.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16333280" target="_blank"><img src="http://p3.qhimg.com/t015222fff3ce1fe87c.jpg"></a></li>
+                            <li><a href="http://www.huajiao.com/l/16323454" target="_blank"><img src="http://p0.qhimg.com/t018b5607e70fa12882.jpg"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </ul>                    </div>
+                </div>
+                <div class="g-box" id="author-top">
+                    <div class="box-hd">
+                        <h2 class="box-title"><span class="icon"></span>主播排行榜</h2>
+                        <a href="" class="box-more"></a>
+                    </div>
+                    <div class="box-bd">
+                        <ul class="rank-list">
+                            <li class="item" data-userid="32117738">
+                                <a href="/user/32117738" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/c3bff0e4ca9212f845aadd8f7119e530-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top  rank-1"></span>
+                                    </div>
+                                    <div class="nickname">Ayla🍂</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    3518643
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="34608141">
+                                <a href="/user/34608141" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/9c96a224631a05b58da6979d1877f8a5-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top  rank-2"></span>
+                                    </div>
+                                    <div class="nickname">🎀筱雅🎤声优FM播音🎼</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    2820426
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="31925074">
+                                <a href="/user/31925074" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/184afa232501755658293c5d4fad7e73-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top  rank-3"></span>
+                                    </div>
+                                    <div class="nickname">钮葫芦<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/27b0.png">佑离😂</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    926071
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="21180269">
+                                <a href="/user/21180269" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/6142feee3d334ef024d5c69344b8d6a3-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">雨萱.Baby<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2764-fe0f.png"></div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    893010
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="28892230">
+                                <a href="/user/28892230" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/d984c67624d7fea6ca4f361b6d70426b-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">🆔......“</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    698893
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="35392699">
+                                <a href="/user/35392699" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/cce2e1d0e99d88738ea510229cfab722-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">小摆摆😪</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    696619
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="27916106">
+                                <a href="/user/27916106" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/5d0e33bad925617cd4286cfa127fa5e5-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">晓晓陛下</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    630341
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="22932295">
+                                <a href="/user/22932295" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/6e577a194e1c45d0878088d874425a84-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">🃏黑博🎲欧巴</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    564637
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="30994053">
+                                <a href="/user/30994053" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/8c6b50af21a953eff864643021c16a78-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">头发乱了～～<img class="hj-emoji" src="http://static.huajiao.com/huajiao/web/static/module/emoji/images/2728.png">🌀</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    556418
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                            <li class="item" data-userid="30709243">
+                                <a href="/user/30709243" class="link">
+                                    <div class="avatar">
+                                        <img src="http://image.huajiao.com/6a8cb07fb183d0253dc59a01c5314f78-100_100.jpg" width="45" height="45" alt="" />
+                                        <span class="icon icon-top "></span>
+                                    </div>
+                                    <div class="nickname">司柠</div>
+                                </a>
+                                <div class="fans">
+                                    <span class="icon icon-top"></span>
+                                    554187
+                                </div>
+                                <a href="###" class="btn-follow j-follow">+关注</a>
+                            </li>
+                        </ul>                    </div>
+                </div>
+                <ul class="topics">
+                    <li><img src="http://p1.qhimg.com/t01263d4a588b6445b3.png"></li>
+
+
+                    <li><a href="http://www.huajiao.com/user/32838107" target="_blank"><img src="http://p2.qhimg.com/t0188b111b8dc76d4e8.jpg"></a></li>
+                    <li><a href="http://www.huajiao.com/user/28288916" target="_blank"><img src="http://p3.qhimg.com/t011af69b08ef73220b.jpg"></a></li>
+                    <li><a href="http://www.huajiao.com/user/26665814" target="_blank"><img src="http://p2.qhimg.com/t019a85c1ac42806438.jpg"></a></li>
+                    <li><a href="http://www.huajiao.com/user/24653870" target="_blank"><img src="http://p8.qhimg.com/t01eb377e5d28582395.png"></a></li>
+
+                    <li><a href="http://www.huajiao.com/user/23646514" target="_blank"><img src="http://p0.qhimg.com/t01a771231bff08f984.jpg"></a></li>
+
+                    <li><a href="http://www.huajiao.com/user/21637733" target="_blank"><img src="http://p0.qhimg.com/t0113220efae49e31f3.jpg"></a></li>
+
+                    <li><a href="http://www.huajiao.com/user/21491770" target="_blank"><img src="http://p7.qhimg.com/t01026ff2dc13ce7d7e.png"></a></li>
+                    <li><a href="http://www.huajiao.com/user/30389759" target="_blank"><img src="http://p7.qhimg.com/t01fe2f208bab42eeae.jpg"></a></li>
+
+
+                    <li><a href="http://www.huajiao.com/user/29662393" target="_blank"><img src="http://p3.qhimg.com/t0166266c05dc4ecced.png"></a></li>
+                    <li><a href="http://www.huajiao.com/user/23432039" target="_blank"><img src="http://p2.qhimg.com/t0182d867d3e8f01c15.jpg"></a></li>
+
+
+                    <li><a href="http://www.huajiao.com/user/23106638" target="_blank"><img src="http://p2.qhimg.com/t016103d2d1f0160c51.jpg"></a></li>
+                    <li><a href="http://www.huajiao.com/user/21129826" target="_blank"><img src="http://p7.qhimg.com/t01627668b6ae2a9066.png"></a></li>
+                    <li><a href="http://www.huajiao.com/user/27482233" target="_blank"><img src="http://p5.qhimg.com/t01a70fd249a019098e.png"></a></li>
+
+
+                </ul>            </div>
+            </div>
+        </div>
+        <div id="doc-bg">
+            <div class="focus-bg">
+                <a href="#" style="background-image: url(http://p2.qhimg.com/t019a84af18ada2a985.png)">花椒直播</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="doc-ft">
+        <div class="container">
+            <p>北京密境和风科技有限公司    地址：北京市朝阳区酒仙桥路甲10号3号楼15层    电话：010-59447797</p>
+            <p>邮箱:bd@huajiao.tv 客服微信号：huajiao_1   京ICP备15024691号-1 信息网络传播视听节目许可证1109357号 <a target="_blank" href="http://sealinfo.trustutn.org/info?sn=L002001201604075488444" style="color:#878787">联盟品牌认证</a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030384" style="display:inline-block;margin-left:5px;color:#878787;"><img src="http://p2.qhimg.com/d/inn/f570feb7/beian.png" style="float:left;"/>京公网安备 11010502030384号</a></p>
+        </div>
+    </div>
+
+    <!--
+    下线时将下面div元素的style改为"display:none;"
+    上线时将下面div元素的style改为"display:block;"
+    图片尺寸100X100
+    -->
+    <div id="right-fixed-position" class="right-fixed-position" style="display:none;" bk>
+        <a href="#" class="close"></a>
+        <a href="http://www.huajiao.com/l/13676965" class="link" target="_blank">
+            <img src="http://p0.qhimg.com/t01517e4a6f9e841989.jpg"/>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="http://s0.qhimg.com/static/0e4b4f909dd26431/jquery,qw.core.js"></script>
+<script type="text/javascript">
+    window._DATA = window._DATA || {};
+    window._DATA.user = null;
+</script>
+<script type="text/javascript" src="http://s0.qhimg.com/static/ebc9263b1e53f54c,ec04f6d964909577,2871d438166db650,03962b4bb009173e,0dd95ee9b41b46c4,41450b6d75ef92e6.js"></script>
+
+
+
+
+<script src="http://s9.qhimg.com/!db55dcd9/switchable.js"></script>
+<script src="http://static.huajiao.com/huajiao/web/static/module/swfobject-2.3.js"></script>
+<script type="text/javascript" src="http://s2.qhimg.com/static/d9ba29ea240136b8,f43d9e19d6f86f49.js"></script>
+
+
+<!-- 打点 -->
+
+<div style="display:none;">
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1255745025'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255745025' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+<script src="http://s0.qhimg.com/monitor/;monitor/8e133f74.js"></script>
+<script src="http://s8.qhimg.com/!e413febf/monitor2.js"></script>
+
+<script>
+    // 业务上的相关统计
+    (function () {
+        if (!window.monitor) return;
+
+        // 启动统计脚本
+        monitor.setProject('huajiao').getTrack().getClickAndKeydown();
+    })();
+</script>
+
+
+
+<script>
+    // 业务上的相关统计
+    (function () {
+        if (!window.monitor2) return;
+
+        // 启动统计脚本
+        monitor2.setProject('hao360_huajiao').getTrack().getClickAndKeydown();
+    })();
+</script>
+
+<!-- File To Static Is Ok -->
+</body>
+</html>
