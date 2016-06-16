@@ -65,10 +65,10 @@ function acquireData(data) {
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms limit ' + limit_range + ';';
+    var sql = 'SELECT * FROM sixrooms ORDER BY id limit ' + limit_range + ' ;';
     conn.query(sql, function (err, rows) {
         if (err) {
-            console.log(err);
+           return console.log(err);
         }
         if (rows.length > 0) {
             start++;

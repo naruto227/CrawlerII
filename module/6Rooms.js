@@ -26,22 +26,24 @@ exports.SixRooms = function () {
 };
 
 myEvents.on('start', function () {
-    rule.second = times;
-    for (var i = 0; i < 60; i = i + 3) {
-        times.push(i);
-    }
-    schedule.scheduleJob(rule, function () {
-        if (SixRoomscrawler.getMainData()) {
-            this.cancel();
-            console.log('-------------爬完啦----------------');
-            myEvents.emit('updateOther');
-        }
-    });
+    // rule.second = times;
+    // for (var i = 0; i < 60; i = i + 3) {
+    //     times.push(i);
+    // }
+    // schedule.scheduleJob(rule, function () {
+    // setTimeout(function () {
+        SixRoomscrawler.getMainData();
+
+    // },60000);
+    console.log('-------------爬完啦----------------');
+    myEvents.emit('updateOther');
+
+    // });
 });
 
 myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 10) {
+    for (var i = 0; i < 60; i = i + 5) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
@@ -54,8 +56,8 @@ myEvents.on('updateOther', function () {
     });
 });
 
- myEvents.on('gameover',function(){
-   uploadService.uploadServe('sixrooms');
+myEvents.on('gameover', function () {
+    uploadService.uploadServe('sixrooms');
 });
 
 

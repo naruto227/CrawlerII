@@ -49,7 +49,7 @@ function selectAndSend(tablename) {
         }
         var options = {
             headers: {"Connection": "close"},
-            url: 'http://121.42.136.52:2999/'+tablename,
+            url: 'http://120.27.94.166:2999/'+tablename,
             method: 'POST',
             json: true,
             body: {data: rows}

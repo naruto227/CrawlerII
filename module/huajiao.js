@@ -35,15 +35,15 @@ myEvents.on('start', function () {
     //getHLive  http://www.huajiao.com/category/3?pageno=
     schedule.scheduleJob(rule, function () {
         if (HuaJiaoscrawler.getStar()) {
-           /* if(HuaJiaoscrawler.getGodNess()){
+            if(HuaJiaoscrawler.getGodNess()){
                 if(HuaJiaoscrawler.getGodMan()){
-                    if(HuaJiaoscrawler.getHLive()){*/
+                    if(HuaJiaoscrawler.getHLive()){
                         this.cancel();
                         console.log('-------------爬完啦----------------');
-                    /*    myEvents.emit('updateOther');
+                        myEvents.emit('updateOther');
                     }
                 }
-            }*/
+            }
         }
     });
 });
@@ -54,7 +54,7 @@ myEvents.on('updateOther', function () {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
-        if (HuaJiaoscrawler.updateFans()) {
+        if (HuaJiaoscrawler.updateOthers()) {
             this.cancel();
             console.log('------------更新完了---------------');
             isRunning = false;
