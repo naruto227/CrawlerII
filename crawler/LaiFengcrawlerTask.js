@@ -18,12 +18,13 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    myEvents.emit('initData', page);
-    page++;
     if (isMainFinish) {
         isMainFinish = false;
+        page = 1;
         return true;
     } else {
+        myEvents.emit('initData', page);
+        page++;
         return false;
     }
 };
@@ -61,6 +62,7 @@ function acquireData(name, data, pic) {
 
     var sql = 'replace INTO laifeng (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES (?,?,?,?,?,?,?,?,?)';
     if (data.length == 0) {
+        isMainFinish = true;
         return console.log('没有数据了');
     }
     for (var i = 0; i < name.length; i++) {
@@ -122,19 +124,23 @@ myEvents.on('getFans', function (room_id) {
         }
         var fans = 0;
         try {
-            var $ = cheerio.load(body);
-            //fans = $('.js_followNum').toArray();
-            fans = $("head title");//.toArray()["0"].children["0"].data;
+            var face = body.substring(body.indexOf('anchorFaceUrl') + 14, body.indexOf('anchorFansNum')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+            fans = body.substring(body.indexOf('FansNum:') + 8, body.indexOf('anchorHadBeans')).trim().replace(/,$/, "");
+            var userId = body.substring(body.indexOf('userId:') + 7, body.indexOf('userName')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+            var owner_uid = body.substring(body.indexOf('anchorId:') + 9, body.indexOf('isGold')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+            var nickname = body.substring(body.indexOf('anchorName:') + 11, body.indexOf('anchorLevel')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+            var tag = body.substring(body.lastIndexOf('anchorSign:') + 11, body.lastIndexOf('gender')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+
         } catch (e) {
             console.log(e + "----net---");
         }
-        myEvents.emit('updateInfo', fans, room_id);
+        myEvents.emit('updateInfo', fans, face, userId, owner_uid, nickname, tag, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (fans, room_id) {
-    var sql = 'UPDATE laifeng SET fans = ? WHERE room_id = ?';
-    var parms = [fans, room_id];
+myEvents.on('updateInfo', function (fans, face, userId, owner_uid, nickname, tag, room_id) {
+    var sql = 'UPDATE laifeng SET fans = ?,face = ?,userId = ?,owner_uid = ?,nickname = ?, tag = ? WHERE room_id = ?';
+    var parms = [fans, face, userId, owner_uid, nickname, tag, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
             console.log(err + "---sql---");

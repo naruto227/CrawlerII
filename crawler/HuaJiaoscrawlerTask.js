@@ -163,22 +163,22 @@ exports.getHLive = function () {
 
 function acquireData(room_id, username, tag, face) {
     //room_id[i].attribs.href.substring(3)
-    var sql = 'replace INTO huajiao (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES (?,?,?,?,?,?,?,?,?)';
+    var sql = 'replace INTO huajiao (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES (?,?,?,?,?,?,?,?)';
     if (username.length == 0) {
         return console.log('没有数据了');
     }
     for (var i = 0; i < username.length; i++) {
-        var room_id = 0;
+        var room_id1 = 0;
         var nickname = username[i].children["0"].data;
-        var face = 0;
+        var face1 = '';
         try {
             var href = room_id[i].attribs.href;
-            room_id = href.substring(3);
-            face = face[i].attribs.src;
+            room_id1 = href.substring(3);
+            face1 = face[i].children["0"].attribs.src;
         } catch (e) {
             console.log(room_id[i]);
         }
-        var params = [room_id, 0, 0, nickname, 0, 0, tag, face];
+        var params = [room_id1, 0, 0, nickname, 0, 0, tag, face1];
         conn.query(sql, params, function (err, result) {
             if (err) {
                 return console.log(err);
@@ -228,8 +228,8 @@ myEvents.on('update', function (room_id) {
             try {
                 var $ = cheerio.load(body);
                 var room_name = $('head title').toArray();
-                var fans = $('.fans').toArray();
-                var numOfFun = parse.data.numOfFun;
+                
+                
                 myEvents.emit('updateTable', numOfFun, room_id);
             } catch (e) {
                 console.log(e)

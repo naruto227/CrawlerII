@@ -1,497 +1,1487 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>
+<html class="ie oldie ie6" lang="zh"><![endif]-->
+<!--[if IE 7]>
+<html class="ie oldie ie7" lang="zh"><![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh"><![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9" lang="zh"><![endif]-->
+<!--[if gt IE 10]><!-->
+<html lang="zh">
+<!--<![endif]-->
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>沈漫雨正在直播,ta的花椒id:23736931,快来关注吧 - 花椒直播,美颜直播,疯狂卖萌</title>
+    <meta property="qc:admins" content="2450377506605121176375"/>
+    <link rel="icon" href="http://p7.qhimg.com/d/inn/e95686a7/favicon-32x32.png"/>
     <meta name="renderer" content="webkit">
-    <meta name="title" content="游戏报道的直播频道-来疯-互联网最火的视频直播生活秀平台" />
-    <meta name="keywords" content="来疯，星梦，直播，视频直播, 视频聊天, 视频社交,美女播客, 美女视频, 美女直播，真人直播秀，秀场，视频生活秀，生活秀，在线视频交友，粉丝互动，一起来疯，来疯唱，来疯跳，来疯玩，来疯说" />
-    <meta name="description" content="来疯是中国互联网最火的视频直播平台，提供丰富精彩的视频真人生活秀。支持数万人同时在线视频直播、聊天、交友、速度流畅不卡，美女帅哥播客任你看。快来加入，一起来疯吧！" />
-    <link rel="Short Icon" href="http://static.youku.com/ddshow/img/laifeng/icon/favicon.ico"/>
-    <title>游戏报道的直播频道-来疯-互联网最火的视频直播生活秀平台</title>
-    <script type="text/javascript">
-        window.IMS = {
-            clientId:'',
-            token:'',
-            count : '0'
-        }
-    </script>
-    <script type="text/javascript">
-        window.INFO = {
-            isLogin: false
-        }
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="沈漫雨,花椒直播,美颜直播,疯狂卖萌">
+    <meta name="description" content="【沈漫雨】在花椒直播，与众多网友等进行零距离的互动交流。大家都玩的很开心！">
 
-        //ie的websocket
-        window.WEB_SOCKET_SWF_LOCATION = 'http://static.youku.com/ddshow/874eeba1/flash/WebSocketMainInsecure.swf?_t='+new Date().getTime();
-        window.CARD_USERID = '';
+
+    <link type="text/css" rel="stylesheet"
+          href="http://s3.qhimg.com/static/e243569df38dff3e,384afd78dcc8fad1,79ce5f78efb7b095.css"/>
+
+
+    <link type="text/css" rel="stylesheet" href="http://s6.qhimg.com/static/a15dc55c2dd05b88,733f99e3b4028d8b.css"/>
+
+
+    <script>
+        var HJ_JS_CONF = window.HJ_JS_CONF || {};
+        HJ_JS_CONF.hdType = '1080p';
+        HJ_JS_CONF.apiConf = {
+            "login_api": {"getLoginUserInfo": "http:\/\/webh.huajiao.com\/user\/getLoginUserInfo"},
+            "follow_api": "http:\/\/www.huajiao.com\/follow\/"
+        };
     </script>
-    <link rel="stylesheet" type="text/css" href="http://static.youku.com/ddshow/874eeba1/livehouse/css/livehouse_v2-sms-min.css"/>
-    <script src="http://static.youku.com/v7.10/paycenter/js/cps.js"></script>
-    <script type="text/javascript" src="http://static.youku.com/ddshow/874eeba1/seajs/lib-sms-min.js"></script>
-    <script type="text/javascript">
-        window.DDS = {
-        };
-        //基本信息
-        DDS.baseInfo = {
-            host:'http://dispatcher.notify.laifeng.com',
-            token:'OTVjMGQwNmY3ZjJiNDYxMmExNDhlNTY0MGZmY2MzYmQtMC0xNDY1ODA5NjIwNDQ3LTEwMDA=-AE3F6050DB04C39B00BB3924547100C4',
-            roomId:'357',
-            serialId:'2186275',
-            chatRate:'5',
-            payUrl:'http://zhifu.laifeng.com',
-            isSuperManager:false,
-            isShowing:false
-        };
-        //用户信息
-        DDS.userInfo = {
-            userId:'1757953853',
-            isGold:'',
-            userName:'游客1757953853',
-            identity:'0',
-            coins:0,
-            isBanSpeak:'0',
-            isKickOut:'0',
-            isRoomBanSpeak:'0',
-            isRoomKickOut:'0',
-            isRoomKickOutMsg:'',
-            isFan:'false',
-            faceUrl:'http://m1.ykimg.com/0A02000015398E800587D4AB68BDB638',
-            sendCoins:0,
-            userLevel:0,
-            isAttention:false,
-            gender:0,
-            isRecharge:'0',
-            differCoin:'0',
-            mBindSkip :  true         };
-        //播客信息
-        DDS.anchorInfo = {
-            anchorId:'805602500',
-            anchorName:'游戏报道',
-            anchorLevel:'5',
-            anchorFaceUrl:'http://r2.ykimg.com/051000005602A48567BC3D02430CA27F',
-            anchorFansNum:482,
-            anchorHadBeans:945200,
-            anchorNeedBeans:54800,
-            anchorStarNum:6111,
-            anchorSign:'直播时间16:00，喜欢节目的宝宝点关注啦~',
-            coverUrl:'http://m1.ykimg.com/0A0200001554309572EC37691C2BE6DB',
-            posterPic:'http://static.youku.com/ddshow/img/room/test.png',
-            showOrder:'1',
-            dataCps:{
-                weibo:'http://cps.laifeng.com/redirect.html?id=0000a252',
-                qq:'http://cps.laifeng.com/redirect.html?id=0000a250',
-                zone:'http://cps.laifeng.com/redirect.html?id=0000a251'
-            }
-        };
-        //表情字典
-        DDS.expressions={"common":[{"id":123,"tag":"[亲亲]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo24.png"},{"id":122,"tag":"[害羞]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo23.png"},{"id":121,"tag":"[痛苦]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo22.png"},{"id":120,"tag":"[无奈]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo21.png"},{"id":119,"tag":"[美满]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo20.png"},{"id":118,"tag":"[瞪眼]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo19.png"},{"id":117,"tag":"[呲牙]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo18.png"},{"id":116,"tag":"[开怀]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo17.png"},{"id":115,"tag":"[哀伤]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo16.png"},{"id":114,"tag":"[偷笑]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo15.png"},{"id":113,"tag":"[愤怒]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo14.png"},{"id":112,"tag":"[大哭]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo13.png"},{"id":111,"tag":"[傻笑]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo12.png"},{"id":109,"tag":"[爱你]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo11.png"},{"id":108,"tag":"[尴尬]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo10.png"},{"id":107,"tag":"[幸福]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo9.png"},{"id":106,"tag":"[哭]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo8.png"},{"id":105,"tag":"[悲伤]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo7.png"},{"id":104,"tag":"[坏笑]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo6.png"},{"id":103,"tag":"[汗]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo5.png"},{"id":102,"tag":"[开心]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo4.png"},{"id":101,"tag":"[歪嘴]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo3.png"},{"id":100,"tag":"[鬼脸]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo2.png"},{"id":99,"tag":"[微笑]","url":"http://static.youku.com/ddshow/img/emoticons/30/emo1.png"}],"guizu":[{"id":158,"tag":"[在这儿]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/18.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/18.gif","limitLevel":10},{"id":157,"tag":"[专属幸福]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/17.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/17.gif","limitLevel":10},{"id":156,"tag":"[笑死]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/16.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/16.gif","limitLevel":10},{"id":155,"tag":"[色]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/15.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/15.gif","limitLevel":10},{"id":154,"tag":"[求你]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/14.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/14.gif","limitLevel":10},{"id":153,"tag":"[求谅解]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/13.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/13.gif","limitLevel":10},{"id":152,"tag":"[专属亲亲]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/12.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/12.gif","limitLevel":10},{"id":151,"tag":"[欺负人]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/11.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/11.gif","limitLevel":10},{"id":150,"tag":"[怒]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/10.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/10.gif","limitLevel":10},{"id":149,"tag":"[抠鼻子]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/9.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/9.gif","limitLevel":10},{"id":148,"tag":"[可怜]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/8.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/8.gif","limitLevel":10},{"id":147,"tag":"[看呆了]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/7.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/7.gif","limitLevel":10},{"id":146,"tag":"[贱]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/6.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/6.gif","limitLevel":10},{"id":145,"tag":"[鼓掌]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/5.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/5.gif","limitLevel":10},{"id":144,"tag":"[专属尴尬]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/4.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/4.gif","limitLevel":10},{"id":143,"tag":"[大笑]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/3.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/3.gif","limitLevel":10},{"id":142,"tag":"[打招呼]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/2.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/2.gif","limitLevel":10},{"id":141,"tag":"[悲剧]","url":"http://static.youku.com/ddshow/img/emoticons/guizu/png/1.png","showUrl":"http://static.youku.com/ddshow/img/emoticons/guizu/gifv2/1.gif","limitLevel":10}],"patronsaint":[{"id":127,"tag":"[好钟意你]","url":"http://static.youku.com/ddshow/img/emoticons/dynamic/04.gif"},{"id":126,"tag":"[卖个萌]","url":"http://static.youku.com/ddshow/img/emoticons/dynamic/03.gif"},{"id":125,"tag":"[不送礼物]","url":"http://static.youku.com/ddshow/img/emoticons/dynamic/02.gif"},{"id":124,"tag":"[哟哟]","url":"http://static.youku.com/ddshow/img/emoticons/dynamic/01.gif"}]};
-        //礼物字典
-        DDS.gift = {"1":{"id":1,"name":"鲜花","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/rose1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/rose1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/rose1_24_24.png","gificon":"null","type":1,"desc":"连送2组188，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"2":{"id":2,"name":"喜欢","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/redheart1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/redheart1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/redheart1_24_24.png","gificon":"null","type":1,"desc":"连送2组188，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"5":{"id":5,"name":"啤酒","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/beer1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/beer1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/beer1_24_24.png","gificon":"null","type":1,"desc":"连送2组188，触发1星特效","isTop":true,"isLucky":false,"isEvent":false},"6":{"id":6,"name":"荧光棒","value":100,"bigicon":"http://static.youku.com/ddshow/img/giftnew/lightstick1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/lightstick1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/lightstick1_24_24.png","gificon":"null","type":1,"desc":"连送2组188，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"7":{"id":7,"name":"心心相印","value":300,"bigicon":"http://static.youku.com/ddshow/img/lfgift/xxxy5_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/xxxy5_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/xxxy5_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/xxxy5_80_80.png","type":1,"desc":"连送2组188，触发2星特效","isTop":false,"isLucky":false,"isEvent":false},"8":{"id":8,"name":"浪漫花束","value":900,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lmfs5_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lmfs5_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lmfs5_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lmfs5_80_80.png","type":1,"desc":"连送2组188，触发3星特效","isTop":false,"isLucky":false,"isEvent":false},"10":{"id":10,"name":"鲁能队徽","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ln_badge_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ln_badge_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ln_badge_24_24.png","gificon":null,"type":1,"desc":"鲁能队徽","isTop":false,"isLucky":false,"isEvent":false},"12":{"id":12,"name":"大牌麦克风","value":10000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/goldmic1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/goldmic1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/goldmic1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/goldmic1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"13":{"id":13,"name":"璀璨烟花","value":50000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/fireworks_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/fireworks_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/fireworks_24_24.png","gificon":"http://static.youku.com/ddshow/img/giftnew/fireworks_80_80.png","type":2,"desc":"璀璨烟花","isTop":false,"isLucky":false,"isEvent":false},"14":{"id":14,"name":"花园别墅","value":80000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/villa1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/villa1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/villa1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/villa1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"15":{"id":15,"name":"尊贵跑车","value":60000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/racingcar1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/racingcar1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/racingcar_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/racingcar1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"16":{"id":16,"name":"私人飞机","value":100000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/plain1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/plain1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/plain1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/plain1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"17":{"id":17,"name":"幸运礼物","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lucky1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lucky1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lucky1_24_24.png","gificon":"null","type":1,"desc":"新增1888倍超级大奖，播客可得80星豆","isTop":false,"isLucky":true,"isEvent":false},"20":{"id":20,"name":"抱一抱","value":2000,"bigicon":"http://static.youku.com/ddshow/img/v4/hug_hug.png","middleicon":"http://static.youku.com/ddshow/img/v4/hug_hug.png","smallicon":"http://static.youku.com/ddshow/img/v4/hug_hug.png","gificon":null,"type":2,"desc":"抱一抱","isTop":false,"isLucky":false,"isEvent":false},"21":{"id":21,"name":"情人戒指","value":100,"bigicon":"http://static.youku.com/ddshow/img/giftnew/ring1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/ring1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/ring1_24_24.png","gificon":"null","type":1,"desc":"连送2组188，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"22":{"id":22,"name":"pogo","value":100,"bigicon":"http://static.youku.com/ddshow/img/giftnew/pogo_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/pogo_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/pogo_24_24.png","gificon":null,"type":1,"desc":"pogo","isTop":false,"isLucky":false,"isEvent":false},"23":{"id":23,"name":"迷笛","value":100,"bigicon":"http://static.youku.com/ddshow/img/giftnew/midi_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/midi_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/midi_24_24.png","gificon":null,"type":1,"desc":"迷笛","isTop":false,"isLucky":false,"isEvent":false},"24":{"id":24,"name":"打火机","value":100,"bigicon":"http://static.youku.com/ddshow/img/giftnew/highter_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/highter_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/highter_24_24.png","gificon":null,"type":1,"desc":"打火机","isTop":false,"isLucky":false,"isEvent":false},"26":{"id":26,"name":"浪漫烟花","value":10000,"bigicon":"http://static.youku.com/ddshow/img/giftnew/lmyh_80_80.png","middleicon":"http://static.youku.com/ddshow/img/giftnew/lmyh_80_80.png","smallicon":"http://static.youku.com/ddshow/img/giftnew/lmyh_24_24.png","gificon":null,"type":1,"desc":"浪漫烟花","isTop":false,"isLucky":false,"isEvent":false},"31":{"id":31,"name":"女神驾到","value":500000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/nvsheng1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/nvsheng1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/nvsheng1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/nvsheng1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"801":{"id":801,"name":"小太阳","value":1000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/801_gift_80_80_20150925114455.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/801_gift_80_80_20150925114455.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/801_gift_24_24_20150925114455.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/801_gift_80_80_20150925114455.png","type":1,"desc":"一部分星币累计到小金库，可用于发红包，播客可得500星豆","isTop":false,"isLucky":false,"isEvent":false},"34":{"id":34,"name":"好运连连鲤","value":10000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/carp_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/carp_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/carp_24_24.png","gificon":null,"type":2,"desc":"好运连连鲤","isTop":false,"isLucky":false,"isEvent":false},"35":{"id":35,"name":"国安队徽","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ga_gadge1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ga_gadge1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ga_gadge1_24_24.png","gificon":null,"type":1,"desc":"国安队徽","isTop":false,"isLucky":false,"isEvent":false},"36":{"id":36,"name":"国安牛逼","value":20000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ga_nb1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ga_nb1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ga_nb1_24_24.png","gificon":null,"type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"37":{"id":37,"name":"国安是冠军","value":50000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ga_no11_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ga_no11_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ga_no11_24_24.png","gificon":null,"type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"38":{"id":38,"name":"国安臭脚","value":20000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ga_rubbish1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ga_rubbish1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ga_rubbish1_24_24.png","gificon":null,"type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"807":{"id":807,"name":"端午粽子","value":200,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/807_gift_80_80_20160607173202.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/807_gift_80_80_20160607173202.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/807_gift_24_24_20160607173202.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/807_gift_80_80_20160607173202.png","type":1,"desc":"端午节礼物","isTop":false,"isLucky":false,"isEvent":false},"39":{"id":39,"name":"土豆音乐君","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/yx_yinyuejun_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/yx_yinyuejun_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/yx_yinyuejun_24_24.png","gificon":null,"type":2,"desc":"土豆音乐君","isTop":false,"isLucky":false,"isEvent":false},"42":{"id":42,"name":"大笑","value":3000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sound_laugh1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sound_laugh1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sound_laugh1_24_24.png","gificon":null,"type":3,"desc":"声效礼物","isTop":false,"isLucky":false,"isEvent":false},"43":{"id":43,"name":"鼓掌","value":3000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sound_clap1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sound_clap1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sound_clap1_24_24.png","gificon":null,"type":3,"desc":"声效礼物","isTop":false,"isLucky":false,"isEvent":false},"44":{"id":44,"name":"欢呼","value":2000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sound_cheer1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sound_cheer1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sound_cheer_24_24.png","gificon":null,"type":3,"desc":"声效礼物","isTop":false,"isLucky":false,"isEvent":false},"45":{"id":45,"name":"尖叫","value":2000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sound_cry1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sound_cry1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sound_cry1_24_24.png","gificon":null,"type":3,"desc":"声效礼物","isTop":false,"isLucky":false,"isEvent":false},"46":{"id":46,"name":"祝贺","value":5000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sound_cong1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sound_cong1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sound_cong1_24_24.png","gificon":null,"type":3,"desc":"声效礼物","isTop":false,"isLucky":false,"isEvent":false},"47":{"id":47,"name":"气球","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/qiqiu_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/qiqiu_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/qiqiu_24_24.png","gificon":null,"type":1,"desc":"气球","isTop":false,"isLucky":false,"isEvent":false},"48":{"id":48,"name":"纸飞机","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/zhifeiji_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/zhifeiji_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/zhifeiji_24_24.png","gificon":null,"type":1,"desc":"纸飞机","isTop":false,"isLucky":false,"isEvent":false},"49":{"id":49,"name":"为你心动","value":300000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lmqa1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lmqa1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lmqa1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/lmqa1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"50":{"id":50,"name":"甜蜜约会","value":200000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/qlzm1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/qlzm1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/qlzm1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/qlzm1_48_48.gif","type":2,"desc":"","isTop":true,"isLucky":false,"isEvent":false},"51":{"id":51,"name":"甜蜜骑行","value":150000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/tmqx1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/tmqx1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/tmqx1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/tmqx1_48_48.gif","type":2,"desc":"","isTop":true,"isLucky":false,"isEvent":false},"52":{"id":52,"name":"烛光晚餐","value":80000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/zgwc1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/zgwc1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/zgwc1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/zgwc1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"53":{"id":53,"name":"幸福摩天轮","value":300000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/xfmtl2_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/xfmtl2_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/xfmtl2_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/xfmtl2_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"54":{"id":54,"name":"为你伴舞","value":120000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/wnbw1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/wnbw1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/wnbw1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/wnbw1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"55":{"id":55,"name":"蛋糕","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/cake_1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/cake_1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/cake_1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/cake_1_80_80.png","type":1,"desc":"连送2组188，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"56":{"id":56,"name":"水晶项链","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/necklace1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/necklace1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/necklace1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/necklace1_80_80.png","type":1,"desc":"连送2组99，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"57":{"id":57,"name":"六爪钻石","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/diamonds1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/diamonds1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/diamonds1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/diamonds1_80_80.png","type":1,"desc":"连送2组99，触发1星特效","isTop":false,"isLucky":false,"isEvent":false},"59":{"id":59,"name":"iphone6","value":60000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/iphone61_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/iphone61_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/iphone61_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/iphone61_80_80.png","type":2,"desc":"男爵专属礼物","isTop":true,"isLucky":false,"isEvent":false},"60":{"id":60,"name":"名牌手表","value":70000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/tuhaobiao1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/tuhaobiao1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/tuhaobiao1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/tuhaobiao1_80_80.png","type":2,"desc":"王爵专属礼物","isTop":false,"isLucky":false,"isEvent":false},"61":{"id":61,"name":"挖掘机","value":80000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/wajueji1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/wajueji1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/wajueji1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/wajueji1_80_80.png","type":2,"desc":"国王专属礼物","isTop":false,"isLucky":false,"isEvent":false},"62":{"id":62,"name":"私人岛屿","value":100000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/island1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/island1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/island_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/island1_80_80.png","type":2,"desc":"帝王专属礼物","isTop":false,"isLucky":false,"isEvent":false},"63":{"id":63,"name":"心愿纸鹤","value":45,"bigicon":"http://static.youku.com/ddshow/img/lfgift/origami_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/origami_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/origami_24_24.png","gificon":"null","type":1,"desc":"炫疯卡专属礼物","isTop":false,"isLucky":false,"isEvent":false},"64":{"id":64,"name":"点赞","value":10000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/zl_zan_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/zl_zan_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/zl_zan_24_24.png","gificon":null,"type":2,"desc":"土豆最live","isTop":false,"isLucky":false,"isEvent":false},"65":{"id":65,"name":"挥舞荧光棒","value":20000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lf_lightstick_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lf_lightstick_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lf_lightstick_24_24.png","gificon":"null","type":2,"desc":"土豆最live挥舞荧光棒","isTop":false,"isLucky":false,"isEvent":false},"66":{"id":66,"name":"最佳歌手奖","value":50000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lf_goodsinger_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lf_goodsinger_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lf_goodsinger_24_24.png","gificon":null,"type":2,"desc":"土豆最live","isTop":false,"isLucky":false,"isEvent":false},"67":{"id":67,"name":"四叶草","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/clover1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/clover1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/clover1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/clover1_80_80.png","type":1,"desc":"新增3888倍超级大奖，播客可得30星豆","isTop":false,"isLucky":true,"isEvent":false},"69":{"id":69,"name":"甜美巧克力","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/chocolates_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/chocolates_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/chocolates_24_24.png","gificon":null,"type":1,"desc":"甜美巧克力","isTop":false,"isLucky":false,"isEvent":false},"71":{"id":71,"name":"幸运魔方","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/mf1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/mf1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/mf1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/mf1_80_80.png","type":1,"desc":"新增1888倍大奖，播客可得100星豆","isTop":false,"isLucky":true,"isEvent":false},"72":{"id":72,"name":"粉红玫瑰","value":2000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pinkrose_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pinkrose_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pinkrose_24_24.png","gificon":null,"type":1,"desc":"首充活动礼物。自获得物品起240天后自动丢弃","isTop":false,"isLucky":false,"isEvent":false},"76":{"id":76,"name":"讲的好","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/edu_jdh_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/edu_jdh_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/edu_jdh_24_24.png","gificon":null,"type":1,"desc":"讲的好（教育中心）","isTop":false,"isLucky":false,"isEvent":false},"77":{"id":77,"name":"稀饭","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/edu_xf_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/edu_xf_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/edu_xf_24_24.png","gificon":null,"type":1,"desc":"稀饭（教育中心）","isTop":false,"isLucky":false,"isEvent":false},"78":{"id":78,"name":"来杯水吧","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/edu_lbs_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/edu_lbs_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/edu_lbs_24_24.png","gificon":null,"type":1,"desc":"来杯水吧(教育中心)","isTop":false,"isLucky":false,"isEvent":false},"79":{"id":79,"name":"捅一捅","value":5000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/edu_tyit_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/edu_tyit_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/edu_tyit_24_24.png","gificon":null,"type":1,"desc":"捅一捅(教育中心)","isTop":false,"isLucky":false,"isEvent":false},"83":{"id":83,"name":"鲁能臭脚","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ln_rubbish_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ln_rubbish_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ln_rubbish_24_24.png","gificon":null,"type":2,"desc":"鲁能臭脚","isTop":false,"isLucky":false,"isEvent":false},"84":{"id":84,"name":"泰山不倒","value":5000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ln_ts_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ln_ts_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ln_ts_24_24.png","gificon":null,"type":2,"desc":"泰山不倒","isTop":false,"isLucky":false,"isEvent":false},"85":{"id":85,"name":"鲁能是冠军","value":10000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ln_no1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ln_no1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ln_no1_24_24.png","gificon":null,"type":2,"desc":"鲁能是冠军","isTop":false,"isLucky":false,"isEvent":false},"87":{"id":87,"name":"飞屋环游","value":20000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lmfw1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lmfw1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lmfw1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/lmfw1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"88":{"id":88,"name":"水晶之恋","value":50000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sjzl527_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sjzl527_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sjzl527_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/sjzl527_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"89":{"id":89,"name":"紫色依恋","value":1000000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/zsyl1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/zsyl1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/zsyl1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/zsyl1_48_48.gif","type":2,"desc":"","isTop":false,"isLucky":false,"isEvent":false},"90":{"id":90,"name":"美味冰淇淋","value":300,"bigicon":"http://static.youku.com/ddshow/img/lfgift/ice_lolly_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/ice_lolly_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/ice_lolly_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/ice_lolly_80_80.png","type":1,"desc":"连送2组188，触发2星特效","isTop":true,"isLucky":false,"isEvent":false},"91":{"id":91,"name":"熊猫萌萌","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pandar_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pandar_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pandar_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pandar_80_80.png","type":1,"desc":"连送2组188，触发2星特效","isTop":false,"isLucky":false,"isEvent":false},"92":{"id":92,"name":"彩虹玫瑰","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/colorrose1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/colorrose1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/colorrose1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/colorrose1_80_80.png","type":1,"desc":"连送2组188，触发3星特效","isTop":true,"isLucky":false,"isEvent":false},"93":{"id":93,"name":"香奈儿香水","value":4000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/perfume_v1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/perfume_v1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/perfume_v1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/perfume_v1_80_80.png","type":1,"desc":"连送2组99，触发4星特效","isTop":false,"isLucky":false,"isEvent":false},"94":{"id":94,"name":"椰子树","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/wzz_yzs_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/wzz_yzs_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/wzz_yzs_24_24.png","gificon":null,"type":1,"desc":"椰子树","isTop":false,"isLucky":false,"isEvent":false},"96":{"id":96,"name":"播客B","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/nlz2_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/nlz2_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/nlz2_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/nlz2_80_80.png","type":1,"desc":"播客B(妞来战)","isTop":false,"isLucky":false,"isEvent":false},"97":{"id":97,"name":"播客A","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/nlz1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/nlz1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/nlz1_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/nlz1_80_80.png","type":1,"desc":"播客A(妞来战)","isTop":false,"isLucky":false,"isEvent":false},"98":{"id":98,"name":"播客C","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/bbt_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/bbt_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/bbt_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/bbt_80_80.png","type":1,"desc":"播客C(妞来战)","isTop":false,"isLucky":false,"isEvent":false},"99":{"id":99,"name":"音符","value":25,"bigicon":"http://static.youku.com/ddshow/img/lfgift/app_note1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/app_note1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/app_note_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/app_note1_80_80.png","type":1,"desc":"音符","isTop":false,"isLucky":false,"isEvent":false},"100":{"id":100,"name":"西瓜","value":25,"bigicon":"http://static.youku.com/ddshow/img/lfgift/app_watermelon1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/app_watermelon1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/app_watermelon_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/app_watermelon1_80_80.png","type":1,"desc":"西瓜","isTop":false,"isLucky":false,"isEvent":false},"101":{"id":101,"name":"雪花","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/app_snowflake1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/app_snowflake1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/app_snowflake_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/app_snowflake1_80_80.png","type":1,"desc":"雪花","isTop":false,"isLucky":false,"isEvent":false},"102":{"id":102,"name":"药丸","value":200,"bigicon":"http://static.youku.com/ddshow/img/lfgift/app_pill1_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/app_pill1_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/app_pill_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/app_pill1_80_80.png","type":1,"desc":"药丸","isTop":false,"isLucky":false,"isEvent":false},"106":{"id":106,"name":"治爱","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/za_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/za_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/za_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/za_80_80.png","type":1,"desc":"治爱","isTop":false,"isLucky":false,"isEvent":false},"107":{"id":107,"name":"荔枝","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lz_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lz_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lz_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lz_80_80.png","type":1,"desc":"荔枝","isTop":false,"isLucky":false,"isEvent":false},"108":{"id":108,"name":"我们","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/we_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/we_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/we_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/we_80_80.png","type":1,"desc":"我们","isTop":false,"isLucky":false,"isEvent":false},"109":{"id":109,"name":"大黑牛","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/dhn_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/dhn_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/dhn_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/dhn_80_80.png","type":1,"desc":"大黑牛","isTop":false,"isLucky":false,"isEvent":false},"622":{"id":622,"name":"夏日比基尼","value":200,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/622_gift_80_80_20160520120126.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/622_gift_80_80_20160520120126.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/622_gift_24_24_20160520120126.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/622_gift_80_80_20160520120126.png","type":1,"desc":"音乐陪你去旅行活动礼物","isTop":false,"isLucky":false,"isEvent":true},"110":{"id":110,"name":"龙袍","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lp_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lp_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lp_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lp_80_80.png","type":1,"desc":"龙袍","isTop":false,"isLucky":false,"isEvent":false},"623":{"id":623,"name":"藏宝图","value":200,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/623_gift_80_80_20160531110202.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/623_gift_80_80_20160531110202.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/623_gift_24_24_20160531110202.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/623_gift_80_80_20160531110202.png","type":1,"desc":"夺宝联盟活动礼物","isTop":false,"isLucky":false,"isEvent":true},"111":{"id":111,"name":"天使心","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sh_pt_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sh_pt_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sh_pt_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/sh_pt_80_80.png","type":1,"desc":"守护专属礼物","isTop":false,"isLucky":false,"isEvent":false},"112":{"id":112,"name":"一见钟情","value":200000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/sh_yjzq_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/sh_yjzq_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/sh_yjzq_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/sh_yjzq_48_48.gif","type":2,"desc":"守护专属礼物","isTop":false,"isLucky":false,"isEvent":false},"113":{"id":113,"name":"高尔夫R-line","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/r_line_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/r_line_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/r_line_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/r_line_80_80.png","type":1,"desc":"高尔夫R-line","isTop":false,"isLucky":false,"isEvent":false},"114":{"id":114,"name":"小鱼干","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_yg_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_yg_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_yg_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_yg_80_80.png","type":1,"desc":"小鱼干","isTop":false,"isLucky":false,"isEvent":false},"115":{"id":115,"name":"铃铛","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_ld_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_ld_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_ld_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_ld_80_80.png","type":1,"desc":"铃铛","isTop":false,"isLucky":false,"isEvent":false},"116":{"id":116,"name":"肉骨头","value":100,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_gt_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_gt_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_gt_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_gt_80_80.png","type":1,"desc":"肉骨头","isTop":false,"isLucky":false,"isEvent":false},"117":{"id":117,"name":"妙鲜包","value":900,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_mbx_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_mbx_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_mbx_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_mbx_80_80.png","type":1,"desc":"妙鲜包","isTop":false,"isLucky":false,"isEvent":false},"120":{"id":120,"name":"牛奶","value":500,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_milk_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_milk_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_milk_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_milk_80_80.png","type":1,"desc":"牛奶","isTop":false,"isLucky":false,"isEvent":false},"121":{"id":121,"name":"铲屎神器","value":1000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_csg_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_csg_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_csg_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_csg_80_80.png","type":1,"desc":"铲屎神器","isTop":false,"isLucky":false,"isEvent":false},"122":{"id":122,"name":"亲亲蹭蹭","value":10000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_cencen2_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_cencen2_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_cencen1_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/pet_cencen_48x48.gif","type":2,"desc":"亲亲蹭蹭","isTop":false,"isLucky":false,"isEvent":false},"123":{"id":123,"name":"超级豆豆","value":5000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_superdd_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_superdd_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_superdd_24_24.png","gificon":"http://static.youku.com/ddshow/img/gift_gif/pet_supperdd_48_48.gif","type":2,"desc":"超级豆豆","isTop":false,"isLucky":false,"isEvent":false},"124":{"id":124,"name":"激光棒 ","value":300,"bigicon":"http://static.youku.com/ddshow/img/lfgift/pet_jgb_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/pet_jgb_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/pet_jgb_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/pet_jgb_80_80.png","type":1,"desc":"激光棒","isTop":false,"isLucky":false,"isEvent":false},"125":{"id":125,"name":"鹿角头饰","value":4000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lh_head_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lh_head_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lh_head_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lh_head_80_80.png","type":1,"desc":"鹿角头饰","isTop":false,"isLucky":false,"isEvent":false},"126":{"id":126,"name":"鹿角灯牌","value":10000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lh_d_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lh_d_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lh_d_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lh_d_80_80.png","type":1,"desc":"鹿角灯牌","isTop":false,"isLucky":false,"isEvent":false},"127":{"id":127,"name":"终身红魔","value":50000,"bigicon":"http://static.youku.com/ddshow/img/lfgift/lh_h_80_80.png","middleicon":"http://static.youku.com/ddshow/img/lfgift/lh_h_80_80.png","smallicon":"http://static.youku.com/ddshow/img/lfgift/lh_h_24_24.png","gificon":"http://static.youku.com/ddshow/img/lfgift/lh_h_80_80.png","type":1,"desc":"终身红魔","isTop":false,"isLucky":false,"isEvent":false},"901":{"id":901,"name":"坨坨君","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/901_gift_80_80_20160406172703.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/901_gift_80_80_20160406172703.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/901_gift_24_24_20160406172703.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/901_gift_80_80_20160406172703.png","type":1,"desc":"坨坨君","isTop":false,"isLucky":false,"isEvent":false},"902":{"id":902,"name":"去污粉","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/902_gift_80_80_20160406172744.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/902_gift_80_80_20160406172744.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/902_gift_24_24_20160406172744.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/902_gift_80_80_20160406172744.png","type":1,"desc":"去污粉","isTop":false,"isLucky":false,"isEvent":false},"903":{"id":903,"name":"花束","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/903_gift_80_80_20160406172827.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/903_gift_80_80_20160406172827.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/903_gift_24_24_20160406172827.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/903_gift_80_80_20160406172827.png","type":1,"desc":"花束","isTop":false,"isLucky":false,"isEvent":false},"905":{"id":905,"name":"猴赛雷","value":300,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/905_gift_80_80_20160406173009.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/905_gift_80_80_20160406173009.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/905_gift_24_24_20160406173009.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/905_gift_80_80_20160406173009.png","type":1,"desc":"猴赛雷","isTop":false,"isLucky":false,"isEvent":false},"906":{"id":906,"name":"你好棒","value":1000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/906_gift_80_80_20160406173044.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/906_gift_80_80_20160406173044.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/906_gift_24_24_20160406173044.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/906_gift_80_80_20160406173044.png","type":1,"desc":"你好棒","isTop":false,"isLucky":false,"isEvent":false},"907":{"id":907,"name":"小公举","value":5000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/907_gift_80_80_20160406173130.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/907_gift_80_80_20160406173130.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/907_gift_24_24_20160406173130.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/907_gift_80_80_20160406173130.png","type":1,"desc":"小公举","isTop":false,"isLucky":false,"isEvent":false},"908":{"id":908,"name":"抱抱","value":10000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/908_gift_80_80_20160406173200.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/908_gift_80_80_20160406173200.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/908_gift_24_24_20160406173200.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/908_gift_80_80_20160406173200.png","type":1,"desc":"抱抱","isTop":false,"isLucky":false,"isEvent":false},"909":{"id":909,"name":"玫瑰","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/909_gift_80_80_20160523160712.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/909_gift_80_80_20160523160712.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/909_gift_24_24_20160523160712.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/909_gift_80_80_20160523160712.png","type":1,"desc":"玫瑰","isTop":false,"isLucky":false,"isEvent":false},"910":{"id":910,"name":"胡萝卜","value":300,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/910_gift_80_80_20160523160639.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/910_gift_80_80_20160523160639.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/910_gift_24_24_20160523160639.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/910_gift_80_80_20160523160639.png","type":1,"desc":"胡萝卜","isTop":false,"isLucky":false,"isEvent":false},"911":{"id":911,"name":"香蕉","value":300,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/911_gift_80_80_20160523161456.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/911_gift_80_80_20160523161456.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/911_gift_24_24_20160523161456.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/911_gift_80_80_20160523161456.png","type":1,"desc":"香蕉","isTop":false,"isLucky":false,"isEvent":false},"912":{"id":912,"name":"吻","value":1000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/912_gift_80_80_20160523161620.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/912_gift_80_80_20160523161620.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/912_gift_24_24_20160523161620.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/912_gift_80_80_20160523161620.png","type":1,"desc":"吻","isTop":false,"isLucky":false,"isEvent":false},"913":{"id":913,"name":"香水","value":5000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/913_gift_80_80_20160523163416.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/913_gift_80_80_20160523163416.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/913_gift_24_24_20160523163416.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/913_gift_80_80_20160523163416.png","type":1,"desc":"香水","isTop":false,"isLucky":false,"isEvent":false},"914":{"id":914,"name":"水晶鞋","value":10000,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/914_gift_80_80_20160523162944.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/914_gift_80_80_20160523162944.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/914_gift_24_24_20160523162944.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/914_gift_80_80_20160523162944.png","type":1,"desc":"水晶鞋","isTop":false,"isLucky":false,"isEvent":false},"916":{"id":916,"name":"端午粽子","value":200,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/916_gift_80_80_20160607173112.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/916_gift_80_80_20160607173112.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/916_gift_24_24_20160607173112.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/916_gift_80_80_20160607173112.png","type":1,"desc":"端午节礼物","isTop":false,"isLucky":false,"isEvent":false},"701":{"id":701,"name":"梦想基金S","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/701_gift_80_80_20160111173158.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/701_gift_80_80_20160111173158.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/701_gift_24_24_20160111173158.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/701_gift_80_80_20160111173158.png","type":1,"desc":"S队梦想基金","isTop":false,"isLucky":false,"isEvent":false},"702":{"id":702,"name":"梦想基金N","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/702_gift_80_80_20160111173228.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/702_gift_80_80_20160111173228.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/702_gift_24_24_20160111173228.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/702_gift_80_80_20160111173228.png","type":1,"desc":"N队梦想基金","isTop":false,"isLucky":false,"isEvent":false},"703":{"id":703,"name":"梦想基金H","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/703_gift_80_80_20160111173243.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/703_gift_80_80_20160111173243.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/703_gift_24_24_20160111173243.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/703_gift_80_80_20160111173243.png","type":1,"desc":"H队梦想基金","isTop":false,"isLucky":false,"isEvent":false},"704":{"id":704,"name":"Rose","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/704_gift_80_80_20160412174710.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/704_gift_80_80_20160412174710.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/704_gift_24_24_20160412174710.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/704_gift_80_80_20160412174710.png","type":1,"desc":"Rose","isTop":false,"isLucky":false,"isEvent":false},"705":{"id":705,"name":"精灵魔法棒","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/705_gift_80_80_20160412174804.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/705_gift_80_80_20160412174804.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/705_gift_24_24_20160412174804.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/705_gift_80_80_20160412174804.png","type":1,"desc":"精灵魔法棒","isTop":false,"isLucky":false,"isEvent":false},"706":{"id":706,"name":"女神皇冠","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/706_gift_80_80_20160412174948.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/706_gift_80_80_20160412174948.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/706_gift_24_24_20160412174948.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/706_gift_80_80_20160412174948.png","type":1,"desc":"女神皇冠","isTop":false,"isLucky":false,"isEvent":false},"707":{"id":707,"name":"香蕉","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/707_gift_80_80_20160412174935.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/707_gift_80_80_20160412174935.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/707_gift_24_24_20160412174935.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/707_gift_80_80_20160412174935.png","type":1,"desc":"香蕉","isTop":false,"isLucky":false,"isEvent":false},"708":{"id":708,"name":"香蕉皮","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/708_gift_80_80_20160412175106.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/708_gift_80_80_20160412175106.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/708_gift_24_24_20160412175106.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/708_gift_80_80_20160412175106.png","type":1,"desc":"香蕉皮","isTop":false,"isLucky":false,"isEvent":false},"709":{"id":709,"name":"钻戒","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/709_gift_80_80_20160412175135.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/709_gift_80_80_20160412175135.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/709_gift_24_24_20160412175135.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/709_gift_80_80_20160412175135.png","type":1,"desc":"钻戒","isTop":false,"isLucky":false,"isEvent":false},"710":{"id":710,"name":"皇冠","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/710_gift_80_80_20160412175335.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/710_gift_80_80_20160412175335.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/710_gift_24_24_20160412175335.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/710_gift_80_80_20160412175335.png","type":1,"desc":"皇冠","isTop":false,"isLucky":false,"isEvent":false},"711":{"id":711,"name":"破鸡蛋","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/711_gift_80_80_20160412180243.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/711_gift_80_80_20160412180243.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/711_gift_24_24_20160412180243.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/711_gift_80_80_20160412180243.png","type":1,"desc":"破鸡蛋","isTop":false,"isLucky":false,"isEvent":false},"712":{"id":712,"name":"权杖","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/712_gift_80_80_20160412180311.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/712_gift_80_80_20160412180311.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/712_gift_24_24_20160412180311.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/712_gift_80_80_20160412180311.png","type":1,"desc":"权杖","isTop":false,"isLucky":false,"isEvent":false},"713":{"id":713,"name":"恶搞香蕉","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/713_gift_80_80_20160412180339.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/713_gift_80_80_20160412180339.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/713_gift_24_24_20160412180339.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/713_gift_80_80_20160412180339.png","type":1,"desc":"恶搞香蕉","isTop":false,"isLucky":false,"isEvent":false},"714":{"id":714,"name":"音乐盒","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/714_gift_80_80_20160412180542.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/714_gift_80_80_20160412180542.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/714_gift_24_24_20160412180542.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/714_gift_80_80_20160412180542.png","type":1,"desc":"音乐盒","isTop":false,"isLucky":false,"isEvent":false},"715":{"id":715,"name":"吹风机","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/715_gift_80_80_20160412180918.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/715_gift_80_80_20160412180918.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/715_gift_24_24_20160412180918.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/715_gift_80_80_20160412180918.png","type":1,"desc":"吹风机","isTop":false,"isLucky":false,"isEvent":false},"716":{"id":716,"name":"唇印","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/716_gift_80_80_20160412180848.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/716_gift_80_80_20160412180848.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/716_gift_24_24_20160412180848.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/716_gift_80_80_20160412180848.png","type":1,"desc":"唇印","isTop":false,"isLucky":false,"isEvent":false},"717":{"id":717,"name":"高跟鞋","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/717_gift_80_80_20160412180742.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/717_gift_80_80_20160412180742.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/717_gift_24_24_20160412180742.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/717_gift_80_80_20160412180742.png","type":1,"desc":"高跟鞋","isTop":false,"isLucky":false,"isEvent":false},"718":{"id":718,"name":"化妆刷","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/718_gift_80_80_20160412180951.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/718_gift_80_80_20160412180951.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/718_gift_24_24_20160412180951.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/718_gift_80_80_20160412180951.png","type":1,"desc":"化妆刷","isTop":false,"isLucky":false,"isEvent":false},"719":{"id":719,"name":"什么鬼","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/719_gift_80_80_20160412181015.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/719_gift_80_80_20160412181015.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/719_gift_24_24_20160412181015.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/719_gift_80_80_20160412181015.png","type":1,"desc":"什么鬼","isTop":false,"isLucky":false,"isEvent":false},"720":{"id":720,"name":"黄磊勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/720_gift_80_80_20160422145356.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/720_gift_80_80_20160422145356.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/720_gift_24_24_20160422145356.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/720_gift_80_80_20160422145356.png","type":1,"desc":"黄磊勋章","isTop":false,"isLucky":false,"isEvent":false},"721":{"id":721,"name":"王迅勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/721_gift_80_80_20160422145501.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/721_gift_80_80_20160422145501.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/721_gift_24_24_20160422145501.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/721_gift_80_80_20160422145501.png","type":1,"desc":"王迅勋章","isTop":false,"isLucky":false,"isEvent":false},"722":{"id":722,"name":"黄渤勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/722_gift_80_80_20160422145538.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/722_gift_80_80_20160422145538.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/722_gift_24_24_20160422145538.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/722_gift_80_80_20160422145538.png","type":1,"desc":"黄渤勋章","isTop":false,"isLucky":false,"isEvent":false},"723":{"id":723,"name":"罗志祥勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/723_gift_80_80_20160422145713.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/723_gift_80_80_20160422145713.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/723_gift_24_24_20160422145713.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/723_gift_80_80_20160422145713.png","type":1,"desc":"罗志祥勋章","isTop":false,"isLucky":false,"isEvent":false},"724":{"id":724,"name":"张艺兴勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/724_gift_80_80_20160422145933.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/724_gift_80_80_20160422145933.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/724_gift_24_24_20160422145933.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/724_gift_80_80_20160422145933.png","type":1,"desc":"张艺兴勋章","isTop":false,"isLucky":false,"isEvent":false},"725":{"id":725,"name":"孙红雷勋章","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/725_gift_80_80_20160422150223.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/725_gift_80_80_20160422150223.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/725_gift_24_24_20160422150223.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/725_gift_80_80_20160422150223.png","type":1,"desc":"孙红雷勋章","isTop":false,"isLucky":false,"isEvent":false},"726":{"id":726,"name":"许愿蜡烛","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/726_gift_80_80_20160513102531.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/726_gift_80_80_20160513102531.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/726_gift_24_24_20160513102531.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/726_gift_80_80_20160513102531.png","type":1,"desc":"许嵩30岁生日专属礼物","isTop":false,"isLucky":false,"isEvent":false},"727":{"id":727,"name":"许愿树","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/727_gift_80_80_20160513102656.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/727_gift_80_80_20160513102656.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/727_gift_24_24_20160513102656.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/727_gift_80_80_20160513102656.png","type":1,"desc":"许嵩30岁生日专属礼物","isTop":false,"isLucky":false,"isEvent":false},"728":{"id":728,"name":"生日蛋糕","value":100,"bigicon":"http://static.youku.com/ddshow/res/gift/lfgift/728_gift_80_80_20160513102745.png","middleicon":"http://static.youku.com/ddshow/res/gift/lfgift/728_gift_80_80_20160513102745.png","smallicon":"http://static.youku.com/ddshow/res/gift/lfgift/728_gift_24_24_20160513102745.png","gificon":"http://static.youku.com/ddshow/res/gift/gift_gif/728_gift_80_80_20160513102745.png","type":1,"desc":"许嵩30岁生日专属礼物","isTop":false,"isLucky":false,"isEvent":false}};
-        DDS.showList = {"1":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/rose1_24_24.png","postion":"0:0|0:0","type":"1"},"2":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/redheart1_24_24.png","postion":"0:0|0:0","type":"1"},"5":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/beer1_24_24.png","postion":"0:0|0:0","type":"1"},"6":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/lightstick1_24_24.png","postion":"0:1|0:0","type":"1"},"7":{"imgUrl":"http://static.youku.com/ddshow/img/lfgift/xxxy5_24_24.png","postion":"0:0|0:0","if_show":"1","type":"1","flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf"},"8":{"imgUrl":"http://static.youku.com/ddshow/img/lfgift/lmfs5_24_24.png","postion":"0:0|0:0","if_show":"1","type":"1","flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf"},"10":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/ln_badge_24_24.png","postion":"0:0|0:0","type":"1"},"12":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftMcPhone.swf","if_show":"1","postion":"10:60|100:100","type":"1","numX":"650","numY":"170","eScaleXY":"0.8","numDelay":"0.1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/goldmic1_80_80.png"},"13":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftWorkfire.swf","if_show":"1","postion":"40:-50|120:-50","type":"3","numX":"670","numY":"260","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/giftnew/fireworks_80_80.png"},"14":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftHome.swf","if_show":"1","postion":"150:0|150:0","type":"3","numX":"565","numY":"210","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/giftnew/villa1_80_80.png"},"15":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftCar.swf","if_show":"1","postion":"40:-50|120:-50","type":"3","numX":"640","numY":"267","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/giftnew/racingcar1_80_80.png"},"16":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPlane.swf","if_show":"1","postion":"80:-10|80:-10","type":"3","numX":"640","numY":"225","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/giftnew/plain1_80_80.png"},"17":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lucky1_24_24.png","postion":"0:0|0:0","type":"1"},"20":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftSofa.swf","if_show":"0","postion":"0:0|0:0","type":"1"},"21":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/ring1_24_24.png","postion":"0:0|0:0","type":"1"},"22":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/pogo_24_24.png","postion":"0:0|0:0","type":"1"},"23":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/midi_24_24.png","postion":"0:0|0:0","type":"1"},"24":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/giftnew/highter_24_24.png","postion":"0:0|0:0","type":"1"},"26":{"flashUrl":"http://static.youku.com/ddshow/img/flash/GiftTudouLive.swf","if_show":"1","postion":"50:0|100:0","type":"3"},"31":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPgirl.swf","if_show":"1","postion":"30:0|30:0","type":"3","numX":"680","numY":"210","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/nvsheng1_80_80.png"},"801":{},"34":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftTudouBanana.swf","if_show":"1","postion":"0:0|300:100","type":"3"},"35":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/ga_gadge1_24_24.png","postion":"0:0|0:0","type":"1"},"36":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGuoan_nb.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"37":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGuoan_no1.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"38":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGuoan_rubbish.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"807":{},"39":{"flashUrl":"http://static.youku.com/ddshow/img/flash/TdGiftYyj.swf","if_show":"1","postion":"0:0|400:0","type":"3"},"42":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftDaxiao_v2.swf","soundUrl":"http://static.youku.com/ddshow/img/sound/gift_daxiao.wav","if_show":"1","postion":"50:30|50:30","type":"3"},"43":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftGuzhang_v2.swf","soundUrl":"http://static.youku.com/ddshow/img/sound/gift_guzhang.wav","if_show":"1","postion":"50:30|50:30","type":"3"},"44":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftHuanhu_v2.swf","soundUrl":"http://static.youku.com/ddshow/img/sound/gift_huanhu.mp3","if_show":"1","postion":"50:30|50:30","type":"3"},"45":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftJianjiao_v2.swf","soundUrl":"http://static.youku.com/ddshow/img/sound/gift_jianjiao.mp3","if_show":"1","postion":"50:30|50:30","type":"3"},"46":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftZhuhe_v2.swf","soundUrl":"http://static.youku.com/ddshow/img/sound/gift_zhuhe.wav","if_show":"1","postion":"50:30|50:30","type":"3"},"47":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/qiqiu_24_24.png","postion":"0:0|0:0","type":"1"},"48":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/zhifeiji_24_24.png","postion":"0:0|0:0","type":"1"},"49":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftLmqa.swf","if_show":"1","postion":"0:50|0:50","type":"3","numX":"730","numY":"150","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lmqa1_80_80.png"},"50":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftQlzm.swf","if_show":"1","postion":"0:100|0:100","type":"3","numX":"730","numY":"170","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/qlzm1_80_80.png"},"51":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfTmqx.swf","if_show":"1","postion":"0:50|0:50","type":"3","numX":"710","numY":"170","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/tmqx1_80_80.png"},"52":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfZgwc.swf","if_show":"1","postion":"0:50|0:50","type":"3","numX":"710","numY":"165","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/zgwc1_80_80.png"},"53":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfXfmtl.swf","if_show":"1","postion":"0:50|0:50","type":"3","numX":"715","numY":"165","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/xfmtl2_80_80.png"},"54":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfWnbw.swf","if_show":"1","postion":"0:50|0:50","type":"3","numX":"700","numY":"155","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/wnbw1_80_80.png"},"55":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/cake_1_24_24.png","postion":"0:0|0:0","type":"1"},"56":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/necklace1_24_24.png","postion":"0:0|0:0","type":"1"},"57":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/diamonds1_24_24.png","postion":"0:0|0:0","type":"1"},"59":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfIphone6.swf","if_show":"1","postion":"0:40|0:40","type":"3","numX":"745","numY":"170","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/iphone61_80_80.png"},"60":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfTuhaobiao.swf","if_show":"1","postion":"0:40|0:40","type":"3","numX":"745","numY":"170","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/tuhaobiao1_80_80.png"},"61":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfWajueji.swf","if_show":"1","postion":"0:40|0:40","type":"3","numX":"740","numY":"170","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/wajueji1_80_80.png"},"62":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfIsLand.swf","if_show":"1","postion":"0:40|0:40","type":"3","eScaleXY":"0.8","numX":"720","numY":"175","imgUrl":"http://static.youku.com/ddshow/img/lfgift/island1_80_80.png"},"63":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/origami_24_24.png","postion":"0:0|0:0","type":"1"},"64":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfZan_v1.swf","if_show":"1","postion":"0:0|0:0","type":"3","eScaleXY":"0.8","numX":"740","numY":"207","numDelay":"0.1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/zl_zan_80_80.png"},"65":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfLightStick.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"66":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGoodSinger_v1.swf","if_show":"1","postion":"0:0|0:0","type":"3","numX":"740","eScaleXY":"0.8","numY":"205","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lf_goodsinger_80_80.png"},"67":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/clover1_24_24.png","postion":"0:0|0:0","type":"1"},"69":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/chocolates_24_24.png","postion":"0:0|0:0","type":"1"},"71":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/mf_24_24.png","postion":"0:0|0:0","type":"1"},"72":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pinkrose_24_24.png","postion":"0:0|0:0","type":"1"},"76":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/edu_jdh_24_24.png","postion":"0:0|0:0","type":"1"},"77":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/edu_xf_24_24.png","postion":"0:0|0:0","type":"1"},"78":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/edu_lbs_24_24.png","postion":"0:0|0:0","type":"1"},"79":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/edu_tyit_24_24.png","postion":"0:0|0:0","type":"1"},"83":{"postion":"0:0|0:0","if_show":"1","type":"3","flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftLn_rubbish.swf"},"84":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftLn_ts.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"85":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftLn_no1.swf","if_show":"1","postion":"0:0|0:0","type":"3"},"87":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftLmfw.swf","if_show":"1","postion":"0|0","type":"3","numX":"700","numY":"250","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lmfw1_80_80.png"},"88":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftSjzl.swf","if_show":"1","postion":"15:10|15:10","type":"3","numX":"700","numY":"246","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/sjzl527_80_80.png"},"89":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftZsyl.swf","if_show":"1","postion":"15:10|15:10","type":"3","numX":"700","numY":"250","eScaleXY":"0.8","imgUrl":"http://static.youku.com/ddshow/img/lfgift/zsyl1_80_80.png"},"90":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/ice_lolly_24_24.png","postion":"0:0|0:0","type":"1"},"91":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pandar_24_24.png","postion":"0:0|0:0","type":"1"},"92":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/colorrose1_24_24.png","postion":"0:0|0:0","type":"1"},"93":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/perfume_v1_24_24.png","postion":"0:0|0:0","type":"1"},"94":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/wzz_yzs_24_24.png","postion":"0:0|0:0","type":"1"},"96":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/nlz2_24_24.png","postion":"0:0|0:0","type":"1"},"97":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/nlz1_24_24.png","postion":"0:0|0:0","type":"1"},"98":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/bbt_24_24.png","postion":"0:0|0:0","type":"1"},"99":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/app_note_24_24.png","postion":"0:0|0:0","type":"1"},"100":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/app_watermelon_24_24.png","postion":"0:0|0:0","type":"1"},"101":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/app_snowflake_24_24.png","postion":"0:0|0:0","type":"1"},"102":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/app_pill_24_24.png","postion":"0:0|0:0","type":"1"},"106":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/za_24_24.png","postion":"0:0|0:0","type":"1"},"107":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lz_24_24.png","postion":"0:0|0:0","type":"1"},"108":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/we_24_24.png","postion":"0:0|0:0","type":"1"},"109":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/dhn_24_24.png","postion":"0:0|0:0","type":"1"},"622":{},"110":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lp_24_24.png","postion":"0:0|0:0","type":"1"},"623":{},"111":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/sh_pt_24_24.png","postion":"0:0|0:0","type":"1"},"112":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftYjzq.swf","imgUrl":"http://static.youku.com/ddshow/img/lfgift/sh_yjzq_80_80.png","if_show":"1","postion":"0:0|0:0","type":"3"},"113":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/r_line_24_24.png","postion":"0:0|0:0","type":"1"},"114":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_yg_24_24.png","postion":"0:0|0:0","type":"1"},"115":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_ld_24_24.png","postion":"0:0|0:0","type":"1"},"116":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_gt_24_24.png","postion":"0:0|0:0","type":"1"},"117":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_mbx_24_24.png","postion":"0:0|0:0","type":"1"},"120":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_milk_24_24.png","postion":"0:0|0:0","type":"1"},"121":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_csg_24_24.png","postion":"0:0|0:0","type":"1"},"122":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftCenCen1.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_cencen1_80_80.png","postion":"0:0|0:0","type":"1"},"123":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftSuperDd1.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_superdd_80_80.png","postion":"0:0|0:0","type":"1"},"124":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/pet_jgb_24_24.png","postion":"0:0|0:0","type":"1"},"125":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lh_head_24_24.png","postion":"0:0|0:0","type":"1"},"126":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lh_d_24_24.png","postion":"0:0|0:0","type":"1"},"127":{"flashUrl":"http://static.youku.com/ddshow/img/flash/LfGiftPingTu.swf","if_show":"1","imgUrl":"http://static.youku.com/ddshow/img/lfgift/lh_h_24_24.png","postion":"0:0|0:0","type":"1"},"901":{},"902":{},"903":{},"905":{},"906":{},"907":{},"908":{},"909":{},"910":{},"911":{},"912":{},"913":{},"914":{},"916":{},"701":{},"702":{},"703":{},"704":{},"705":{},"706":{},"707":{},"708":{},"709":{},"710":{},"711":{},"712":{},"713":{},"714":{},"715":{},"716":{},"717":{},"718":{},"719":{},"720":{},"721":{},"722":{},"723":{},"724":{},"725":{},"726":{},"727":{},"728":{}};
+
+    <script>
+        (function () {
+
+
+            var _DATA = window._DATA || {};
+            var feed = {
+                "feed": {
+                    "duration": "05:04:51",
+                    "sn": "_LC_ps3_2373693114662590811358249_OX",
+                    "paused": "N",
+                    "position": "Y",
+                    "m3u8": "http:\/\/g2.live.360.cn\/vodplay?channel=live_huajiao_v2&sn=_LC_ps3_2373693114662590811358249_OX&ts=1466277688&dtype=non&stype=m3u8&sid=e7c5ddec3596e228051e0e66b822520f&_rate=sd&_sign=8365e16863a02668d5ccba38d2b5ed61&_tag=.m3u8",
+                    "subtitle": "http:\/\/static.huajiao.com\/huajiao\/subtitles\/17795995.txt",
+                    "subtitle_index": "http:\/\/static.huajiao.com\/huajiao\/subtitles\/17795995_index.txt",
+                    "liveCache": 1466299378,
+                    "title": "",
+                    "image": "http:\/\/image.huajiao.com\/dba36f2bd0d81efb8d366b67bc588b26.jpg",
+                    "publishtime": "2016-06-18 22:11:40",
+                    "width": 360,
+                    "height": 640,
+                    "device": "iPhone 6 Plus",
+                    "network": "Wi-Fi",
+                    "location": "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02",
+                    "relateid": 17795995,
+                    "favorited": false,
+                    "praises": 62918,
+                    "watches": 25264,
+                    "reposts": 0,
+                    "replies": 2,
+                    "formated_title": ""
+                },
+                "author": {
+                    "uid": "23736931",
+                    "nickname": "\u6c88\u6f2b\u96e8",
+                    "avatar": "http:\/\/image.huajiao.com\/dba36f2bd0d81efb8d366b67bc588b26-100_100.jpg",
+                    "followed": false,
+                    "verified": true,
+                    "verifiedinfo": {
+                        "credentials": "\u6f14\u5458\uff0c\u6b4c\u624b\uff0c\u7b2c\u516b\u5c4a\u4e2d\u56fd\u6d41\u884c\u97f3\u4e50\u91d1\u949f\u5956\u4e0a\u6d77\u56db\u5f3a\uff0c\u66fe\u51fa\u6f14\u7535\u5f71\u300a\u5b8c\u7f8e\u7684\u7231\u300b",
+                        "type": 1,
+                        "realname": "\u6c88\u6f2b\u96e8",
+                        "status": 3,
+                        "error": "",
+                        "official": false
+                    },
+                    "exp": 1773788,
+                    "level": 26,
+                    "medal": [{"kind": "tuhao", "medal": "3"}],
+                    "userCache": 1466299428,
+                    "pocket": false
+                },
+                "type": 2,
+                "creatime": "2016-06-18 22:11:40",
+                "relay": {"usign": "e29f4e85a737b012366cfc9921b57acd", "channel": "live_huajiao_v2"}
+            };
+            var author = {
+                "uid": "23736931",
+                "nickname": "\u6c88\u6f2b\u96e8",
+                "avatar": "http:\/\/image.huajiao.com\/dba36f2bd0d81efb8d366b67bc588b26-100_100.jpg",
+                "avatar_l": "http:\/\/image.huajiao.com\/dba36f2bd0d81efb8d366b67bc588b26-324_324.jpg",
+                "avatar_o": "http:\/\/image.huajiao.com\/dba36f2bd0d81efb8d366b67bc588b26.jpg",
+                "signature": "\u65b0\u6d6a\u5fae\u535a\uff1a\u6c88\u6f2b\u96e8  wx:shenmanyuyu\u662f\u4e2a\u4e0d\u8010\u70e6\u7684\u8001\u597d\u4eba~",
+                "gender": "F",
+                "astro": "\u5929\u874e\u5ea7",
+                "location": "\u6d59\u6c5f \u676d\u5dde",
+                "lives": 0,
+                "watches": 0,
+                "praises": "3076483",
+                "followings": "74",
+                "followers": "31656",
+                "verified": true,
+                "verifiedinfo": {
+                    "credentials": "\u6f14\u5458\uff0c\u6b4c\u624b\uff0c\u7b2c\u516b\u5c4a\u4e2d\u56fd\u6d41\u884c\u97f3\u4e50\u91d1\u949f\u5956\u4e0a\u6d77\u56db\u5f3a\uff0c\u66fe\u51fa\u6f14\u7535\u5f71\u300a\u5b8c\u7f8e\u7684\u7231\u300b",
+                    "type": 1,
+                    "realname": "\u6c88\u6f2b\u96e8",
+                    "status": 3,
+                    "error": "",
+                    "official": false
+                },
+                "vrid": "",
+                "isbindvr": false,
+                "source": "sina",
+                "forbidden": false,
+                "exp": 1773788,
+                "level": 26,
+                "medal": [{"kind": "tuhao", "medal": "3"}],
+                "cached": true,
+                "cachetime": 1466277200,
+                "followed": false,
+                "blocked": false,
+                "isfriend": false,
+                "feeds": "64",
+                "es_nickname": "\u6c88\u6f2b\u96e8"
+            };
+            // feed.feed.subtitle = 'http:\/\/static.huajiao.com\/huajiao\/subtitles\/2526307.txt';
+            _DATA.feed = feed;
+            _DATA.author = author;
+            window._DATA = _DATA;
+
+            var jsConf = window.HJ_JS_CONF;
+            jsConf.backImage = 'http://image.huajiao.com/dba36f2bd0d81efb8d366b67bc588b26.jpg';
+            jsConf.playerUrls = {
+                "playerUrl": "http:\/\/s9.qhimg.com\/static\/09a5bb77611ddaeb.swf",
+                "playerFlash": "http:\/\/s1.qhimg.com\/static\/db3e04bd6db0bbba.swf",
+                "screenApi": "http:\/\/webh.huajiao.com\/screenshot\/upload",
+                "getScreenshot": "http:\/\/www.huajiao.com\/pc\/screenshot",
+                "voteApi": "http:\/\/webh.huajiao.com\/screenshot\/vote"
+            };
+            window.HJ_JS_CONF = jsConf;
+        })();
     </script>
-    <style type="text/css">
-        body {
-            background:#535260 url("http://r2.ykimg.com/051000005683AE9167BC3D327F05E320") no-repeat top center;
-        }
-        .SR-stager {
-            margin-top:350px;
-        }
-    </style>
+
+
+    <script>
+        // 需处理的直播id list。在首页和播放页面使用
+        var _RELATE_ID_LIST = [6370356, 6467893, 6567845, 6654981, 6747159, 6836338, 7927096, 8021453, 8121385, 8223733, 8229254, 8320355, 8406746, 8499791, 8590334, 8680037, 8780552, 8878002, 8963841, 9048539, 9134671, 10051304, 10136907, 10232103];
+    </script>
+
+
 </head>
 <body>
-<div class="SR-nav" id="LF-nav">
-    <!--前景-->
-    <div class="nav-fg">
-        <h1>
-            <a href="http://www.laifeng.com" target="_blank">
-                <img src="http://static.youku.com/ddshow/img/laifeng/logo.png" alt="来疯"/>
-            </a>
-        </h1>
-        <ul class="nav" id="LF-nav-fg">
-            <li class="user" id="LF-user"></li>
-            <li>
-                <a href="http://www.laifeng.com" class="linked" target="_blank">首页</a>
-            </li>
-            <li class="had-dialog" id="LF-toggle-square">
-                <label class="fun">广场</label>
-            </li>
-            <li>
-                <a href="http://www.laifeng.com/mall/list/0" class="linked" target="_blank">商城</a>
-            </li>
-            <li class="had-dialog" id="LF-toggle-online">
-                <label class="fun">用户</label>
-            </li>
-        </ul>
-    </div>
-    <!--背景-->
-    <div class="nav-bg" id="LF-nav-bg">
-        <div class="nav-panel" id="LF-panel-news"></div>
-        <div class="nav-panel" id="LF-panel-square"></div>
-        <div class="nav-panel" id="LF-panel-online"></div>
-    </div>
-    <!--底部导航-->
-    <div class="nav-link" id="LF-nav-link">
-        <ul>
-            <li class="report">
-                <div class="icon">
-                    <i class="ICON-nav-report"></i>
-                    <span class="desc" id="LF-video-report">举报</span>
+<div class="wrapper">
+
+
+    <div id="doc-hd" class="header single" data-bk="doc-header">
+        <div class="container clearfix">
+            <!-- logo -->
+            <div class="hd-logo"><a href="http://www.huajiao.com" class="links"></a></div>
+
+            <div class="hd-login">
+                <div class="no-login">
+                    <i class="icon-avatar"></i>
+                    <a href="###" class="tologin">登录/注册</a>
+                    <i class="icon-level"></i>
+                    <i class="icon-more"></i>
                 </div>
-            </li>
-            <li class="client">
-                <a href="http://static.youku.com/ddshow/img/client/LaifengSetup.2.0.0.2.exe" target="_blank">
-                    <i class="ICON-client"></i>
-                    <span class="desc">来疯伴侣</span>
-                </a>
-            </li>
-            <li class="share">
-                <div class="icon">
-                    <dl>
-                        <dt>
-                            <i class="ICON-nav-share"></i>
-                        </dt>
-                        <dd>
-                            <span class="desc">分享</span>
-                        </dd>
-                    </dl>
+                <div class="already-login hide">
+                    <a class="link" href="">
+                        <i class="icon-avatar">
+                            <img src="http://p2.qhimg.com/d/inn/9ea0e4a7/avatar.png" alt="">
+                        </i>
+                        <span class="nickname"></span>
+                    </a>
+                    <i class="icon-level"></i>
+                    <i class="icon-more"></i>
+                    <div class="userinfo">
+                        <div class="userinfo_up"></div>
+                        <div class="userinfo_down">
+                            <div class="userinfo_name">
+                                <div class="logout">【退出登录】</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info" id="LF-share"></div>
-            </li>
-            <li class="app">
-                <div class="icon">
-                    <dl>
-                        <dt>
-                            <i class="ICON-nav-app"></i>
-                        </dt>
-                        <dd>
-                            <span class="desc">APP下载</span>
-                        </dd>
-                    </dl>
+                <div class="huajiaodou">
+                    <a class="btn-huajiaodou" href="https://zhifu.huajiao.com/charge" target="_blank">充值</a>
+                    <a class="btn-huajiaodou" href="http://www.huajiao.com/economic/pc/cash.html" target="_blank">提现</a>
                 </div>
-                <div class="info">
-                    <div class="app-ma"></div>
-                </div>
-            </li>
-            <li class="help">
-                <a href="http://iku.youku.com/channelinstall/yweblfplayer" target="_blank">
-                    <i class="ICON-nav-iku"></i>
-                    <span class="desc">PC客户端</span>
-                </a>
-            </li>
-            <li class="help">
-                <a href="/help/anchor-level" target="_blank">
-                    <i class="ICON-nav-help"></i>
-                    <span class="desc">帮助</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="SR-pager" id="LF-pager">
-    <div class="SR-stager
-          " id="LF-stager">
-        <div class="SR-mainer" id="LF-mainer">
-            <div class="stager-header clearfix">
-                <div class="photoer">
-                    <img src="http://r2.ykimg.com/051000005602A48567BC3D02430CA27F" width="80" height="80" alt="游戏报道" />
-                </div>
-                <div class="name">游戏报道</div>
-                <div class="about" id="LF-about"></div>
-                <div class="count" id="LF-count"></div>
             </div>
-            <div class="stager-video" id="LF-area-video"></div>
-            <div class="stager-cost clearfix   " id="LF-area-cost">
-                <div class="cost-tab first  gift-tab ">
-                    <div class="tab-icon" class="on" action-to='LF-cost-gift'></div>
-                    <i class="arrow"></i>
+
+            <ul class="hd-nav">
+                <li class="item">
+                    <a href="/" class="">首页</a>
+                </li>
+                <li class="item"><a href="/user" class="" target="">我的关注</a></li>
+                <li class="item"><a href="/category/1" class="" target="">明星来了</a></li>
+                <li class="item"><a href="/category/2" class="" target="">女神驾到</a></li>
+                <li class="item"><a href="/category/5" class="" target="">国民男神</a></li>
+                <li class="item more">
+                    <a href="#" class="link">更多栏目></a>
+                    <div class="dropdown">
+                        <ul class="clearfix">
+                            <li><a href="/category/3" class="" target="">高清直播</a></li>
+                            <li><a href="/zt/supergirl2016" class="" target="_blank">超级女声</a></li>
+                            <li><a href="/recommend/mingxingricheng" class="" target="_blank">明星日程</a></li>
+                            <li><a href="/channel/52" class="" target="">聚椒现场</a></li>
+                            <li><a href="/channel/51" class="" target="">椒点访谈</a></li>
+                            <li><a href="/pc/pictures" class="" target="">精彩瞬间</a></li>
+                            <li><a href="http://bbs.360safe.com/forum-3050-1.html" class="" target="_blank">社区</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="search-bar">
+                <div class="search-hd"></div>
+                <div class="search-bd">
+                    <form class="search-form" action="/search" target="_top" method="get" name="search-form">
+                        <div class="search-input-wrap">
+                            <input name="q" class="search-input" autocomplete="off" tabindex="0"
+                                   placeholder="请输入用户名、用户ID或直播标题">
+                            <input type="submit" class="search-submit-btn">
+                        </div>
+                    </form>
                 </div>
-                <div class="cost-con">
-                    <div class="cost-panel   " id="LF-cost-gift"></div>
-                    <div class="cost-panel   hide  " id="LF-cost-vote"></div>
-                </div>
-                <div class="cost-tab second  vote-tab ">
-                    <div class="tab-icon" action-to='LF-cost-vote'></div>
-                    <i class="arrow"></i>
+                <div class="search-ft">
+                    <div id="suggest-container" class="suggest-container">
+                        <div class="suggest-bd"></div>
+                        <div class="suggest-ft"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="SR-sider" id="LF-sider">
-            <div class="stager-chat" id="LF-area-chat"></div>
-            <span class="MR-chat-btn" id="LF-chat-btn"></span>
-        </div>
-        <div class="MR-gift-flash" id="LF-gift-container">
-            <div id="LF-gift-flash"></div>
-        </div>
-        <script type="text/javascript">
-            function _flash_getAuthorInfo() {
-                return '{"tudouUrl":"","disc":"去我的个人频道看看~里面有更多精彩视频等你哦","imgUrl":"http://r2.ykimg.com/051000005602A48567BC3D02430CA27F"}';
-            }
-            //视频倒计时
-            function _flash_videoCountDown() {
-                return '{"sysTime":"1465809620459","endTime":"0"}';
-            }
-            seajs.use('SWF',function(S){
-                S.embedSWF(
-                        "http://static.youku.com/ddshow/874eeba1/flash/GiftDisplay.swf",
-                        "LF-gift-flash",
-                        "850",
-                        "600",
-                        "10.0.0",
-                        "expressInstall.swf",
-                        false,
-                        {
-                            "allowFullScreen":"1",
-                            "allowScriptAccess":"always",
-                            "wmode":"transparent",
-                            "flashvars":"roomType=2"
-                        },
-                        {id:'ddshowGifter',name:'ddshowGifter'});
-            });
-        </script>
     </div>
-    <div class="SR-rank-area" id="LF-rank-area">
-        <div class="area-con" id="LF-rank-area-con">
-            <div class="rank-anchor" id="LF-rank-anchor"></div>
-            <div class="rank-user" id="LF-rank-user"></div>
+
+
+    <div id="doc-bd">
+        <div class="container review">
+            <div class="player-box clearfix">
+                <div class="player-main video js_playerArea">
+                    <div class="player" id="player"></div>
+                    <div class="qrcode" id="download-qrcode">
+                        <img src="http://p3.qhimg.com/t01204199df0248c53f.png" alt="二维码"/>
+                        <p>APP可以私信主播哦</p>
+                        <span class="close">&times;</span>
+                    </div>
+
+                    <div id="author-info" class="mini" data-bk="player-author-info">
+                        <a class="link" href="/user/23736931">
+                            <div class="avatar avatar-v personal">
+                                <img src="http://image.huajiao.com/dba36f2bd0d81efb8d366b67bc588b26-100_100.jpg"/>
+                            </div>
+                        </a>
+                        <div class="base-info">
+                            <a class="link" href="/user/23736931">
+                                <h3>沈漫雨</h3>
+                            </a>
+                            <p class="author-id">ID 23736931</p>
+                            <p class="watches"><span>观看数</span> <strong>25264</strong></p>
+                        </div>
+                        <div class="follow">
+                            <a href="###" class="btn-follow">+关注</a>
+                        </div>
+                        <div class="counts clearfix">
+                            <div class="follows">
+                                <h4>74</h4>
+                                <p>关注</p>
+                            </div>
+                            <div class="fans">
+                                <h4>31656</h4>
+                                <p>粉丝</p>
+                            </div>
+                            <div class="praises">
+                                <h4>62918</h4>
+                                <p>赞</p>
+                            </div>
+                        </div>
+                        <div class="currency hide"><span>花椒币</span><strong>0</strong></div>
+                        <div class="watches"><span>观看数</span><strong>25264</strong></div>
+                        <a class="switch" href="###">展开</a>
+                    </div>
+
+                    <div class="hjPopbox"></div>
+                    <div class="recommend" data-bk="end-recommend">
+                        <h2 class="reco-title">直播已结束</h2>
+                        <div class="playinfo clearfix"></div>
+                        <div class="reco-info">
+                            <h3 class="legend">大家都在看</h3>
+                            <div class="feed-list"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-sidebar">
+                    <div class="toplist">
+                        <div class="toptab js-toptab" data-bk="toptab">
+                            <ul class="clearfix">
+                                <li class="tabitem active" data-key="top-gift">
+                                    <a href="###" onclick="return false;">送礼榜</a>
+                                </li>
+                                <li class="tabitem" data-key="top-share">
+                                    <a href="###" onclick="return false;">分享榜</a>
+                                </li>
+                                <li class="tabitem" data-key="top-online">
+                                    <a href="###" onclick="return false;">时长榜</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="topview hide js-topview" data-bk="topview">
+                            <div class="viewitem top-gift active ps-container ps-theme-default ps-active-y">
+                                <ul class="g-top">
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-1">1</span>
+                                        <a href="/user/23584470" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/47697d3a794fd3f8c656cf9d49fd2218-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23584470" target="_blank" class="nickname">随便的内裤飞舞</a>
+					<span class="orderby">
+						<i class="num">200645</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-2">2</span>
+                                        <a href="/user/21285952" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/078b856a1f25bbdc679eddd2429a7fde-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/21285952" target="_blank" class="nickname">鳗鱼家的欧巴🐝🐝🐝</a>
+					<span class="orderby">
+						<i class="num">131595</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-3">3</span>
+                                        <a href="/user/23780502" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/d715ac3ce78056901ba8b535afef7bb3-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23780502" target="_blank" class="nickname">大一守护漫雨</a>
+					<span class="orderby">
+						<i class="num">82554</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-4">4</span>
+                                        <a href="/user/23864843" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/62cc05903945e8a72596bb7ecf8152c6.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23864843" target="_blank" class="nickname">數字君</a>
+					<span class="orderby">
+						<i class="num">48516</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-5">5</span>
+                                        <a href="/user/30529056" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/50f45d21432c5dfad1a262705f56980a-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/30529056" target="_blank" class="nickname">斯斯00948</a>
+					<span class="orderby">
+						<i class="num">42142</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-6">6</span>
+                                        <a href="/user/23238508" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/808325334ce7f0ca4b639413aec9ff8d-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23238508" target="_blank" class="nickname">白衬衫-于彬</a>
+					<span class="orderby">
+						<i class="num">36264</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-7">7</span>
+                                        <a href="/user/24653846" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/1a609c4f580755cc552f6da453394267-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24653846" target="_blank" class="nickname">Brody Li</a>
+					<span class="orderby">
+						<i class="num">19925</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-8">8</span>
+                                        <a href="/user/26354135" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/399f20f95d24b792e1cd77b45785d2f7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/26354135" target="_blank" class="nickname">可口之家</a>
+					<span class="orderby">
+						<i class="num">19765</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-9">9</span>
+                                        <a href="/user/27306418" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/2936d668776d535ffbd0451ca3aab3d7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27306418" target="_blank" class="nickname">Marian.刀子</a>
+					<span class="orderby">
+						<i class="num">16616</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-10">10</span>
+                                        <a href="/user/30286054" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/3fcea0b0415df8c6bcd1a4493047e7ae-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/30286054" target="_blank" class="nickname">Danny哥哥</a>
+					<span class="orderby">
+						<i class="num">16226</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-11">11</span>
+                                        <a href="/user/24023336" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/422c4dcb1b4ad620eade896ffb98783b-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24023336" target="_blank" class="nickname">神秘嘉宾:蓝仁</a>
+					<span class="orderby">
+						<i class="num">16149</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-12">12</span>
+                                        <a href="/user/28021382" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/03b156b9354fc20ab44cfa569f8d8099-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/28021382" target="_blank" class="nickname">羊羊腰子</a>
+					<span class="orderby">
+						<i class="num">14693</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-13">13</span>
+                                        <a href="/user/23236608" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/a7a3511a48cb19cbb756feaef47f3f9f-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23236608" target="_blank" class="nickname">猫的被窝会暖</a>
+					<span class="orderby">
+						<i class="num">8440</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-14">14</span>
+                                        <a href="/user/25551120" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/1201edab49c9a16f077260d4a544e8c8-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/25551120" target="_blank" class="nickname">O少</a>
+					<span class="orderby">
+						<i class="num">6889</i>
+						花椒币
+					</span>
+                                    </li>
+
+                                    <li class="listitem clearfix">
+                                        <span class="index top-15">15</span>
+                                        <a href="/user/22800371" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/f649c19fb36668de8af265e61924ea54-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/22800371" target="_blank" class="nickname">运营-咖咖@</a>
+					<span class="orderby">
+						<i class="num">4501</i>
+						花椒币
+					</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="viewitem top-share ps-container ps-theme-default ps-active-y">
+                                <ul class="g-top">
+                                    <li class="listitem clearfix">
+                                        <span class="index top-1">1</span>
+                                        <a href="/user/23772772" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/cb0eaabfe0705fa998d7485ce966aeed-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23772772" target="_blank" class="nickname">我親愛的男人</a>
+					<span class="orderby">
+						<i class="num">671</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-2">2</span>
+                                        <a href="/user/24808605" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/11567101378fc08988b38b8f0acb1f74-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24808605" target="_blank" class="nickname">简单点34</a>
+					<span class="orderby">
+						<i class="num">583</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-3">3</span>
+                                        <a href="/user/27309490" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/46619ffc2fa32d3f5089416a4c30e24c-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27309490" target="_blank" class="nickname">以A开头盍喜儿</a>
+					<span class="orderby">
+						<i class="num">254</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-4">4</span>
+                                        <a href="/user/27099698" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/e9a8530e764cab9288b8edc4a1c0dc12-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27099698" target="_blank" class="nickname">Yuan-呵呵索曼冬</a>
+					<span class="orderby">
+						<i class="num">202</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-5">5</span>
+                                        <a href="/user/21403332" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/7e46e3c87e73ebd41629196d1370ab4a-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/21403332" target="_blank" class="nickname">🐝D.mi黑色无人记</a>
+					<span class="orderby">
+						<i class="num">119</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-6">6</span>
+                                        <a href="/user/24903273" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/11567101378fc08988b38b8f0acb1f74-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24903273" target="_blank" class="nickname">油菜花开1</a>
+					<span class="orderby">
+						<i class="num">78</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-7">7</span>
+                                        <a href="/user/28279938" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/62cc05903945e8a72596bb7ecf8152c6.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/28279938" target="_blank" class="nickname">f489877</a>
+					<span class="orderby">
+						<i class="num">66</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-8">8</span>
+                                        <a href="/user/25143915" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/8a6b2e5ec52df3940d80803902bb34d8-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/25143915" target="_blank" class="nickname">喻薪稿喻</a>
+					<span class="orderby">
+						<i class="num">63</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-9">9</span>
+                                        <a href="/user/22852586" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/4d3bcf2b35fc8999d43ee299bf0a27fe-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/22852586" target="_blank" class="nickname">宪家族</a>
+					<span class="orderby">
+						<i class="num">57</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-10">10</span>
+                                        <a href="/user/26453394" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/11567101378fc08988b38b8f0acb1f74-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/26453394" target="_blank" class="nickname">萌萌椒1</a>
+					<span class="orderby">
+						<i class="num">57</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-11">11</span>
+                                        <a href="/user/27306418" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/2936d668776d535ffbd0451ca3aab3d7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27306418" target="_blank" class="nickname">Marian.刀子</a>
+					<span class="orderby">
+						<i class="num">55</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-12">12</span>
+                                        <a href="/user/22450626" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/62cc05903945e8a72596bb7ecf8152c6.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/22450626" target="_blank" class="nickname">ALrrr</a>
+					<span class="orderby">
+						<i class="num">55</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-13">13</span>
+                                        <a href="/user/27248080" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/f6985e11a56a104a654358cabdf124b4-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27248080" target="_blank" class="nickname">我快剩灰烬红梦桃</a>
+					<span class="orderby">
+						<i class="num">53</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-14">14</span>
+                                        <a href="/user/23082663" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/62cc05903945e8a72596bb7ecf8152c6.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23082663" target="_blank" class="nickname">一生相伴@</a>
+					<span class="orderby">
+						<i class="num">52</i>
+						次
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-15">15</span>
+                                        <a href="/user/28992401" target="_blank" class="avatar">
+                                            <img src="http://image.huajiao.com/d2759bc50f1597982998cdeec9263cd7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/28992401" target="_blank" class="nickname">美皇</a>
+					<span class="orderby">
+						<i class="num">51</i>
+						次
+					</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="viewitem top-online ps-container ps-theme-default ps-active-y">
+                                <ul class="g-top">
+                                    <li class="listitem clearfix">
+                                        <span class="index top-1">1</span>
+                                        <a href="/user/27608223" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/32532f3e0d52307399569ea20556bdaa-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27608223" target="_blank" class="nickname">eels（守护漫雨。）</a>
+					<span class="orderby">
+						<i class="num">4天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-2">2</span>
+                                        <a href="/user/23772772" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/cb0eaabfe0705fa998d7485ce966aeed-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23772772" target="_blank" class="nickname">我親愛的男人</a>
+					<span class="orderby">
+						<i class="num">2天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-3">3</span>
+                                        <a href="/user/24176898" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/11567101378fc08988b38b8f0acb1f74-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24176898" target="_blank" class="nickname">*冰缘蓝梦*</a>
+					<span class="orderby">
+						<i class="num">2天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-4">4</span>
+                                        <a href="/user/27306418" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/2936d668776d535ffbd0451ca3aab3d7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/27306418" target="_blank" class="nickname">Marian.刀子</a>
+					<span class="orderby">
+						<i class="num">1天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-5">5</span>
+                                        <a href="/user/23780502" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/d715ac3ce78056901ba8b535afef7bb3-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23780502" target="_blank" class="nickname">大一守护漫雨</a>
+					<span class="orderby">
+						<i class="num">1天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-6">6</span>
+                                        <a href="/user/24989440" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/5a4bc658b2076cb0cada4f7e9a56c08d-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24989440" target="_blank" class="nickname">我是你小洒哥</a>
+					<span class="orderby">
+						<i class="num">1天</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-7">7</span>
+                                        <a href="/user/30529056" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/50f45d21432c5dfad1a262705f56980a-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/30529056" target="_blank" class="nickname">斯斯00948</a>
+					<span class="orderby">
+						<i class="num">21小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-8">8</span>
+                                        <a href="/user/23069101" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/739efa7bf7381010927b9f897d9c1035-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23069101" target="_blank" class="nickname">ε米痴儿з </a>
+					<span class="orderby">
+						<i class="num">21小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-9">9</span>
+                                        <a href="/user/21285952" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/078b856a1f25bbdc679eddd2429a7fde-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/21285952" target="_blank" class="nickname">鳗鱼家的欧巴🐝🐝🐝</a>
+					<span class="orderby">
+						<i class="num">20小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-10">10</span>
+                                        <a href="/user/30538017" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/f5f0aa35c43fd58ff64a4ba0f9755ea0-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/30538017" target="_blank" class="nickname">╭☆蜨飝蘤儛</a>
+					<span class="orderby">
+						<i class="num">19小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-11">11</span>
+                                        <a href="/user/26354135" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/399f20f95d24b792e1cd77b45785d2f7-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/26354135" target="_blank" class="nickname">可口之家</a>
+					<span class="orderby">
+						<i class="num">18小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-12">12</span>
+                                        <a href="/user/29703273" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/d7fd9957964ac020e609387d5dc117c8-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/29703273" target="_blank" class="nickname">音小太阳</a>
+					<span class="orderby">
+						<i class="num">18小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-13">13</span>
+                                        <a href="/user/33854426" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/8ffb76876ae6708f4bac3a5b942c0b05-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/33854426" target="_blank" class="nickname">漫雨3ee82</a>
+					<span class="orderby">
+						<i class="num">17小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-14">14</span>
+                                        <a href="/user/23864843" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/62cc05903945e8a72596bb7ecf8152c6.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/23864843" target="_blank" class="nickname">數字君</a>
+					<span class="orderby">
+						<i class="num">15小时</i>
+					</span>
+                                    </li>
+                                    <li class="listitem clearfix">
+                                        <span class="index top-15">15</span>
+                                        <a href="/user/24243072" target="_blank" class="avatar ">
+                                            <img src="http://image.huajiao.com/f8fdc3bd136a83a9d6408fa55a62c01e-100_100.jpg"
+                                                 alt=""/>
+                                        </a>
+                                        <a href="/user/24243072" target="_blank" class="nickname">老孙14</a>
+					<span class="orderby">
+						<i class="num">13小时</i>
+					</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat" data-bk="tantan-chat">
+                        <div class="chattab">
+                            <ul class="clearfix" data-bk="chat-tab">
+                                <li class="current" data-key="chatArea"><a href="###" onclick="return false;">互动</a>
+                                </li>
+                                <li data-key="screenshotArea"><a href="###" onclick="return false;">精彩截图</a></li>
+                            </ul>
+                            <!-- <a class="btn-fullscreen">全屏观看</a> -->
+                        </div>
+                        <div class="chatviews">
+                            <ul>
+                                <li id="chatArea" class="chatArea viewitem tt-tantan current">
+                                </li>
+                                <li id="screenshotArea" class="viewitem tt-tantan chatArea">
+                                    <div class="ss-msg-box">
+                                        <div class="tt-msg-loading"><i></i>
+                                            <span>加载中...</span>
+                                        </div>
+                                        <ul></ul>
+                                    </div>
+                                    <div class="ss-control">
+                                        <a href="" class="btn-screenshot">截屏</a>
+                                    </div>
+                                    <div class="ss-message">
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-bar">
+                <div class="player-title">
+                    <p>这家伙很懒，标题没留下，直接看重播吧</p>
+                </div>
+                <div class="share-bar" data-bk="share-bar">
+                    <div class="label">分享：</div>
+                    <a href="###" class="item btn-weibo iconfont iconfont-weibo" data-sns="weibo"><span>weibo</span></a>
+                    <a href="###" class="item btn-wechat iconfont iconfont-wechat" data-sns="wechat"><span>wechat</span></a>
+                    <a href="###" class="item btn-qq iconfont iconfont-qq" data-sns="qq"><span>qq</span></a>
+                    <a href="###" class="item btn-qzone iconfont iconfont-qzone" data-sns="qzone"><span>qzone</span></a>
+                </div>
+
+            </div>
+            <div class="row clearfix">
+                <div class="main">
+                    <div class="player-comment clearfix" id="comment" bk>
+                        <!-- 评论框 -->
+                        <div class="reply">
+                            <h3 class="reply-title">网友评论</h3>
+                            <div class="reply-container ">
+                                <div class="reply-box">
+                                    <div class="reply-box-content">
+                                        <div class="text-container"><textarea maxlength="100"></textarea></div>
+                                        <a href="javascript:;" class="reply-box-btn-submit">发表评论</a>
+                                    </div>
+                                    <div class="reply-box-footer">
+                                        <a href="javascript:;" class="reply-box-btn-login">登录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评论显示列表 -->
+                        <div class="content">
+                            <ul id="comment_list_container"></ul>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div id="load-more" class="load-more"><a href="javascript:;">查看更多评论</a></div>
+                    </div>
+                    <!-- 其他热门视频 -->
+                    <div class="g-box feed-list" id="hot-video" data-bk="other-hot-live">
+                        <div class="box-hd">
+                            <h2 class="box-title"><span class="icon"></span>其他热门直播</h2>
+                        </div>
+                        <div class="box-bd">
+                            <ul class="list">
+                                <li class="feed live">
+                                    <a class="link" href="/l/17834460">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/2cffe4c351d699a00e399a4ea6b13c74-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/2cffe4c351d699a00e399a4ea6b13c74-100_100.jpg"></span>
+                                            <span class="username">我是米饭🍚</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>回到那三年[守护昊明] 说：</em> 红包！！！！！
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17834410">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/2f2862a4b5e207ca54e6a9be43e65f77-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/2f2862a4b5e207ca54e6a9be43e65f77-100_100.jpg"></span>
+                                            <span class="username">齐大美人</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                遇见就是精彩
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17833703">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/cd361c8f251893a9afc38567f8011715-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/5adae244dc3aef3f87491b770be75009-100_100.jpg"></span>
+                                            <span class="username">李泽新</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>小王子7164b 说：</em> 你主持什么节目？
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17833108">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/543d1e300e7e27c2151f4b41a55218af-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/543d1e300e7e27c2151f4b41a55218af-100_100.jpg"></span>
+                                            <span class="username">OnLy💕小cc</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>M_大蚊子🍃 说：</em> 你是单眼皮吗
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17830156">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/0aed70f8e60f3a77c476c0408f3b56ed-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/0aed70f8e60f3a77c476c0408f3b56ed-100_100.jpg"></span>
+                                            <span class="username">.小欣欣💫</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>林8bb19 说：</em> 66666666
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17832237">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/bcc4524c7ab2acd0766114b9d2a20d50-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/bcc4524c7ab2acd0766114b9d2a20d50-100_100.jpg"></span>
+                                            <span class="username">慕灵宝宝</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>假钞换贞操4eb09 说：</em> 我默默的看着你！
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17830686">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/329692c3dcca7ed6bc16a60399941881-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/329692c3dcca7ed6bc16a60399941881-100_100.jpg"></span>
+                                            <span class="username">培羽叫你进来！</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>颜学跃 说：</em> 6666666666
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17833041">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/6a261d1e85f96138f61a7b3637e74903-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/6a261d1e85f96138f61a7b3637e74903-100_100.jpg"></span>
+                                            <span class="username">伊然_</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>天涯客7045 说：</em> 6666666
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17834814">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/5949516c65a2c29f17f8a96ad155b301-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/5949516c65a2c29f17f8a96ad155b301-100_100.jpg"></span>
+                                            <span class="username">宋visionary</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                走过路过，不要错过
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17832201">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/7ce8b8e9afb815b6e3d14b7247f65023-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar avatar-v personal"><img
+                                                    src="http://image.huajiao.com/7ce8b8e9afb815b6e3d14b7247f65023-100_100.jpg"></span>
+                                            <span class="username">x1ao师妹😇</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                <em>花椒用户05221301 说：</em> 主播眼睛会发光
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 主播的更多内容 -->
+                    <div class="g-box feed-list" id="self-video" data-bk="latest-live">
+                        <div class="box-hd">
+                            <h2 class="box-title"><span class="icon"></span>最新直播</h2>
+                        </div>
+                        <div class="box-bd">
+                            <ul class="list">
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835026">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/c7e5dcf2a8e205ece8bea2b55ba8f0e9-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/c7e5dcf2a8e205ece8bea2b55ba8f0e9-100_100.jpg"></span>
+                                            <span class="username">yun yun</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                你开心就好
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835023">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/61d2edb8d93af79753a6783621659160-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/61d2edb8d93af79753a6783621659160-100_100.jpg"></span>
+                                            <span class="username">IF52000</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                你开心就好
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835019">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/5a2e03cc05079b47fe5096f4c6a8a120-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/5a2e03cc05079b47fe5096f4c6a8a120-100_100.jpg"></span>
+                                            <span class="username">℡  污污   潇 少</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                走过路过，不要错过
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835013">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/31fa7d8292f2c72bb54a2acb31daf63a-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/31fa7d8292f2c72bb54a2acb31daf63a-100_100.jpg"></span>
+                                            <span class="username">公子仲</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                遇见就是精彩
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835008">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/a0ac70b9be384a0621efbb7546b34904-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/a0ac70b9be384a0621efbb7546b34904-100_100.jpg"></span>
+                                            <span class="username">裴妹妹阿👄</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                我什么都不知道，你进来再说。
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835005">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/1db6372909e764abd17387eeea9bcdff-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/1db6372909e764abd17387eeea9bcdff-100_100.jpg"></span>
+                                            <span class="username">王 Mei Jia💞</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                主要看气质
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835004">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/3802cd20c2149a386ed6149dd1092e1c-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/3802cd20c2149a386ed6149dd1092e1c-100_100.jpg"></span>
+                                            <span class="username">小妖彬彬</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                主要看气质
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17835000">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/477fe2482349fc59986f73813ff6eda3-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/477fe2482349fc59986f73813ff6eda3-100_100.jpg"></span>
+                                            <span class="username">刘佳Ritajia</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                遇见就是精彩
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17834994">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/399be304671352551f451192d0bd1575-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/399be304671352551f451192d0bd1575-100_100.jpg"></span>
+                                            <span class="username">Top_LaLa</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                你开心就好
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="feed live">
+                                    <a class="link" href="/l/17834995">
+                                        <img class="screenshot"
+                                             src="http://image.huajiao.com/713eda737293d7936e4f91b3c4e6d4e2-172_245.jpg">
+                                        <p class="user">
+                                            <span class="avatar"><img
+                                                    src="http://image.huajiao.com/713eda737293d7936e4f91b3c4e6d4e2-100_100.jpg"></span>
+                                            <span class="username">张颠颠</span>
+                                        </p>
+                                        <div class="comment">
+                                            <div class="comment-inner">
+                                                遇见就是精彩
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <!-- 精心策划 -->
+                    <div class="g-box" id="feed-topic" data-bk="feed-topic">
+                        <div class="box-hd">
+                            <h2 class="box-title"><span class="icon"></span>精心策划</h2>
+                        </div>
+                        <div class="box-bd">
+                            <div class="download">
+                                <div class="headline">
+                                    <a href="http://www.huajiao.com/l/16650025" target="_blank">
+                                        <img src="http://p0.qhimg.com/t012589dc3be79d8d54.jpg" width="100%" alt=""/>
+                                        <div class="logo-slogan"></div>
+                                    </a>
+                                </div>
+                                <div class="btns clearfix">
+                                    <a href="http://www.huajiao.com/mobile/downloadjump?src=pc_index_android"
+                                       class="btn-android" target="_blank"></a>
+                                    <a href="http://www.huajiao.com/mobile/downloadjump?src=pc_index_ios"
+                                       class="btn-iphone" target="_blank"></a>
+                                </div>
+                                <dl class="qrcode">
+                                    <dt class="title"><span>或扫描二维码下载花椒直播APP</span></dt>
+                                    <dd class="pic">
+                                        <img src="http://p3.qhimg.com/t0180e3e5f9d2f3423f.png" alt=""/>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <ul class="topics">
+                                <li><img src="http://p1.qhimg.com/t01263d4a588b6445b3.png"></li>
+
+                                <li><a href="http://www.huajiao.com/user/21233234" target="_blank"><img
+                                        src="http://p3.qhimg.com/t01e93ee34588f1cd6a.jpg"></a></li>
+                                <li><a href="http://www.huajiao.com/user/28288916" target="_blank"><img
+                                        src="http://p3.qhimg.com/t011af69b08ef73220b.jpg"></a></li>
+                                <li><a href="http://www.huajiao.com/user/32838107" target="_blank"><img
+                                        src="http://p8.qhimg.com/t016c96ebf53c03f0ef.png"></a></li>
+                                <li><a href="http://www.huajiao.com/user/33159157" target="_blank"><img
+                                        src="http://p2.qhimg.com/t01751cc7a902882401.png"></a></li>
+                                <li><a href="http://www.huajiao.com/user/24653870" target="_blank"><img
+                                        src="http://p5.qhimg.com/t01ed043ed64dfa73c5.png"></a></li>
+                                <li><a href="http://www.huajiao.com/user/30389759" target="_blank"><img
+                                        src="http://p2.qhimg.com/t01c1494045f13a24be.jpg"></a></li>
+                                <li><a href="http://www.huajiao.com/user/22225600" target="_blank"><img
+                                        src="http://p3.qhimg.com/t0183902e01254ebe16.png"></a></li>
+                                <li><a href="http://www.huajiao.com/user/23521384" target="_blank"><img
+                                        src="http://p0.qhimg.com/t01b2639b5b718c70af.png"></a></li>
+                                <li><a href="http://www.huajiao.com/user/23106638" target="_blank"><img
+                                        src="http://p2.qhimg.com/t016103d2d1f0160c51.jpg"></a></li>
+                                <li><a href="http://www.huajiao.com/user/27482233" target="_blank"><img
+                                        src="http://p5.qhimg.com/t01a70fd249a019098e.png"></a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <script type="text/javascript">
-        seajs.use('livehouse/js/v2/ranking.js',function(R){
-            R.rankingList.init();
-        });
-    </script>
+
+
+    <div id="doc-ft">
+        <div class="container">
+            <p>北京密境和风科技有限公司 地址：北京市朝阳区酒仙桥路甲10号3号楼15层 电话：010-59447797</p>
+            <p>邮箱:bd@huajiao.tv 客服微信号：huajiao_1 京ICP备15024691号-1 信息网络传播视听节目许可证1109357号 <a target="_blank"
+                                                                                          href="http://sealinfo.trustutn.org/info?sn=L002001201604075488444"
+                                                                                          style="color:#878787">联盟品牌认证</a><a
+                    target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030384"
+                    style="display:inline-block;margin-left:5px;color:#878787;"><img
+                    src="http://p2.qhimg.com/d/inn/f570feb7/beian.png" style="float:left;"/>京公网安备 11010502030384号</a>
+            </p>
+        </div>
+    </div>
+
+    <!--
+    下线时将下面div元素的style改为"display:none;"
+    上线时将下面div元素的style改为"display:block;"
+    图片尺寸100X100
+    -->
+    <div id="right-fixed-position" class="right-fixed-position" style="display:block;" bk>
+        <a href="#" class="close"></a>
+        <img src="http://p6.qhimg.com/t018cdf8f08c02a258e.png"/>
+        </a>
+    </div>
 </div>
-<script type="text/javascript">
-    livehouseConf = {"conf":0,"vote":1,"gift":1,"userNum":0,"roomGift":1,"pic":"http://r2.ykimg.com/051000005683AE9167BC3D327F05E320","next":""};
+
+
+<div class="cls_qrcodeArea">
+    <div id="qrcodeClose" class="cls_qrcodeClose"></div>
+    <div id="qrcode" class="cls_qrcode" title="">
+    </div>
+</div>
+<script type="text/template" id="screenshot-tpl">
+
+    <li class="tt-msg-item tt-msg-message" data-id={id} data-type="9" data-create-time="{add_time}"
+        data-user-qid="{user_id}">
+        <div class="tt-msg-left">
+            <div class="tt-msg-portrait">
+                <a href="#">
+                    <img src="{user_avatar}">
+                </a>
+            </div>
+        </div>
+        <div class="tt-msg-body">
+            <div class="tt-msg-heading">
+                <span href="#" class="tt-msg-nickname">{user_nickname}</span>
+                <span class="tt-msg-time">{from_now}</span>
+            </div>
+            <div class="tt-msg-content-wrap">
+                <div class="tt-msg-content">
+                    <div class="screenshot">
+                        <img src="{parse_image}" data-index="{index}" data-src="{image}"/>
+                    </div>
+                    <div class="pics-up">
+                        <a href="" class="btn-up null">
+                            <span class="icon"></span>
+                            <span class="nums">{vote}</span>
+                            <span class="text">求赞</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tt-clearfix"></div>
+        </div>
+    </li>
+
 </script>
+<div class="popup">
+    <div class="main">
+        <img class="picture" src="http://i0.qhimg.com/t01f0af09bad3e1a55a.png">
+        <div class="desc clearfix">
+            <p class="user">
+                <img class="avatar" src="http://image.huajiao.com/40788af81edcea960b6d2fa97c83dcbf-100_100.jpg"/>
+                <span class="username">King✨💋格子</span>
+                <span>的截图</span>
+            </p>
+            <p class="like will">
+                <span class="icon"></span>
+                <span class="nums">78</span>
+            </p>
+        </div>
+        <a class="prev"></a>
+        <a class="next"></a>
+        <a class="close"></a>
+    </div>
+</div>
+
+
+<script src="http://s0.qhimg.com/static/0e4b4f909dd26431/jquery,qw.core.js"></script>
 <script type="text/javascript">
-    DDS.config = {
-        roomType:'livehouse',
-        models:[
-            {
-                name:'my',
-                container:'#LF-user',
-                depend:{
-                    controls:'CONTROLS_MY'
-                },
-                data:{
-                    data:DDS,
-                    mode:2,
-                    initData:{
-                        userName:'游客1757953853',
-                        coins:0,
-                        faceUrl:'http://m1.ykimg.com/0A02000015398E800587D4AB68BDB638',
-                        userLevel:0
-                    }
-                },
-                isBefore:true
-            },
-            {
-                name:'share',
-                container:'#LF-share',
-                depend:{
-                    controls:'CONTROLS_SHARE'
-                },
-                data:{
-                    data:DDS.anchorInfo,
-                    type:1
-                },
-                isBefore:true
-            },
-            {
-                name:'square',
-                depend:{
-                    controls:'CONTROLS_SQUARE'
-                },
-                container:'#LF-panel-square',
-                data:{
-                    toggle:'#LF-toggle-square',
-                    data:DDS
-                },
-                isExtra:true
-            },
-            {
-                name:'count',
-                container:'#LF-count',
-                depend:{
-                    controls:'CONTROLS_COUNT'
-                },
-                data:{
-                    initData:{
-                        'hot':{
-                            num:1240,
-                            title: '热度'                         },
-                        'gift':{},
-                        'gold':{}
-                    }
-                }
-            },
-            {
-                name:'about',
-                container:'#LF-about',
-                depend:{
-                    controls:'CONTROLS_ABOUT'
-                },
-                data:{
-                    data:DDS
-                }
-            }
-            ,{
-                name: 'video',
-                container: '#LF-area-video',
-                depend: {
-                    controls: 'CONTROLS_VIDEO'
-                },
-                data: {
-                    clientType : 'flash',
-                    src: 'http://static.youku.com/ddshow/874eeba1/liveio/LFplayer.swf',
-                    appId: '101',
-                    initStreamId: '357851663',
-                    initAlias:'stream_alias_805602500_357',
-                    initToken: '575e7ad4ac7cac330b9532d58d6f0a40',
-                    titles:["超清","高清","标清"],
-                    defaultDef:1,
-                    p2p:false,
-                    room_id: '357',
-                    playerwidth: 800,
-                    playerheight: 450,
-                    fullScreen:1,
-                    ex_roomType:2
-                    ,
-                    ex_showPlugs:1
-                },
-                isBefore: true
-            }
-            ,{
-                name:'msg',
-                depend:{
-                    controls:'VIEWS_MSG'
-                },
-                container:'#LF-area-chat',
-                data:{
-                    data:DDS
-                }
-            },
-            {
-                name:'talk',
-                depend:{
-                    controls:'CONTROLS_TALK',
-                    views:'VIEWS_TALK'
-                },
-                container:'#LF-area-chat',
-                data:{
-                    data:DDS,
-                    showDynamicExpression: false,
-                    showGuiZuExpression : false
-                },
-                isExtra:true
-            },
-            {
-                name:'horn',
-                depend:{
-                    controls:'CONTROLS_HORN'
-                },
-                container:'#LF-area-chat',
-                data:{
-                    data:DDS,
-                    price:2000,
-                    isFlash:true
-                },
-                isExtra:true
-            },
-            {
-                name:'roomnotice',
-                depend:{
-                    controls:'CONTROLS_OSNOTICE'
-                },
-                container:'#LF-area-video',
-                data:{
-                    mode:1,
-                    roll_notice_data:'直播时间16:00，喜欢节目的宝宝点关注啦~'
-                }
-            }
-            ,{
-                name:'gift',
-                depend:{
-                    controls:'CONTROLS_GIFT',
-                    views:'VIEWS_GIFT'
-                },
-                container:'#LF-cost-gift',
-                data:{
-                    data:DDS,
-                    setAll:true
-                },
-                isExtra:true
-            }
-            ,
-            {
-                name:'giftcount',
-                container:'#LF-area-chat',
-                depend:{
-                    controls:'CONTROLS_GIFTCOUNT'
-                },
-                data:{
-                    data:DDS,
-                    numData:{"21":{"num":0},"6":{"num":0},"8":{"num":0},"12":{"num":0},"13":{"num":0},"1":{"num":0},"2":{"num":0},"55":{"num":0},"5":{"num":0}}
-                }
-            }
-            ,{
-                name:'appVote',
-                container:'#LF-cost-vote',
-                depend:{
-                    controls:'CONTROLS_VOTE'
-                },
-                data:{
-                    data:DDS,
-                    units:538,
-                    maxOptions:4,
-                    defalutOpen:true
-                },
-                isExtra:true,
-                isBefore:false
-            }
-        ],
-        //礼物配置
-        giftNormal:[{"type":"Livehouse","data":[{"id":21},{"id":6},{"id":8},{"id":12},{"id":13},{"id":1},{"id":2},{"id":55},{"id":5}]}],
-        // 排行榜相关
-        anchorRankSwitch:true,
-        anchorRankTitle:'',
-        anchorRankDesc:'',
-        userRankSwitch:true,
-        userConsumerRankTitle:'谁才是游戏达人',
-        userConsumerRankDesc:'',
-        // 多送相关
-        multiSend:0,
-        multiSendAnchorArray:[]
-    }
+    window._DATA = window._DATA || {};
+    window._DATA.user = null;
 </script>
-<script type="text/javascript" src="http://static.youku.com/ddshow/874eeba1/livehouse/js/livehouse_v2-sms-min.js"></script>
-<script type="text/javascript">
-    seajs.use('livehouse/js/v2/main.js',function(M){
-        M.init();
-    });
-</script>
-<script type="text/javascript">
-    (function(){
-        var _tj = new Image();
-        _tj.src="http://www.laifeng.com/tj?_d="+new Date().getTime();
-    })();
-    (function(d, t, s){
-        var c = d.body || d.getElementsByTagName('head')[0],
-                n = d.createElement(t);
-        n.async = 'async';
-        n.src = s;
-        c.appendChild(n);
-    })(document, 'script', 'http://static.youku.com/ddshow/874eeba1/user/js/pvgo.js');
-</script>
+<script type="text/javascript"
+        src="http://s0.qhimg.com/static/ebc9263b1e53f54c,ec04f6d964909577,2871d438166db650,03962b4bb009173e,0dd95ee9b41b46c4,41450b6d75ef92e6.js"></script>
+
+
+<script src="http://static.huajiao.com/huajiao/web/static/module/qrcode/qrcode.min.js?_586"></script>
+<script src="http://s5.qhimg.com/!29719ee3/swfobject-2.3.js"></script>
+<script type="text/javascript" src="http://static.huajiao.com/huajiao/web/static/module/emoji/emoji.js?_586"
+        data-emoji-path="http://static.huajiao.com/huajiao/web/static/module/emoji/images/"></script>
+<script type="text/javascript"
+        src="http://s3.qhimg.com/static/2ff695bb9841469c,5a5b4933cd4b338c,686f96527ad2a48a,d25e95238ceeaac6,99b7440b42747ea5,9be90c09071afd2b,8a9002efeecbb231,f116566576ec9221.js"></script>
+
+
+<!-- 打点 -->
+
 <div style="display:none;">
     <script type="text/javascript">
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F502e77fddc771fd4e6748d0421df2a6b' type='text/javascript'%3E%3C/script%3E"));
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1255745025'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255745025' type='text/javascript'%3E%3C/script%3E"));
     </script>
 </div>
+<script src="http://s0.qhimg.com/monitor/;monitor/8e133f74.js"></script>
+<script src="http://s8.qhimg.com/!e413febf/monitor2.js"></script>
+
+<script>
+    // 业务上的相关统计
+    (function () {
+        if (!window.monitor) return;
+
+        // 启动统计脚本
+        monitor.setProject('huajiao').getTrack().getClickAndKeydown();
+    })();
+</script>
+
+
+<script>
+    // 业务上的相关统计
+    (function () {
+        if (!window.monitor2) return;
+
+        // 启动统计脚本
+        monitor2.setProject('hao360_huajiao').setUrl('http://www.huajiao.com/l/replay').getTrack().getClickAndKeydown();
+    })();
+</script>
+
+<!-- File To Static Is Ok -->
 </body>
 </html>

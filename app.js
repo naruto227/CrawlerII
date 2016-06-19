@@ -64,7 +64,7 @@ rule.minute = times;
 for (var i = 0; i < 60; i = i + 30) {
     times.push(i);
 }
-var count = 0;
+/*var count = 0;
 var options = {
     method: 'GET',
     encoding: null,
@@ -79,7 +79,7 @@ schedule.scheduleJob(rule, function () {
         case 1:
             options.url = 'http://localhost:3000/sixrooms';
             break;
-        /*case 2:
+        /!*case 2:
             options.url = 'http://localhost:3000/6rooms';
             break;
         case 3:
@@ -87,7 +87,7 @@ schedule.scheduleJob(rule, function () {
             break;
         case 4:
             options.url = 'http://localhost:3000/6rooms';
-            break;*/
+            break;*!/
         default:
             break;
     }
@@ -98,7 +98,7 @@ schedule.scheduleJob(rule, function () {
         }
     });
     count++;
-});
+});*/
 
 
 module.exports = app;

@@ -21,7 +21,7 @@ exports.huajiao = function () {
     } else {
         isRunning = true;
         sub();
-        return true;
+        return true;face[i].children["0"].attribs.src
     }
 };
 

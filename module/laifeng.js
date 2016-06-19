@@ -15,7 +15,7 @@ var isRunning = false;
 /**
  * @return{boolean}
  */
-/*exports.laifeng = function () {
+exports.laifeng = function () {
     if (isRunning) {
         return false;
     } else {
@@ -37,29 +37,28 @@ myEvents.on('start', function () {
             myEvents.emit('updateOther');
         }
     });
-});*/
+});
 
-//myEvents.on('updateOther', function () {
-exports.laifeng = function () {
-    rule.second = times;
-    for (var i = 0; i < 60; i = i + 10) {
-        times.push(i);
-    }
-    schedule.scheduleJob(rule, function () {
-        if (LaiFengcrawler.updateFans()) {
-            this.cancel();
-            console.log('------------更新完了---------------');
-            isRunning = false;
-            //myEvents.emit('gameover');
+myEvents.on('updateOther', function () {
+    exports.laifeng = function () {
+        rule.second = times;
+        for (var i = 0; i < 60; i = i + 10) {
+            times.push(i);
         }
-    });
-};
-
-/**
+        schedule.scheduleJob(rule, function () {
+            if (LaiFengcrawler.updateFans()) {
+                this.cancel();
+                console.log('------------更新完了---------------');
+                isRunning = false;
+                myEvents.emit('gameover');
+            }
+        });
+    };
+});
+    
  myEvents.on('gameover',function(){
    uploadService.uploadService('sixrooms');
 });
- */
 
 var mypretime = 0;
 function sub() {
