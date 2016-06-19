@@ -232,7 +232,7 @@ myEvents.on('update', function (room_id) {
                 
                 myEvents.emit('updateTable', numOfFun, room_id);
             } catch (e) {
-                console.log(e)
+                console.log(e);
             }
         }
     });
