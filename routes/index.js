@@ -4,6 +4,7 @@ var sixrooms = require("../module/6Rooms.js");
 var laifeng = require("../module/laifeng.js");
 var longzhu = require("../module/longzhu.js");
 var huajiao = require("../module/huajiao.js");
+var ingkee = require("../module/ingkee.js");
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -39,6 +40,14 @@ router.get('/huajiao', function (req, res) {
         res.render('index', {title: '花椒 start running'});
     } else {
         res.render('index', {title: '花椒 already running'});
+    }
+});
+
+router.get('/ingkee', function (req, res) {
+    if (ingkee.ingkee()) {
+        res.render('index', {title: '映客 start running'});
+    } else {
+        res.render('index', {title: '映客 already running'});
     }
 });
 

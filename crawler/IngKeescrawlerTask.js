@@ -1,10 +1,6 @@
 /**
- * Created by huang on 16-6-12.
+ * Created by hzq on 16-6-20.
  */
-/**
- * http://api.plu.cn/tga/streams?max-results=18&start-index=18
- * max-results等价于limit,start-index等价于offset
- * */
 var request = require('request'),
     mysql = require('mysql'),
     cheerio = require('cheerio'),
@@ -16,7 +12,7 @@ var myEvents = new EventEmitter();
 // var isFinish = false;
 var isMainFinish = false;
 //var start = 1;
-var page = 1;
+// var page = 30;
 /**
  * @return{boolean}
  */
@@ -36,6 +32,8 @@ myEvents.on('initData', function (pn) {
     var longzhuApi = {
         method: 'GET',
         encoding: null,
+        // http://service.ingkee.com/api/live/homepage_new?proto=3&location=38  长的
+        // http://service.ingkee.com/api/live/simpleall?proto=3&multiaddr=1 短的
         url: "http://api.plu.cn/tga/streams?max-results=50&start-index=" + parseInt(pn) * 50
     };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
     request(longzhuApi, function (err, response, body) {
@@ -64,62 +62,3 @@ function acquireData(data) {
         });
     });
 }
-/**
-
- exports.updateFans = function () {
-    var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms limit ' + limit_range + ';';
-    conn.query(sql, function (err, rows) {
-        if (err) {
-            console.log(err);
-        }
-        if (rows.length > 0) {
-            start++;
-            for (var i = 0; i < rows.length; i++) {
-                myEvents.emit('getFans', rows[i].room_id);
-            }
-        } else {
-            isFinish = true;
-        }
-    });
-    if (isFinish) {
-        isFinish = false;
-        return true;
-    } else {
-        return false;
-    }
-};
-
- myEvents.on('getFans', function (room_id) {
-    console.log(room_id);
-    var options = {
-        method: 'GET',
-        encoding: null,
-        url: 'http://v.6.cn/profile/index.php?rid=' + room_id
-    };
-    request(options, function (err, response, body) {
-        if (err) {
-            return console.log(err);
-        }
-        var fans = 0;
-        try {
-            var $ = cheerio.load(body);
-            //fans = $('.js_followNum').toArray();
-            fans = $('.js_followNum').toArray()["0"].children["0"].data;
-        } catch (e) {
-            console.log(e + "----net---");
-        }
-        myEvents.emit('updateInfo', fans, room_id);
-    });
-});
-
- myEvents.on('updateInfo', function (fans, room_id) {
-    var sql = 'UPDATE sixrooms SET fans = ? WHERE room_id = ?';
-    var parms = [fans, room_id];
-    conn.query(sql, parms, function (err) {
-        if (err) {
-            console.log(err + "---sql---");
-        }
-    })
-});
- */

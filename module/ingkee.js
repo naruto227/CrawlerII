@@ -1,12 +1,12 @@
 /**
- * Created by huang on 16-6-11.
+ * Created by hzq on 16-6-20.
  */
 var cheerio = require('cheerio'),
     // request = require('request'),
     schedule = require('node-schedule'),
     EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
-var SixRoomscrawler = require("../crawler/6RoomscrawlerTask.js");
+var IngKeescrawler = require("../crawler/IngKeescrawlerTask.js");
 var uploadService = require("../uploadModel/upload.js");
 var rule = new schedule.RecurrenceRule();
 
@@ -15,7 +15,7 @@ var isRunning = false;
 /**
  * @return{boolena}
  */
-exports.SixRooms = function () {
+exports.ingkee = function () {
     if (isRunning) {
         return false;
     } else {
@@ -26,38 +26,21 @@ exports.SixRooms = function () {
 };
 
 myEvents.on('start', function () {
-    // rule.second = times;
-    // for (var i = 0; i < 60; i = i + 3) {
-    //     times.push(i);
-    // }
-    // schedule.scheduleJob(rule, function () {
-    // setTimeout(function () {
-        SixRoomscrawler.getMainData();
-
-    // },60000);
-    console.log('-------------爬完啦----------------');
-    myEvents.emit('updateOther');
-
-    // });
-});
-
-myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 5) {
+    for (var i = 0; i < 60; i = i + 3) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
-        if (SixRoomscrawler.updateFans()) {
+        if (IngKeescrawler.getMainData()) {
             this.cancel();
-            console.log('------------更新完了---------------');
-            isRunning = false;
+            console.log('-------------爬完啦----------------');
             myEvents.emit('gameover');
         }
     });
 });
 
 myEvents.on('gameover', function () {
-    uploadService.uploadServe('sixrooms');
+    uploadService.uploadServe('longzhu');
 });
 
 
@@ -76,3 +59,4 @@ function sub() {
     }
     myEvents.emit('start');
 }
+

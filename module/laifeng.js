@@ -2,7 +2,7 @@
  * Created by huang on 16-6-12.
  */
 var cheerio = require('cheerio');
-var request = require('request');
+// var request = require('request');
 var schedule = require('node-schedule');
 var EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
