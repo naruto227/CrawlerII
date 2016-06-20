@@ -1,10 +1,10 @@
 /**
  * Created by huang on 16-6-12.
  */
-var cheerio = require('cheerio'),
-    request = require('request'),
-    schedule = require('node-schedule'),
-    EventEmitter = require('events').EventEmitter;
+var cheerio = require('cheerio');
+var request = require('request');
+var schedule = require('node-schedule');
+var EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
 var LaiFengcrawler = require("../crawler/LaiFengcrawlerTask.js");
 var uploadService = require("../uploadModel/upload.js");
@@ -40,24 +40,23 @@ myEvents.on('start', function () {
 });
 
 myEvents.on('updateOther', function () {
-    exports.laifeng = function () {
-        rule.second = times;
-        for (var i = 0; i < 60; i = i + 10) {
-            times.push(i);
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (LaiFengcrawler.updateFans()) {
+            this.cancel();
+            console.log('------------更新完了---------------');
+            isRunning = false;
+            myEvents.emit('gameover');
         }
-        schedule.scheduleJob(rule, function () {
-            if (LaiFengcrawler.updateFans()) {
-                this.cancel();
-                console.log('------------更新完了---------------');
-                isRunning = false;
-                myEvents.emit('gameover');
-            }
-        });
-    };
-});
+    });
     
- myEvents.on('gameover',function(){
-   uploadService.uploadService('sixrooms');
+});
+
+myEvents.on('gameover', function () {
+    uploadService.uploadServe('laifeng');
 });
 
 var mypretime = 0;

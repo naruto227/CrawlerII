@@ -34,12 +34,12 @@ myEvents.on('start', function () {
         if (LongZhuscrawler.getMainData()) {
             this.cancel();
             console.log('-------------爬完啦----------------');
-            myEvents.emit('updateOther');
+            myEvents.emit('gameover');
         }
     });
 });
-
-myEvents.on('updateOther', function () {
+/**
+ myEvents.on('updateOther', function () {
     rule.second = times;
     for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
@@ -49,13 +49,13 @@ myEvents.on('updateOther', function () {
             this.cancel();
             console.log('------------更新完了---------------');
             isRunning = false;
-            //myEvents.emit('gameover');
+            myEvents.emit('gameover');
         }
     });
-});
+});*/
 
- myEvents.on('gameover',function(){
-   uploadService.uploadServe('sixrooms');
+myEvents.on('gameover', function () {
+    uploadService.uploadServe('longzhu');
 });
 
 

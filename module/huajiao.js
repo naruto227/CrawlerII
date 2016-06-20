@@ -21,7 +21,8 @@ exports.huajiao = function () {
     } else {
         isRunning = true;
         sub();
-        return true;face[i].children["0"].attribs.src
+        return true;
+        face[i].children["0"].attribs.src
     }
 };
 
@@ -35,9 +36,9 @@ myEvents.on('start', function () {
     //getHLive  http://www.huajiao.com/category/3?pageno=
     schedule.scheduleJob(rule, function () {
         if (HuaJiaoscrawler.getStar()) {
-            if(HuaJiaoscrawler.getGodNess()){
-                if(HuaJiaoscrawler.getGodMan()){
-                    if(HuaJiaoscrawler.getHLive()){
+            if (HuaJiaoscrawler.getGodNess()) {
+                if (HuaJiaoscrawler.getGodMan()) {
+                    if (HuaJiaoscrawler.getHLive()) {
                         this.cancel();
                         console.log('-------------爬完啦----------------');
                         myEvents.emit('updateOther');
@@ -58,16 +59,14 @@ myEvents.on('updateOther', function () {
             this.cancel();
             console.log('------------更新完了---------------');
             isRunning = false;
-            //myEvents.emit('gameover');
+            myEvents.emit('gameover');
         }
     });
 });
 
-/**
- myEvents.on('gameover',function(){
-   uploadService.uploadService('sixrooms');
+myEvents.on('gameover', function () {
+    uploadService.uploadServe('huajiao');
 });
- */
 
 var mypretime = 0;
 function sub() {

@@ -54,7 +54,7 @@ function acquireData(data) {
     }
     data.roomList.forEach(function (item) {
         /** @namespace item.rtype */
-        var params = [item.rid, item.username, item.uid, item.rtype, item.count, 0, item.pic];
+        var params = [item.rid, 0, item.uid, item.username, item.count, 0, item.pic];
         conn.query(sql, params, function (err, result) {
             if (err) {
                 return console.log(err);
@@ -88,13 +88,14 @@ exports.updateFans = function () {
 };
 
 myEvents.on('getFans', function (room_id) {
-    console.log(room_id);
     var options = {
         method: 'GET',
         encoding: null,
         url: 'http://v.6.cn/profile/index.php?rid=' + room_id
     };
     request(options, function (err, response, body) {
+        console.log(options.url);
+
         if (err) {
             return console.log(err);
         }
@@ -102,17 +103,18 @@ myEvents.on('getFans', function (room_id) {
         try {
             var $ = cheerio.load(body);
             //fans = $('.js_followNum').toArray();
+            var room_name = $('head title').toArray()["0"].children["0"].data;
             fans = $('.js_followNum').toArray()["0"].children["0"].data;
         } catch (e) {
             console.log(e + "----net---");
         }
-        myEvents.emit('updateInfo', fans, room_id);
+        myEvents.emit('updateInfo', room_name, fans, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (fans, room_id) {
-    var sql = 'UPDATE sixrooms SET fans = ? WHERE room_id = ?';
-    var parms = [fans, room_id];
+myEvents.on('updateInfo', function (room_name, fans, room_id) {
+    var sql = 'UPDATE sixrooms SET room_name = ?, fans = ? WHERE room_id = ?';
+    var parms = [room_name, fans, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
             console.log(err + "---sql---");

@@ -1,9 +1,10 @@
 /**
- * Created by huang on 16-6-11.
+ * Created by deng on 16-6-7.
  */
+
 var EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
-var count = 0;
+// var count = 0;
 var mysql = require('mysql');
 var config = require("../config.js");
 var schedule = require('node-schedule');
@@ -42,14 +43,15 @@ function selectAndSend(tablename) {
         if (err) {
             return console.log(err)
         }
-        console.log(rows);
+        console.log(tablename+"上传json");
         if (rows.length == 0) {
             isFinish = true;
+            myEvents.emit("clearTable",tablename);
             return;
         }
         var options = {
             headers: {"Connection": "close"},
-            url: 'http://120.27.94.166:2999/'+tablename,
+            url: config.upload.uploadurl+tablename,
             method: 'POST',
             json: true,
             body: {data: rows}
@@ -66,6 +68,18 @@ function selectAndSend(tablename) {
     });
     page++;
 };
+/**
+ * 表清除
+ */
+myEvents.on("clearTable",function (tablename) {
+    var selectSql = 'TRUNCATE TABLE '+tablename;
+    conn.query(selectSql, function (err, rows, fields) {
+        if (err) {
+            return console.log(err)
+        }
+       
+    });
+});
 var mypretime = 0;
 function sub(tablename) {
     var Today = new Date();

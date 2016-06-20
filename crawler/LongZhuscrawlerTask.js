@@ -13,10 +13,10 @@ var request = require('request'),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
-var isFinish = false;
+// var isFinish = false;
 var isMainFinish = false;
 //var start = 1;
-var page = 1;
+var page = 30;
 /**
  * @return{boolean}
  */
@@ -36,14 +36,14 @@ myEvents.on('initData', function (pn) {
     var longzhuApi = {
         method: 'GET',
         encoding: null,
-        url: "http://api.plu.cn/tga/streams?max-results=100&start-index=" + parseInt(pn) * 100
+        url: "http://api.plu.cn/tga/streams?max-results=50&start-index=" + parseInt(pn) * 50
     };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
     request(longzhuApi, function (err, response, body) {
         if (err) {
             return console.log(err);
         }
         var data = JSON.parse(body);
-        if (data.data.length == 0) {
+        if (data.data.items.length== 0) {
             isMainFinish = true;
             return;
         }

@@ -26,7 +26,8 @@ exports.getStar = function () {
     request(options, function (err, response, body) {
         starpage = starpage + 1;
         if (err) {
-            return console.log(err);
+            console.log('pageno=' + starpage);
+            return console.log('明星来了' + err);
         }
         try {
             var $ = cheerio.load(body);
@@ -37,11 +38,11 @@ exports.getStar = function () {
             var tag = "明星来了";
             if (body.indexOf('title') < 0) {
                 starpage = -9999;
-                return console.log('no more data');
+                return console.log('明星来了no more data');
             }
             acquireData(room_id, username, tag, face);
         } catch (e) {
-            console.log(e + "-----net----");
+            console.log(e + "明星来了-----net----");
         }
     });
 
@@ -57,12 +58,13 @@ exports.getGodNess = function () {
     var options = {
         method: 'GET',
         encoding: null,
-        url: "http://www.huajiao.com/category/2?pageno=" + godmanpage
+        url: "http://www.huajiao.com/category/2?pageno=" + godnesspage
     };
     request(options, function (err, response, body) {
-        godmanpage = godmanpage + 1;
+        godnesspage = godnesspage + 1;
         if (err) {
-            return console.log(err);
+            console.log('pageno=' + godnesspage);
+            return console.log('女神驾到' + err);
         }
         try {
             var $ = cheerio.load(body);
@@ -71,16 +73,16 @@ exports.getGodNess = function () {
             var face = $('.avatar').toArray();
             var tag = "女神驾到";
             if (body.indexOf('title') < 0) {
-                godmanpage = -9999;
-                return console.log('no more data');
+                godnesspage = -9999;
+                return console.log('女神驾到no more data');
             }
             acquireData(room_id, username, tag, face);
         } catch (e) {
-            console.log(e + "-----net----");
+            console.log(e + "女神驾到-----net----");
         }
     });
 
-    if (godmanpage < 0) {
+    if (godnesspage < 0) {
         return true;
     } else {
         return false;
@@ -97,7 +99,9 @@ exports.getGodMan = function () {
     request(options, function (err, response, body) {
         godmanpage = godmanpage + 1;
         if (err) {
-            return console.log(err);
+            console.log('pageno=' + godmanpage);
+
+            return console.log('国民男神' + err);
         }
         try {
             var $ = cheerio.load(body);
@@ -107,11 +111,11 @@ exports.getGodMan = function () {
             var tag = "国民男神";
             if (body.indexOf('title') < 0) {
                 godmanpage = -9999;
-                return console.log('no more data');
+                return console.log('国民男神no more data');
             }
             acquireData(room_id, username, tag, face);
         } catch (e) {
-            console.log(e + "-----net----");
+            console.log(e + "国民男神-----net----");
         }
     });
 
@@ -132,7 +136,8 @@ exports.getHLive = function () {
     request(options, function (err, response, body) {
         gethlivepage = gethlivepage + 1;
         if (err) {
-            return console.log(err);
+            console.log('pageno=' + gethlivepage);
+            return console.log('高清直播' + err);
         }
         try {
             var $ = cheerio.load(body);
@@ -142,11 +147,11 @@ exports.getHLive = function () {
             var tag = "高清直播";
             if (body.indexOf('title') < 0) {
                 gethlivepage = -9999;
-                return console.log('no more data');
+                return console.log('高清直播no more data');
             }
             acquireData(room_id, username, tag, face);
         } catch (e) {
-            console.log(e + "-----net----");
+            console.log(e + "高清直播-----net----");
         }
     });
 
@@ -176,12 +181,12 @@ function acquireData(room_id, username, tag, face) {
             room_id1 = href.substring(3);
             face1 = face[i].children["0"].attribs.src;
         } catch (e) {
-            console.log(room_id[i]);
+            console.log(room_id1);
         }
         var params = [room_id1, 0, 0, nickname, 0, 0, tag, face1];
         conn.query(sql, params, function (err, result) {
             if (err) {
-                return console.log(err);
+                return console.log('sql' + err);
             }
         });
     }
@@ -215,7 +220,7 @@ exports.updateOthers = function () {
 myEvents.on('update', function (room_id) {
     var optionsfordetail = {
         method: 'GET',
-        encoding: null,
+        //encoding: null,
         url: 'http://www.huajiao.com/l/' + room_id
     };
     /**room_name ('head title')
@@ -227,18 +232,33 @@ myEvents.on('update', function (room_id) {
         if (!error && response.statusCode == 200) {
             try {
                 var $ = cheerio.load(body);
-                var room_name = $('head title').toArray();
-                
-                
-                myEvents.emit('updateTable', numOfFun, room_id);
+                var room_name = $('head title').toArray()["0"].children["0"].data;
+                var fans = $('.fans').toArray()["0"].children["0"].next.children["0"].data;
+                var online = body.substring(body.indexOf('watches') + 9, body.indexOf('"reposts"')).trim().replace(/,$/, "");
+                var owner_uid = body.substring(body.indexOf('uid') + 6, body.indexOf('uid') + 14);
+                var a = body.indexOf('uid') + 6;
+                var b = body.indexOf('uid') + 14;
+                //console.log(a + '\n' + b);
+                //console.log(room_name + '\n' + online + '\n' + uid);
             } catch (e) {
-                console.log(e);
+                console.log(e + '-----------------');
             }
+        } else {
+            return console.log(room_id + error);
         }
+        myEvents.emit('updateInfo', room_name, fans, online, owner_uid, room_id);
     });
 });
 
-
+myEvents.on('updateInfo', function (room_name, fans, online, owner_uid, room_id) {
+    var sql = 'UPDATE huajiao SET room_name = ?, fans = ?, online = ?, owner_uid = ? WHERE room_id = ?';
+    var parms = [room_name, fans, online, owner_uid, room_id];
+    conn.query(sql, parms, function (err) {
+        if (err) {
+            console.log(err + "---sql---");
+        }
+    })
+});
 
 
 

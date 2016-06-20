@@ -47,7 +47,10 @@ myEvents.on('initData', function (pn) {
         var name = $(".user-list .name a").toArray();
         var data = $(".user-list .data ").toArray();
         var pic = $(".user-list .pic img").toArray();
-
+        if (name.length == 0) {
+            isMainFinish = true;
+            return;
+        }
 
         //var room_id = href.substring(21,href.length);
 
@@ -62,7 +65,7 @@ function acquireData(name, data, pic) {
 
     var sql = 'replace INTO laifeng (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES (?,?,?,?,?,?,?,?,?)';
     if (data.length == 0) {
-        isMainFinish = true;
+        // isMainFinish = true;
         return console.log('没有数据了');
     }
     for (var i = 0; i < name.length; i++) {
@@ -70,7 +73,7 @@ function acquireData(name, data, pic) {
         var room_id = href.substring(21, href.length);
         var roomname = name[i].attribs.title;
         var face = pic[0].attribs.src;
-        var online = 0
+        var online = 0;
         try {
             online = data[i].children["4"].data.replace(/[^0-9]/ig, "");//正则表达，获取数字
         } catch (e) {
