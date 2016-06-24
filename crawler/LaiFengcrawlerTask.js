@@ -18,19 +18,22 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    if (isMainFinish) {
+    if (isMainFinish || page >= 80) {
+        console.log(page + "---------------------------");
         isMainFinish = false;
         page = 1;
         return true;
     } else {
         myEvents.emit('initData', page);
-        if(page>275){
-            console.log(page+"---------------------------");
-
-        }
         page++;
         return false;
     }
+    /*if (page > 150) {
+     console.log(page + "---------------------------");
+     isMainFinish = false;
+     page = 1;
+     return true;
+     }*/
 };
 
 myEvents.on('initData', function (pn) {
@@ -67,11 +70,12 @@ myEvents.on('initData', function (pn) {
 });
 function acquireData(name, data, pic) {
 
-    var sql = 'replace INTO laifeng (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES (?,?,?,?,?,?,?,?)';
+    var sql = 'replace INTO laifeng (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES ?';
     if (data.length == 0) {
         // isMainFinish = true;
         return console.log('没有数据了');
     }
+    var values = [];
     for (var i = 0; i < name.length; i++) {
         var href = name[i].attribs.href;
         var room_id = href.substring(21, href.length);
@@ -86,12 +90,13 @@ function acquireData(name, data, pic) {
         //var online = data[i].children["4"].data;//这个方法会产生一个\n
         var face = pic[i].attribs.src;
         var params = [room_id, roomname, 0, 0, online, 0, 0, face];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                return console.log(err);
-            }
-        });
+        values.push(params);
     }
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            return console.log(err);
+        }
+    });
 }
 
 exports.updateFans = function () {
@@ -99,7 +104,7 @@ exports.updateFans = function () {
     var sql = 'SELECT * FROM laifeng limit ' + limit_range + ';';
     conn.query(sql, function (err, rows) {
         if (err) {
-            console.log(err);
+            return console.log(err);
         }
         if (rows.length > 0) {
             start++;
@@ -119,15 +124,15 @@ exports.updateFans = function () {
 };
 
 myEvents.on('getFans', function (room_id) {
-    console.log(room_id);
-    var options = {
-        method: 'GET',
-        // encoding: null,
-        url: 'http://v.laifeng.com/' + room_id
-    };
-    request(options, function (err, response, body) {
+    // console.log(room_id);
+    // var options = {
+    //     method: 'GET',
+    //     // encoding: null,
+    //     url: 'http://v.laifeng.com/' + room_id
+    // };
+    request('http://v.laifeng.com/' + room_id, function (err, response, body) {
         if (err) {
-            return console.log(err);
+            return console.log(room_id + err);
         }
         var fans = 0;
         try {
@@ -150,7 +155,7 @@ myEvents.on('updateInfo', function (fans, face, owner_uid, nickname, tag, room_i
     var parms = [fans, face, owner_uid, nickname, tag, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
-            console.log(err + "---sql---");
+            return console.log(err + "---sql---");
         }
     })
 });

@@ -33,7 +33,13 @@ myEvents.on('start', function () {
     schedule.scheduleJob(rule, function () {
         if (LaiFengcrawler.getMainData()) {
             this.cancel();
-            console.log('-------------爬完啦----------------');
+            var Today = new Date();
+            var NowHour = Today.getHours();
+            var NowMinute = Today.getMinutes();
+            var NowSecond = Today.getSeconds();
+            var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
+            console.log(end - mypretime);
+            console.log('\n' + '-------------爬完啦----------------');
             myEvents.emit('updateOther');
         }
     });
@@ -41,7 +47,7 @@ myEvents.on('start', function () {
 
 myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 10) {
+    for (var i = 0; i < 60; i = i + 30) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
@@ -52,7 +58,7 @@ myEvents.on('updateOther', function () {
             myEvents.emit('gameover');
         }
     });
-    
+
 });
 
 myEvents.on('gameover', function () {

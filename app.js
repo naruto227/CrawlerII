@@ -59,9 +59,8 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 rule.minute = times;
-for (var i = 0; i < 60; i = i + 25) {
+for (var i = 0; i < 60; i = i + 15) {
     times.push(i);
 }
 var count = 0;
@@ -80,10 +79,10 @@ schedule.scheduleJob(rule, function () {
             options.url = 'http://localhost:3000/sixrooms';
             break;
         case 2:
-            options.url = 'http://localhost:3000/laifeng';
+            options.url = 'http://localhost:3000/huajiao';
             break;
         case 3:
-            options.url = 'http://localhost:3000/huajiao';
+            options.url = 'http://localhost:3000/laifeng';
             break;
         /*case 4:
          options.url = 'http://localhost:3000/6rooms';

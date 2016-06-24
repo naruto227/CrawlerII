@@ -37,13 +37,15 @@ myEvents.on('upload', function (tablename) {
     });
 });
 function selectAndSend(tablename) {
+    // SELECT * FROM `sixrooms`where `room_name`!='0'and`room_name`!='' ORDER BY id desc limit 100  or nickname != 0 or owner_uid != 0 
+    // var selectSql = 'SELECT * FROM ' + tablename + ' where room_name != ' + 0 + 'ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
     var selectSql = 'SELECT * FROM ' + tablename +
         ' ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
     conn.query(selectSql, function (err, rows, fields) {
         if (err) {
             return console.log(err)
         }
-        console.log(tablename+"上传json");
+        console.log(tablename + "上传json");
         if (rows.length == 0) {
             isFinish = true;
             myEvents.emit("clearTable",tablename);
@@ -51,7 +53,7 @@ function selectAndSend(tablename) {
         }
         var options = {
             headers: {"Connection": "close"},
-            url: config.upload.uploadurl+tablename,
+            url: config.upload.uploadurl + tablename,
             method: 'POST',
             json: true,
             body: {data: rows}
@@ -71,13 +73,13 @@ function selectAndSend(tablename) {
 /**
  * 表清除
  */
-myEvents.on("clearTable",function (tablename) {
-    var selectSql = 'TRUNCATE TABLE '+tablename;
+myEvents.on("clearTable", function (tablename) {
+    var selectSql = 'TRUNCATE TABLE ' + tablename;
     conn.query(selectSql, function (err, rows, fields) {
         if (err) {
             return console.log(err)
         }
-       
+
     });
 });
 var mypretime = 0;

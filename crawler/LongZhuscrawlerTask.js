@@ -43,7 +43,7 @@ myEvents.on('initData', function (pn) {
             return console.log(err);
         }
         var data = JSON.parse(body);
-        if (data.data.items.length== 0) {
+        if (data.data.items.length == 0) {
             isMainFinish = true;
             return;
         }
@@ -51,17 +51,19 @@ myEvents.on('initData', function (pn) {
     })
 });
 function acquireData(data) {
-    var sql = 'replace INTO longzhu (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES (?,?,?,?,?,?,?,?,?)';
+    var sql = 'replace INTO longzhu (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES ?';
     if (data.data.length == 0) {
         return console.log('没有数据了');
     }
+    var values = [];
     data.data.items.forEach(function (item) {
         var params = [item.channel.url.substring(24), item.channel.status, item.channel.id, item.channel.name, item.viewers, item.game["0"].name, item.channel.followers, item.channel.tag, item.channel.avatar];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                return console.log(err);
-            }
-        });
+        values.push(params);
+    });
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            return console.log(err);
+        }
     });
 }
 /**

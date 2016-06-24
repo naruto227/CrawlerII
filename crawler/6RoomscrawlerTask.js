@@ -48,18 +48,22 @@ myEvents.on('initData', function () {
     })
 });
 function acquireData(data) {
-    var sql = 'replace INTO sixrooms (room_id, room_name, owner_uid, nickname, online, fans, face) VALUES (?,?,?,?,?,?,?)';
+    var sql = 'replace INTO sixrooms (room_id, room_name, owner_uid, nickname, online, fans, face) VALUES ?';
     if (data.roomList.length == 0) {
         return console.log('没有数据了');
     }
+    var values = [];
     data.roomList.forEach(function (item) {
         /** @namespace item.rtype */
         var params = [item.rid, 0, item.uid, item.username, item.count, 0, item.pic];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                return console.log(err);
-            }
-        });
+        values.push(params);
+        
+    });
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            return console.log(err);
+        }
+        // conn.end();
     });
 }
 
@@ -91,13 +95,15 @@ myEvents.on('getFans', function (room_id) {
     var options = {
         method: 'GET',
         encoding: null,
+        /*host: 'http://v.6.cn',
+        path: '/profile/index.php?rid=' + room_id*/
         url: 'http://v.6.cn/profile/index.php?rid=' + room_id
     };
     request(options, function (err, response, body) {
-        console.log(options.url);
+        // console.log(options.url);
 
         if (err) {
-            return console.log(err);
+            return console.log('http://v.6.cn/profile/index.php?rid=' + room_id + err);
         }
         var fans = 0;
         try {
@@ -106,7 +112,7 @@ myEvents.on('getFans', function (room_id) {
             var room_name = $('head title').toArray()["0"].children["0"].data;
             fans = $('.js_followNum').toArray()["0"].children["0"].data;
         } catch (e) {
-            console.log(e + "----net---");
+            console.log(e + room_id + "----net---");
         }
         myEvents.emit('updateInfo', room_name, fans, room_id);
     });

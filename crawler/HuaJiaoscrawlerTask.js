@@ -168,10 +168,11 @@ exports.getHLive = function () {
 
 function acquireData(room_id, username, tag, face) {
     //room_id[i].attribs.href.substring(3)
-    var sql = 'replace INTO huajiao (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES (?,?,?,?,?,?,?,?)';
+    var sql = 'replace INTO huajiao (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES ?';
     if (username.length == 0) {
         return console.log('没有数据了');
     }
+    var values = [];
     for (var i = 0; i < username.length; i++) {
         var room_id1 = 0;
         var nickname = username[i].children["0"].data;
@@ -184,12 +185,15 @@ function acquireData(room_id, username, tag, face) {
             console.log(room_id1);
         }
         var params = [room_id1, 0, 0, nickname, 0, 0, tag, face1];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                return console.log('sql' + err);
-            }
-        });
+        values.push(params);
+
     }
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            return console.log('sql' + err);
+        }
+        // conn.end();
+    });
 }
 
 var isFinish = false;
