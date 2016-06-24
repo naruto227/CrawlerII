@@ -72,10 +72,10 @@ var options = {
 schedule.scheduleJob(rule, function () {
 
     switch (count % 4) {
-        case 3:
+        case 2:
             options.url = 'http://localhost:3000/longzhu';
             break;
-        case 2:
+        case 3:
             options.url = 'http://localhost:3000/sixrooms';
             break;
         case 1:
