@@ -59,6 +59,12 @@ myEvents.on('updateOther', function () {
             this.cancel();
             console.log('------------更新完了---------------');
             isRunning = false;
+            var Today = new Date();
+            var NowHour = Today.getHours();
+            var NowMinute = Today.getMinutes();
+            var NowSecond = Today.getSeconds();
+            var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
+            console.log('花椒耗时' + end-mypretime);
             myEvents.emit('gameover');
         }
     });

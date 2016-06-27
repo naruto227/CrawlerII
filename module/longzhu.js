@@ -34,6 +34,12 @@ myEvents.on('start', function () {
         if (LongZhuscrawler.getMainData()) {
             this.cancel();
             console.log('-------------爬完啦----------------');
+            var Today = new Date();
+            var NowHour = Today.getHours();
+            var NowMinute = Today.getMinutes();
+            var NowSecond = Today.getSeconds();
+            var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
+            console.log('龙珠耗时' + end-mypretime);
             myEvents.emit('gameover');
         }
     });
