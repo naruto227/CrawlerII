@@ -39,7 +39,8 @@ myEvents.on('start', function () {
             var NowMinute = Today.getMinutes();
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
-            console.log('龙珠耗时' + end-mypretime);
+            var time = end - mypretime;
+            console.log('龙珠耗时' + time);
             myEvents.emit('gameover');
         }
     });
