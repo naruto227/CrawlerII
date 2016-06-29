@@ -27,20 +27,44 @@ exports.ingkee = function () {
 
 myEvents.on('start', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 3) {
+    for (var i = 0; i < 60; i = i + 5) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
-        if (IngKeescrawler.getMainData()) {
+        if (IngKeescrawler.getMainData1()) {
+            if(IngKeescrawler.getMainData2()){
+                this.cancel();
+                console.log('-------------爬完啦----------------');
+                myEvents.emit('updateOther');
+            }
+        }
+    });
+});
+
+myEvents.on('updateOther', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (IngKeescrawler.updateOthers()) {
             this.cancel();
-            console.log('-------------爬完啦----------------');
+            console.log('------------更新完了---------------');
+            isRunning = false;
+            var Today = new Date();
+            var NowHour = Today.getHours();
+            var NowMinute = Today.getMinutes();
+            var NowSecond = Today.getSeconds();
+            var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
+            var time = end - mypretime;
+            console.log('花椒耗时' + time);
             myEvents.emit('gameover');
         }
     });
 });
 
 myEvents.on('gameover', function () {
-    uploadService.uploadServe('longzhu');
+    uploadService.uploadServe('ingkee');
 });
 
 
