@@ -18,20 +18,20 @@ var config = {
 
 
    //
-   db:{
+  /* db:{
        host: 'localhost',
        user: 'root',
        password: 'root',
        database: 'douyu',
        port: 3306
-   }
-    /*db:{
+   }*/
+    db:{
         host: 'localhost',
         user: 'root',
         password: 'xidian@513',
         database: 'douyu',
         port: 3306
-    }*/
+    }
 
 };
 

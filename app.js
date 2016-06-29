@@ -59,7 +59,6 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-/*
 rule.minute = times;
 for (var i = 0; i < 60; i = i + 15) {
     times.push(i);
@@ -85,9 +84,9 @@ schedule.scheduleJob(rule, function () {
         case 3:
             options.url = 'http://localhost:3000/laifeng';
             break;
-        /!*case 4:
+        /*case 4:
          options.url = 'http://localhost:3000/6rooms';
-         break;*!/
+         break;*/
         default:
             break;
     }
@@ -102,7 +101,7 @@ schedule.scheduleJob(rule, function () {
         console.log(count);
         count = 0;
     }
-});*/
+});
 
 
 module.exports = app;
