@@ -19,7 +19,7 @@ var page = 1;
 
 exports.getMainData1 = function () {
 
-    if (page > 5) {
+    if (page > 10) {
         page = 1;
         return true;
     } else {
@@ -52,7 +52,7 @@ myEvents.on('initData1', function () {
 
 exports.getMainData2 = function () {
 
-    if (start > 5) {
+    if (start > 10) {
         start = 1;
         return true;
     } else {
