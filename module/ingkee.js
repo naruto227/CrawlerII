@@ -34,7 +34,7 @@ myEvents.on('start', function () {
         if (IngKeescrawler.getMainData1()) {
             if(IngKeescrawler.getMainData2()){
                 this.cancel();
-                console.log('-------------爬完啦----------------');
+                console.log('-------ingkee------爬完啦----------------');
                 myEvents.emit('updateOther');
             }
         }
@@ -49,7 +49,7 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (IngKeescrawler.updateOthers()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('------ingkee------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();
@@ -57,7 +57,7 @@ myEvents.on('updateOther', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             var time = end - mypretime;
-            console.log('花椒耗时' + time);
+            console.log('映客耗时' + time + '秒');
             myEvents.emit('gameover');
         }
     });

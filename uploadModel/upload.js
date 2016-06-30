@@ -38,7 +38,7 @@ myEvents.on('upload', function (tablename) {
 });
 function selectAndSend(tablename) {
     // SELECT * FROM `sixrooms`where `room_name`!='0'and`room_name`!='' ORDER BY id desc limit 100  or nickname != 0 or owner_uid != 0 
-    // var selectSql = 'SELECT * FROM ' + tablename + ' where room_name != ' + 0 + 'ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
+    // var selectSql = 'SELECT * FROM ' + tablename + ' where room_name != ' + 0 + 'ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';' WHERE room_name ' + '!=' + "" +
     var selectSql = 'SELECT * FROM ' + tablename +
         ' ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
     conn.query(selectSql, function (err, rows, fields) {

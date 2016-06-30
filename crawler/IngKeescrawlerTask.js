@@ -19,7 +19,7 @@ var page = 1;
 
 exports.getMainData1 = function () {
 
-    if (page > 10) {
+    if (page > 5) {
         page = 1;
         return true;
     } else {
@@ -52,7 +52,7 @@ myEvents.on('initData1', function () {
 
 exports.getMainData2 = function () {
 
-    if (start > 10) {
+    if (start > 5) {
         start = 1;
         return true;
     } else {
@@ -141,7 +141,7 @@ myEvents.on('update', function (room_id) {
                 // isMainFinish = true;
                 return;
             }
-            acquireData2(data);
+            acquireData2(data,room_id);
         } else {
             return console.log(room_id + error);
         }
@@ -149,7 +149,7 @@ myEvents.on('update', function (room_id) {
     });
 });
 
-function acquireData2(data) {
+function acquireData2(data,room_id) {
     var sql = 'UPDATE ingkee SET fans = ? WHERE room_id = ?';
     var parms = [data.num_followings, room_id];
     conn.query(sql, parms, function (err) {

@@ -18,7 +18,7 @@ var config = {
 
 
    //
-  /* db:{
+   /*db:{
        host: 'localhost',
        user: 'root',
        password: 'root',
