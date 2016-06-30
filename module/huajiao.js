@@ -40,7 +40,7 @@ myEvents.on('start', function () {
                 if (HuaJiaoscrawler.getGodMan()) {
                     if (HuaJiaoscrawler.getHLive()) {
                         this.cancel();
-                        console.log('-------------爬完啦----------------');
+                        console.log('-------huajiao------爬完啦----------------');
                         myEvents.emit('updateOther');
                     }
                 }
@@ -57,7 +57,7 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (HuaJiaoscrawler.updateOthers()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('-------huajiao-------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();

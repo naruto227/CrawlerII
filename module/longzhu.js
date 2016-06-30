@@ -33,7 +33,7 @@ myEvents.on('start', function () {
     schedule.scheduleJob(rule, function () {
         if (LongZhuscrawler.getMainData()) {
             this.cancel();
-            console.log('-------------爬完啦----------------');
+            console.log('------longzhu-------爬完啦----------------');
             var Today = new Date();
             var NowHour = Today.getHours();
             var NowMinute = Today.getMinutes();

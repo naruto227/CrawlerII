@@ -35,7 +35,7 @@ myEvents.on('start', function () {
         SixRoomscrawler.getMainData();
 
     // },60000);
-    console.log('-------------爬完啦----------------');
+    console.log('-------sixrooms------爬完啦----------------');
     myEvents.emit('updateOther');
 
     // });
@@ -49,7 +49,7 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (SixRoomscrawler.updateFans()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('------sixrooms------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();

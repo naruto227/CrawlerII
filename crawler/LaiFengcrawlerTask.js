@@ -85,7 +85,8 @@ function acquireData(name, data, pic) {
         try {
             online = data[i].children["4"].data.replace(/[^0-9]/ig, "");//正则表达，获取数字
         } catch (e) {
-            console.log(roomname);
+            // console.log(roomname);
+            return;
         }
         //var online = data[i].children["4"].data;//这个方法会产生一个\n
         var face = pic[i].attribs.src;

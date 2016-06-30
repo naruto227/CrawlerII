@@ -39,7 +39,7 @@ myEvents.on('start', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             console.log(end - mypretime);
-            console.log('\n' + '-------------爬完啦----------------');
+            console.log('\n' + '------laifeng-------爬完啦----------------');
             myEvents.emit('updateOther');
         }
     });
