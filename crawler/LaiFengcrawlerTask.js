@@ -18,7 +18,7 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    if (isMainFinish || page >= 5) {
+    if (isMainFinish || page >= 75) {
         console.log(page + "---------------------------");
         isMainFinish = false;
         page = 1;
