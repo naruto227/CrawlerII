@@ -71,7 +71,7 @@ var options = {
 };
 schedule.scheduleJob(rule, function () {
 
-    switch (count % 4) {
+    switch (count % 5) {
         case 0:
             options.url = 'http://localhost:3000/huajiao';
             break;
@@ -85,9 +85,9 @@ schedule.scheduleJob(rule, function () {
             options.url = 'http://localhost:3000/sixrooms';
             break;
 
-        /*case 1:
+        case 4:
             options.url = 'http://localhost:3000/laifeng';
-            break;*/
+            break;
 
         default:
             break;
