@@ -16,6 +16,8 @@ var config = {
         uploadurl:'http://120.27.94.166:2999/'
     },
 
+    sitesetting: ['laifeng', 'longzhu', 'ingkee'],
+    
 
    /*db:{
        host: 'localhost',

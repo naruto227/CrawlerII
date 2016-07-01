@@ -28,7 +28,7 @@ exports.laifeng = function () {
 
 myEvents.on('start', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 10) {
+    for (var i = 0; i < 60; i = i + 3) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
@@ -42,7 +42,7 @@ myEvents.on('start', function () {
 
 myEvents.on('updateOther', function () {
     rule1.second = times;
-    for (var i = 0; i < 60; i = i + 8) {
+    for (var i = 0; i < 60; i = i + 6) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {

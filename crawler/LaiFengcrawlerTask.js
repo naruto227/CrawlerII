@@ -18,7 +18,7 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    if (isMainFinish || page >= 75) {
+    if (isMainFinish || page >= 65) {
         console.log(page + "---------------------------");
         isMainFinish = false;
         page = 1;
@@ -44,7 +44,7 @@ myEvents.on('initData', function (pn) {
     };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
     request(laifengApi, function (err, response, body) {
         if (err) {
-            return console.log(err);
+            return console.log("maindata request" + err);
         }
         var $ = cheerio.load(body);
         //var data = JSON.parse(body);
@@ -134,22 +134,23 @@ myEvents.on('getFans', function (room_id) {
     };
     request(options1, function (err, response, body) {
         if (err) {
-            return console.log(room_id + err);
+            return console.log('http://v.laifeng.com/' + room_id + err);
         }
         var fans = 0;
-        try {
-            var face = body.substring(body.indexOf('anchorFaceUrl') + 14, body.indexOf('anchorFansNum')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
-            fans = body.substring(body.indexOf('FansNum:') + 8, body.indexOf('anchorHadBeans')).trim().replace(/,$/, "");
-            var online = body.substring(body.indexOf('onlineNum:') + 10, body.indexOf('giftNum')).replace(/[^0-9]/ig, "");
-            // var userId = body.substring(body.indexOf('userId:') + 7, body.indexOf('userName')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
-            var owner_uid = body.substring(body.indexOf('anchorId:') + 9, body.indexOf('isGold')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
-            var nickname = body.substring(body.indexOf('anchorName:') + 11, body.indexOf('anchorLevel')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
-            var tag = body.substring(body.lastIndexOf('anchorSign:') + 11, body.lastIndexOf('gender')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
-
-        } catch (e) {
-            console.log(e + "----net---");
+        if (body.indexOf('anchorFaceUrl') != -1) {
+            try {
+                var face = body.substring(body.indexOf('anchorFaceUrl') + 14, body.indexOf('anchorFansNum')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+                fans = body.substring(body.indexOf('FansNum:') + 8, body.indexOf('anchorHadBeans')).trim().replace(/,$/, "");
+                var online = body.substring(body.indexOf('onlineNum:') + 10, body.indexOf('giftNum')).replace(/[^0-9]/ig, "");
+                // var userId = body.substring(body.indexOf('userId:') + 7, body.indexOf('userName')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+                var owner_uid = body.substring(body.indexOf('anchorId:') + 9, body.indexOf('isGold')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+                var nickname = body.substring(body.indexOf('anchorName:') + 11, body.indexOf('anchorLevel')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+                var tag = body.substring(body.lastIndexOf('anchorSign:') + 11, body.lastIndexOf('gender')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
+                myEvents.emit('updateInfo', fans, face, online, owner_uid, nickname, tag, room_id);
+            } catch (e) {
+                console.log(e + "----net---");
+            }
         }
-        myEvents.emit('updateInfo', fans, face, online, owner_uid, nickname, tag, room_id);
     });
 });
 

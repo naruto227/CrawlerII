@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var schedule = require('node-schedule');
 var request = require('request');
 var rule = new schedule.RecurrenceRule();
+var uploadServe = require("./uploadModel/upload.js");
+
 var times = [];
 
 var app = express();
@@ -63,15 +65,20 @@ rule.minute = times;
 for (var i = 0; i < 60; i = i + 20) {
     times.push(i);
 }
+
+var config = require('./config');
+var sitesetting = config.sitesetting;
+var length = sitesetting.length;
+
 var count = 0;
 var options = {
     method: 'GET',
     encoding: null,
-    url: "localhost:3000"
+    url: null
 };
 schedule.scheduleJob(rule, function () {
 
-    switch (count % 5) {
+    /*switch (count % 5) {
         case 0:
             options.url = 'http://localhost:3000/huajiao';
             break;
@@ -91,13 +98,18 @@ schedule.scheduleJob(rule, function () {
 
         default:
             break;
-    }
+    }*/
+    options.url='http://localhost:3000/'+sitesetting[count%length];
+    console.log(options.url);
+    
     request(options, function (err, response, body) {
         if (err) {
             console.log(err.message);
             return;
         }
     });
+
+    uploadServe.log(sitesetting[count%length],"start",0);
     count++;
     if (count % 100 == 0) {
         console.log(count);
