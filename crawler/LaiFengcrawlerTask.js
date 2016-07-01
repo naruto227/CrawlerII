@@ -18,7 +18,7 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    if (isMainFinish || page >= 80) {
+    if (isMainFinish || page >= 5) {
         console.log(page + "---------------------------");
         isMainFinish = false;
         page = 1;
@@ -39,7 +39,7 @@ exports.getMainData = function () {
 myEvents.on('initData', function (pn) {
     var laifengApi = {
         method: 'GET',
-        encoding: null,
+        // encoding: null,
         url: "http://www.laifeng.com/center?pageNo=" + pn
     };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
     request(laifengApi, function (err, response, body) {
@@ -52,7 +52,7 @@ myEvents.on('initData', function (pn) {
         //var pic = $(".pic a img").attr().src;
         //var href = $(".user-list .name a").toArray()["0"].attribs.href;
         var name = $(".user-list .name a").toArray();
-        var data = $(".user-list .data ").toArray();
+        // var data = $(".user-list .data ").toArray();
         var pic = $(".user-list .pic img").toArray();
         if (name.length == 0) {
             isMainFinish = true;
@@ -65,13 +65,13 @@ myEvents.on('initData', function (pn) {
          isMainFinish = true;
          return;
          }*/
-        acquireData(name, data, pic);
+        acquireData(name, pic);
     })
 });
-function acquireData(name, data, pic) {
+function acquireData(name, pic) {
 
     var sql = 'replace INTO laifeng (room_id, room_name, owner_uid, nickname, online, fans, tags, face) VALUES ?';
-    if (data.length == 0) {
+    if (name.length == 0) {
         // isMainFinish = true;
         return console.log('没有数据了');
     }
@@ -79,18 +79,19 @@ function acquireData(name, data, pic) {
     for (var i = 0; i < name.length; i++) {
         var href = name[i].attribs.href;
         var room_id = href.substring(21, href.length);
-        var roomname = name[i].attribs.title;
-        var face = pic[0].attribs.src;
-        var online = 0;
+        // var online = 0;
         try {
-            online = data[i].children["4"].data.replace(/[^0-9]/ig, "");//正则表达，获取数字
+
+            var roomname = name[i].attribs.title;
+            var face = pic[0].attribs.src;
+            // online = data[i].children["4"].data.replace(/[^0-9]/ig, "");//正则表达，获取数字
         } catch (e) {
-            // console.log(roomname);
-            return;
+            return console.log('http://v.laifeng.com/' + room_id + e);
+
         }
         //var online = data[i].children["4"].data;//这个方法会产生一个\n
         var face = pic[i].attribs.src;
-        var params = [room_id, roomname, 0, 0, online, 0, 0, face];
+        var params = [room_id, roomname, 0, 0, 0, 0, 0, face];
         values.push(params);
     }
     conn.query(sql, [values], function (err, result) {
@@ -126,12 +127,12 @@ exports.updateFans = function () {
 
 myEvents.on('getFans', function (room_id) {
     // console.log(room_id);
-    // var options = {
-    //     method: 'GET',
-    //     // encoding: null,
-    //     url: 'http://v.laifeng.com/' + room_id
-    // };
-    request('http://v.laifeng.com/' + room_id, function (err, response, body) {
+    var options1 = {
+        method: 'GET',
+        // encoding: null,
+        url: 'http://v.laifeng.com/' + room_id
+    };
+    request(options1, function (err, response, body) {
         if (err) {
             return console.log(room_id + err);
         }
@@ -139,6 +140,7 @@ myEvents.on('getFans', function (room_id) {
         try {
             var face = body.substring(body.indexOf('anchorFaceUrl') + 14, body.indexOf('anchorFansNum')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
             fans = body.substring(body.indexOf('FansNum:') + 8, body.indexOf('anchorHadBeans')).trim().replace(/,$/, "");
+            var online = body.substring(body.indexOf('onlineNum:') + 10, body.indexOf('giftNum')).replace(/[^0-9]/ig, "");
             // var userId = body.substring(body.indexOf('userId:') + 7, body.indexOf('userName')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
             var owner_uid = body.substring(body.indexOf('anchorId:') + 9, body.indexOf('isGold')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
             var nickname = body.substring(body.indexOf('anchorName:') + 11, body.indexOf('anchorLevel')).trim().replace(/,$/, "").replace(/\'|’|‘/g, "");
@@ -147,13 +149,13 @@ myEvents.on('getFans', function (room_id) {
         } catch (e) {
             console.log(e + "----net---");
         }
-        myEvents.emit('updateInfo', fans, face, owner_uid, nickname, tag, room_id);
+        myEvents.emit('updateInfo', fans, face, online, owner_uid, nickname, tag, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (fans, face, owner_uid, nickname, tag, room_id) {
-    var sql = 'UPDATE laifeng SET fans = ?,face = ?,owner_uid = ?,nickname = ?, tags = ? WHERE room_id = ?';
-    var parms = [fans, face, owner_uid, nickname, tag, room_id];
+myEvents.on('updateInfo', function (fans, face, online, owner_uid, nickname, tag, room_id) {
+    var sql = 'UPDATE laifeng SET fans = ?,face = ?, online = ?, owner_uid = ?,nickname = ?, tags = ? WHERE room_id = ?';
+    var parms = [fans, face, online, owner_uid, nickname, tag, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
             return console.log(err + "---sql---");

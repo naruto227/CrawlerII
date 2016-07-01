@@ -18,142 +18,119 @@ var starpage = 1,
  */
 exports.getStar = function () {
 
-    var options = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.huajiao.com/category/1?pageno=" + starpage
-    };
-    request(options, function (err, response, body) {
-        starpage = starpage + 1;
-        if (err) {
-            console.log('pageno=' + starpage);
-            return console.log('明星来了' + err);
-        }
-        try {
-            var $ = cheerio.load(body);
-            //var tag = $('.current').toArray();
-            var room_id = $('.feed .link').toArray();
-            var username = $('.username').toArray();
-            var face = $('.avatar').toArray();
-            var tag = "明星来了";
-            if (body.indexOf('title') < 0) {
-                starpage = -9999;
-                return console.log('明星来了no more data');
-            }
-            acquireData(room_id, username, tag, face);
-        } catch (e) {
-            console.log(e + "明星来了-----net----");
-        }
-    });
 
     if (starpage < 0) {
         return true;
     } else {
+        var options = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.huajiao.com/category/1?pageno=" + starpage
+        };
+        request(options, function (err, response, body) {
+            starpage = starpage + 1;
+            if (err) {
+                console.log('pageno=' + starpage);
+                return console.log('明星来了' + err);
+            }
+            try {
+                var $ = cheerio.load(body);
+                //var tag = $('.current').toArray();
+                var room_id = $('.feed .link').toArray();
+                var username = $('.username').toArray();
+                var face = $('.avatar').toArray();
+                var tag = "明星来了";
+                if (body.indexOf('title') < 0) {
+                    starpage = -9999;
+                    return console.log('明星来了no more data');
+                }
+                acquireData(room_id, username, tag, face);
+            } catch (e) {
+                console.log(e + "明星来了-----net----");
+            }
+        });
         return false;
     }
 };
 
 exports.getGodNess = function () {
 
-    var options = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.huajiao.com/category/2?pageno=" + godnesspage
-    };
-    request(options, function (err, response, body) {
-        godnesspage = godnesspage + 1;
-        if (err) {
-            console.log('pageno=' + godnesspage);
-            return console.log('女神驾到' + err);
-        }
-        try {
-            var $ = cheerio.load(body);
-            var room_id = $('.feed .link').toArray();
-            var username = $('.username').toArray();
-            var face = $('.avatar').toArray();
-            var tag = "女神驾到";
-            if (body.indexOf('title') < 0) {
-                godnesspage = -9999;
-                return console.log('女神驾到no more data');
-            }
-            acquireData(room_id, username, tag, face);
-        } catch (e) {
-            console.log(e + "女神驾到-----net----");
-        }
-    });
+
 
     if (godnesspage < 0) {
         return true;
     } else {
+        var options = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.huajiao.com/category/2?pageno=" + godnesspage
+        };
+        request(options, function (err, response, body) {
+            godnesspage = godnesspage + 1;
+            if (err) {
+                console.log('pageno=' + godnesspage);
+                return console.log('女神驾到' + err);
+            }
+            try {
+                var $ = cheerio.load(body);
+                var room_id = $('.feed .link').toArray();
+                var username = $('.username').toArray();
+                var face = $('.avatar').toArray();
+                var tag = "女神驾到";
+                if (body.indexOf('title') < 0) {
+                    godnesspage = -9999;
+                    return console.log('女神驾到no more data');
+                }
+                acquireData(room_id, username, tag, face);
+            } catch (e) {
+                console.log(e + "女神驾到-----net----");
+            }
+        });
         return false;
     }
 };
 
 exports.getGodMan = function () {
 
-    var options = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.huajiao.com/category/5?pageno=" + godmanpage
-    };
-    request(options, function (err, response, body) {
-        godmanpage = godmanpage + 1;
-        if (err) {
-            console.log('pageno=' + godmanpage);
 
-            return console.log('国民男神' + err);
-        }
-        try {
-            var $ = cheerio.load(body);
-            var room_id = $('.feed .link').toArray();
-            var username = $('.username').toArray();
-            var face = $('.avatar').toArray();
-            var tag = "国民男神";
-            if (body.indexOf('title') < 0) {
-                godmanpage = -9999;
-                return console.log('国民男神no more data');
-            }
-            acquireData(room_id, username, tag, face);
-        } catch (e) {
-            console.log(e + "国民男神-----net----");
-        }
-    });
 
     if (godmanpage < 0) {
         return true;
     } else {
+        var options = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.huajiao.com/category/5?pageno=" + godmanpage
+        };
+        request(options, function (err, response, body) {
+            godmanpage = godmanpage + 1;
+            if (err) {
+                console.log('pageno=' + godmanpage);
+
+                return console.log('国民男神' + err);
+            }
+            try {
+                var $ = cheerio.load(body);
+                var room_id = $('.feed .link').toArray();
+                var username = $('.username').toArray();
+                var face = $('.avatar').toArray();
+                var tag = "国民男神";
+                if (body.indexOf('title') < 0) {
+                    godmanpage = -9999;
+                    return console.log('国民男神no more data');
+                }
+                acquireData(room_id, username, tag, face);
+            } catch (e) {
+                console.log(e + "国民男神-----net----");
+            }
+        });
         return false;
     }
 };
 
 exports.getHLive = function () {
 
-    var options = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.huajiao.com/category/3?pageno=" + gethlivepage
-    };
-    request(options, function (err, response, body) {
-        gethlivepage = gethlivepage + 1;
-        if (err) {
-            console.log('pageno=' + gethlivepage);
-            return console.log('高清直播' + err);
-        }
-        try {
-            var $ = cheerio.load(body);
-            var room_id = $('.feed .link').toArray();
-            var username = $('.username').toArray();
-            var face = $('.avatar').toArray();
-            var tag = "高清直播";
-            if (body.indexOf('title') < 0) {
-                gethlivepage = -9999;
-                return console.log('高清直播no more data');
-            }
-            acquireData(room_id, username, tag, face);
-        } catch (e) {
-            console.log(e + "高清直播-----net----");
-        }
-    });
+
 
     if (gethlivepage < 0) {
         starpage = 1;
@@ -162,6 +139,32 @@ exports.getHLive = function () {
         gethlivepage = 1;
         return true;
     } else {
+        var options = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.huajiao.com/category/3?pageno=" + gethlivepage
+        };
+        request(options, function (err, response, body) {
+            gethlivepage = gethlivepage + 1;
+            if (err) {
+                console.log('pageno=' + gethlivepage);
+                return console.log('高清直播' + err);
+            }
+            try {
+                var $ = cheerio.load(body);
+                var room_id = $('.feed .link').toArray();
+                var username = $('.username').toArray();
+                var face = $('.avatar').toArray();
+                var tag = "高清直播";
+                if (body.indexOf('title') < 0) {
+                    gethlivepage = -9999;
+                    return console.log('高清直播no more data');
+                }
+                acquireData(room_id, username, tag, face);
+            } catch (e) {
+                console.log(e + "高清直播-----net----");
+            }
+        });
         return false;
     }
 };

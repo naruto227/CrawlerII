@@ -28,7 +28,7 @@ exports.huajiao = function () {
 
 myEvents.on('start', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 3) {
+    for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
     }//getStar  http://www.huajiao.com/category/1?pageno=
     //getGodNess   http://www.huajiao.com/category/2?pageno=

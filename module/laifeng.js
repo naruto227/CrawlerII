@@ -9,6 +9,7 @@ var myEvents = new EventEmitter();
 var LaiFengcrawler = require("../crawler/LaiFengcrawlerTask.js");
 var uploadService = require("../uploadModel/upload.js");
 var rule = new schedule.RecurrenceRule();
+var rule1 = new schedule.RecurrenceRule();
 
 var times = [];
 var isRunning = false;
@@ -27,33 +28,27 @@ exports.laifeng = function () {
 
 myEvents.on('start', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 3) {
+    for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
         if (LaiFengcrawler.getMainData()) {
             this.cancel();
-            var Today = new Date();
-            var NowHour = Today.getHours();
-            var NowMinute = Today.getMinutes();
-            var NowSecond = Today.getSeconds();
-            var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
-            console.log(end - mypretime);
-            console.log('\n' + '------laifeng-------爬完啦----------------');
+            console.log('------laifeng-------爬完啦----------------');
             myEvents.emit('updateOther');
         }
     });
 });
 
 myEvents.on('updateOther', function () {
-    rule.second = times;
-    for (var i = 0; i < 60; i = i + 30) {
+    rule1.second = times;
+    for (var i = 0; i < 60; i = i + 8) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
         if (LaiFengcrawler.updateFans()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('------laifeng------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();
@@ -61,7 +56,7 @@ myEvents.on('updateOther', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             var time = end - mypretime;
-            console.log('来疯耗时' + time);
+            console.log('来疯耗时:' + time);
             myEvents.emit('gameover');
         }
     });

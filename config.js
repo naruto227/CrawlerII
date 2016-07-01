@@ -17,7 +17,6 @@ var config = {
     },
 
 
-   //
    /*db:{
        host: 'localhost',
        user: 'root',
