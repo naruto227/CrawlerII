@@ -62,14 +62,14 @@ app.use(function (err, req, res, next) {
     });
 });
 rule.minute = times;
-for (var i = 0; i < 60; i = i + 24) {
+for (var i = 0; i < 60; i = i + 3) {
     times.push(i);
 }
 
 var config = require('./config');
 var sitesetting = config.sitesetting;
 var length = sitesetting.length;
-
+var abc=0;
 var count = 0;
 var options = {
     method: 'GET',
@@ -99,22 +99,25 @@ schedule.scheduleJob(rule, function () {
         default:
             break;
     }*/
-    options.url='http://localhost:3000/'+sitesetting[count%length];
-    console.log(options.url);
-    
-    request(options, function (err, response, body) {
-        if (err) {
-            console.log(err.message);
-            return;
-        }
-    });
+    if(abc++%8==0){
+        options.url='http://localhost:3001/'+sitesetting[count%length];
+        console.log(options.url);
 
-    uploadServe.log(sitesetting[count%length],"start",0);
-    count++;
-    if (count % 100 == 0) {
-        console.log(count);
-        count = 0;
+        request(options, function (err, response, body) {
+            if (err) {
+                console.log(err.message);
+                return;
+            }
+        });
+
+        uploadServe.log(sitesetting[count%length],config.host+" start",0);
+        count++;
+        if (count % 100 == 0) {
+            console.log(count);
+            count = 0;
+        }
     }
+    
 });
 
 

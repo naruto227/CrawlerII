@@ -20,7 +20,7 @@ exports.uploadServe = function (tablename) {
             return console.log(err);
         }
         console.log(rows.length + "行数" + tablename);
-        log(tablename, "end", rows.length);
+        log(tablename, config.host + " end", rows.length);
 
     });
 
@@ -58,7 +58,7 @@ function selectAndSend(tablename) {
         console.log(tablename + "上传json");
         if (rows.length == 0) {
             isFinish = true;
-            myEvents.emit("clearTable",tablename);
+            myEvents.emit("clearTable", tablename);
             return;
         }
         var options = {

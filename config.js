@@ -16,8 +16,8 @@ var config = {
         uploadurl:'http://120.27.94.166:2999/'
     },
 
-    sitesetting: ['laifeng', 'huajiao', 'bilibli', 'longzhu', 'huya', 'sixrooms', 'yy', 'ingkee',  'douyu', 'Panda'],
-    
+    sitesetting: ['laifeng', 'huajiao', 'longzhu', 'sixrooms', 'ingkee'],
+    host:"from 121.42.176.30",
 
    /*db:{
        host: 'localhost',
