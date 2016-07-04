@@ -17,7 +17,7 @@ exports.uploadServe = function (tablename) {
     var sql = 'SELECT * FROM ' + tablename;
     conn.query(sql, function (err, rows, fields) {
         if (err) {
-            return console.log(err)
+            return console.log(err);
         }
         console.log(rows.length + "行数" + tablename);
         log(tablename, "end", rows.length);
@@ -126,7 +126,7 @@ function log(platform, action, amount) {
         "&amount=" + amount;
     request(url, function (error, response, body) {
             if (error) {
-                return console.log(error)
+                return console.log(error);
             }
         }
     );

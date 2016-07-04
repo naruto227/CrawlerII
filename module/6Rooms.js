@@ -43,7 +43,7 @@ myEvents.on('start', function () {
 
 myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 5) {
+    for (var i = 0; i < 60; i = i + 6) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {

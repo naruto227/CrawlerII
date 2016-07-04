@@ -151,7 +151,7 @@ myEvents.on('update', function (room_id) {
 
 function acquireData2(data,room_id) {
     var sql = 'UPDATE ingkee SET fans = ? WHERE room_id = ?';
-    var parms = [data.num_followings, room_id];
+    var parms = [data.num_followers, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
             console.log(err + "---sql---");
