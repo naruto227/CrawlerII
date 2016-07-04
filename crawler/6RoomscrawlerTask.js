@@ -55,7 +55,7 @@ function acquireData(data) {
     var values = [];
     data.roomList.forEach(function (item) {
         /** @namespace item.rtype */
-        var params = [item.rid, 0, item.uid, item.username, item.count, 0, item.pic];
+        var params = [item.rid, item.username, item.uid, item.username, item.count, 0, item.pic];
         values.push(params);
         
     });
