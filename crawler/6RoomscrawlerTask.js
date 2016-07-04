@@ -109,18 +109,18 @@ myEvents.on('getFans', function (room_id) {
         try {
             var $ = cheerio.load(body);
             //fans = $('.js_followNum').toArray();
-            var room_name = $('head title').toArray()["0"].children["0"].data;
+            // var room_name = $('head title').toArray()["0"].children["0"].data;
             fans = $('.js_followNum').toArray()["0"].children["0"].data;
         } catch (e) {
             console.log(e + room_id + "----net---");
         }
-        myEvents.emit('updateInfo', room_name, fans, room_id);
+        myEvents.emit('updateInfo', fans, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (room_name, fans, room_id) {
-    var sql = 'UPDATE sixrooms SET room_name = ?, fans = ? WHERE room_id = ?';
-    var parms = [room_name, fans, room_id];
+myEvents.on('updateInfo', function (fans, room_id) {
+    var sql = 'UPDATE sixrooms SET fans = ? WHERE room_id = ?';
+    var parms = [fans, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
             console.log(err + "---sql---");
