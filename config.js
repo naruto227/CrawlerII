@@ -17,7 +17,7 @@ var config = {
         uploadurl: 'http://120.27.94.166:2999/'
     },
 
-    sitesetting: ['huajiao', 'laifeng', 'longzhu', 'sixrooms', 'ingkee'],
+    sitesetting: ['huajiao', 'laifeng', 'longzhu', 'ingkee'],//'sixrooms',
     // host:"from 121.42.176.30",
     host: "from 192.168.199.233s",
 

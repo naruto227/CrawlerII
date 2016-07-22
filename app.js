@@ -62,7 +62,7 @@ app.use(function (err, req, res, next) {
     });
 });
 rule.minute = times;
-for (var i = 0; i < 60; i = i + 3) {
+for (var i = 0; i < 60; i = i + 5) {
     times.push(i);
 }
 
@@ -99,7 +99,7 @@ schedule.scheduleJob(rule, function () {
         default:
             break;
     }*/
-    if(abc++%8==0){
+    if(abc++%6==0){
         options.url='http://localhost:3001/'+sitesetting[count%length];
         console.log(options.url);
 
