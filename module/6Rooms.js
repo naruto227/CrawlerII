@@ -2,7 +2,7 @@
  * Created by huang on 16-6-11.
  */
 var cheerio = require('cheerio'),
-    // request = require('request'),
+// request = require('request'),
     schedule = require('node-schedule'),
     EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
@@ -32,16 +32,34 @@ myEvents.on('start', function () {
     // }
     // schedule.scheduleJob(rule, function () {
     // setTimeout(function () {
+    setTimeout(function () {
         SixRoomscrawler.getMainData();
+        myEvents.emit('updateOther');
+
+
+    }, 10000);
 
     // },60000);
     console.log('-------sixrooms------爬完啦----------------');
-    myEvents.emit('updateOther');
 
     // });
 });
 
 myEvents.on('updateOther', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 6) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (SixRoomscrawler.updateFans()) {
+            this.cancel();
+
+            myEvents.emit('updateSecond');
+        }
+    });
+});
+
+myEvents.on('updateSecond', function () {
     rule.second = times;
     for (var i = 0; i < 60; i = i + 6) {
         times.push(i);

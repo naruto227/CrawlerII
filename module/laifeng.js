@@ -35,6 +35,7 @@ myEvents.on('start', function () {
         if (LaiFengcrawler.getMainData()) {
             this.cancel();
             console.log('------laifeng-------爬完啦----------------');
+            console.log('update laifeng first start');
             myEvents.emit('updateOther');
         }
     });
@@ -48,7 +49,37 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (LaiFengcrawler.updateFans()) {
             this.cancel();
-            console.log('------laifeng------更新完了---------------');
+            console.log('update laifeng second start');
+            myEvents.emit('updateSecond');
+        }
+    });
+
+});
+
+myEvents.on('updateSecond', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 8) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (LaiFengcrawler.updateFans()) {
+            this.cancel();
+            console.log('update laifeng third start');
+
+            myEvents.emit('updateThird');
+        }
+    });
+});
+
+myEvents.on('updateThird', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 8) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (LaiFengcrawler.updateFans()) {
+            this.cancel();
+            console.log('-------laifeng-------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();
@@ -56,11 +87,10 @@ myEvents.on('updateOther', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             var time = end - mypretime;
-            console.log('来疯耗时:' + time);
+            console.log('花椒耗时' + time);
             myEvents.emit('gameover');
         }
     });
-
 });
 
 myEvents.on('gameover', function () {

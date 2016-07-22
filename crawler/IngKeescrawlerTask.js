@@ -94,10 +94,11 @@ function acquireData(data) {
         if (!(item.creator.portrait.includes("http"))) {
             item.creator.portrait = "http://img.meelive.cn/" + item.creator.portrait;
         }
-        var params = [item.creator.id, item.name, item.creator.id, item.creator.nick, item.online_users, null, 0, null, item.creator.portrait];
+        var params = [item.id, item.name, item.creator.id, item.creator.nick, item.online_users, null, 0, null, item.creator.portrait];
         conn.query(sql, params, function (err, result) {
             if (err) {
-                return console.log(err);
+                conn.end();
+                return console.log(err + "ingkee sql1");
             }
         });
     });
@@ -107,10 +108,11 @@ var isFinish = false;
 var pn = 1;
 exports.updateOthers = function () {
     var limit_range = (pn - 1) * 10 + ',' + 10;
-    var Sql = 'SELECT * FROM ingkee limit ' + limit_range + ';';
+    var Sql = 'SELECT * FROM ingkee WHERE fans = 0 limit ' + limit_range + ';';
     conn.query(Sql, function (err, rows) {
         if (err) {
-            return console.log(err + '------------sql err--------------')
+            conn.end();
+            return console.log(err + "ingkee sql2");
         }
         if (rows.length == 0) {
             return isFinish = true;
@@ -154,7 +156,8 @@ function acquireData2(data,room_id) {
     var parms = [data.num_followers, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
-            console.log(err + "---sql---");
+            conn.end();
+            return console.log(err + "ingkee sql3");
         }
     });
 }

@@ -14,7 +14,7 @@ var conn = mysql.createConnection(config.db);
 var page = 0;
 
 exports.uploadServe = function (tablename) {
-    var sql = 'SELECT * FROM ' + tablename;
+    var sql = 'SELECT * FROM ' + tablename +" where   `room_name` !=  '' or `room_name` is null ";
     conn.query(sql, function (err, rows, fields) {
         if (err) {
             return console.log(err);

@@ -41,6 +41,8 @@ myEvents.on('start', function () {
                     if (HuaJiaoscrawler.getHLive()) {
                         this.cancel();
                         console.log('-------huajiao------爬完啦----------------');
+                        console.log('update huajiao first start');
+
                         myEvents.emit('updateOther');
                     }
                 }
@@ -50,6 +52,36 @@ myEvents.on('start', function () {
 });
 
 myEvents.on('updateOther', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (HuaJiaoscrawler.updateOthers()) {
+            this.cancel();
+            console.log('update huajiao second start');
+
+            myEvents.emit('updateSecond');
+        }
+    });
+});
+
+myEvents.on('updateSecond', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (HuaJiaoscrawler.updateOthers()) {
+            this.cancel();
+            console.log('update huajiao third start');
+
+            myEvents.emit('updateThird');
+        }
+    });
+});
+
+myEvents.on('updateThird', function () {
     rule.second = times;
     for (var i = 0; i < 60; i = i + 10) {
         times.push(i);

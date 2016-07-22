@@ -29,23 +29,27 @@ exports.getMainData = function () {
 };
 
 myEvents.on('initData', function () {
-    var sixroomsApi = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.6.cn/liveAjax.html"
-    };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
-    request(sixroomsApi, function (err, response, body) {
-        if (err) {
-            return console.log(err);
-        }
-        var data = JSON.parse(body);
-        /** @namespace data.roomList */
-        if (data.roomList.length == 0) {
-            isMainFinish = true;
-            return;
-        }
-        acquireData(data);
-    })
+    setTimeout(function () {
+        var sixroomsApi = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.6.cn/liveAjax.html"
+        };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
+        request(sixroomsApi, function (err, response, body) {
+            if (err) {
+                return console.log(err);
+            }
+            var data = JSON.parse(body);
+            // console.log(JSON.stringify(data));
+            /** @namespace data.roomList */
+            // if (data.roomList.length == 0) {
+                isMainFinish = true;
+                // return;
+            // }
+            acquireData(data);
+        })
+    },10000);
+   
 });
 function acquireData(data) {
     var sql = 'replace INTO sixrooms (room_id, room_name, owner_uid, nickname, online, fans, face) VALUES ?';
@@ -61,7 +65,8 @@ function acquireData(data) {
     });
     conn.query(sql, [values], function (err, result) {
         if (err) {
-            return console.log(err);
+            conn.end();
+            return console.log(err + "sixrooms sql1");
         }
         // conn.end();
     });
@@ -69,10 +74,11 @@ function acquireData(data) {
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms ORDER BY id limit ' + limit_range + ' ;';
+    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 ORDER BY id limit ' + limit_range + ' ;';
     conn.query(sql, function (err, rows) {
         if (err) {
-           return console.log(err);
+            conn.end();
+            return console.log(err + "sixrooms sql2");
         }
         if (rows.length > 0) {
             start++;
@@ -123,7 +129,8 @@ myEvents.on('updateInfo', function (fans, room_id) {
     var parms = [fans, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
-            console.log(err + "---sql---");
+            conn.end();
+            return console.log(err + "sixrooms sql3");
         }
     })
 });

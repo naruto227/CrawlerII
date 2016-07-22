@@ -62,7 +62,8 @@ function acquireData(data) {
     });
     conn.query(sql, [values], function (err, result) {
         if (err) {
-            return console.log(err);
+            conn.end();
+            return console.log(err + "longzhu sql1");
         }
     });
 }

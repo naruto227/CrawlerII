@@ -18,7 +18,7 @@ var page = 1;
  */
 
 exports.getMainData = function () {
-    if (isMainFinish || page >= 65) {
+    if (isMainFinish || page >= 45) {
         console.log(page + "---------------------------");
         isMainFinish = false;
         page = 1;
@@ -96,17 +96,19 @@ function acquireData(name, pic) {
     }
     conn.query(sql, [values], function (err, result) {
         if (err) {
-            return console.log(err);
+            conn.end();
+            return console.log(err + "laifeng sql1");
         }
     });
 }
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM laifeng limit ' + limit_range + ';';
+    var sql = 'SELECT * FROM laifeng WHERE fans = 0 limit ' + limit_range + ';';
     conn.query(sql, function (err, rows) {
         if (err) {
-            return console.log(err);
+            conn.end();
+            return console.log(err + "laifeng sql2");
         }
         if (rows.length > 0) {
             start++;
@@ -159,7 +161,8 @@ myEvents.on('updateInfo', function (fans, face, online, owner_uid, nickname, tag
     var parms = [fans, face, online, owner_uid, nickname, tag, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
-            return console.log(err + "---sql---");
+            conn.end();
+            return console.log(err + "laifeng sql3");
         }
     })
 });

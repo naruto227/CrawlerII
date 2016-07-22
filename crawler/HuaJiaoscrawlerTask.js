@@ -179,6 +179,7 @@ function acquireData(room_id, username, tag, face) {
     for (var i = 0; i < username.length; i++) {
         var room_id1 = 0;
         var nickname = username[i].children["0"].data;
+        var room_name = nickname + "的直播";
         var face1 = '';
         try {
             var href = room_id[i].attribs.href;
@@ -187,13 +188,14 @@ function acquireData(room_id, username, tag, face) {
         } catch (e) {
             console.log(room_id1);
         }
-        var params = [room_id1, 0, 0, nickname, 0, 0, tag, face1];
+        var params = [room_id1, room_name, 0, nickname, 0, 0, tag, face1];
         values.push(params);
 
     }
     conn.query(sql, [values], function (err, result) {
         if (err) {
-            return console.log('sql' + err);
+            conn.end();
+            return console.log(err + "huajiao sql1");
         }
         // conn.end();
     });
@@ -203,10 +205,11 @@ var isFinish = false;
 var page = 1;
 exports.updateOthers = function () {
     var limit_range = (page - 1) * 10 + ',' + 10;
-    var Sql = 'SELECT * FROM huajiao limit ' + limit_range + ';';
+    var Sql = 'SELECT * FROM huajiao WHERE owner_uid = 0 limit ' + limit_range + ';';
     conn.query(Sql, function (err, rows) {
         if (err) {
-            return console.log(err + '------------sql err--------------')
+            conn.end();
+            return console.log(err + "huajiao sql2");
         }
         if (rows.length == 0) {
             return isFinish = true;
@@ -239,7 +242,7 @@ myEvents.on('update', function (room_id) {
         if (!error && response.statusCode == 200) {
             try {
                 var $ = cheerio.load(body);
-                var room_name = $('head title').toArray()["0"].children["0"].data;
+                // var room_name = $('head title').toArray()["0"].children["0"].data;
                 var fans = $('.fans').toArray()["0"].children["0"].next.children["0"].data;
                 var online = body.substring(body.indexOf('watches') + 9, body.indexOf('"reposts"')).trim().replace(/,$/, "");
                 var owner_uid = body.substring(body.indexOf('uid') + 6, body.indexOf('uid') + 14);
@@ -253,16 +256,17 @@ myEvents.on('update', function (room_id) {
         } else {
             return console.log(room_id + error);
         }
-        myEvents.emit('updateInfo', room_name, fans, online, owner_uid, room_id);
+        myEvents.emit('updateInfo', fans, online, owner_uid, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (room_name, fans, online, owner_uid, room_id) {
-    var sql = 'UPDATE huajiao SET room_name = ?, fans = ?, online = ?, owner_uid = ? WHERE room_id = ?';
-    var parms = [room_name, fans, online, owner_uid, room_id];
+myEvents.on('updateInfo', function (fans, online, owner_uid, room_id) {
+    var sql = 'UPDATE huajiao SET fans = ?, online = ?, owner_uid = ? WHERE room_id = ?';
+    var parms = [fans, online, owner_uid, room_id];
     conn.query(sql, parms, function (err) {
         if (err) {
-            console.log(err + "---sql---");
+            conn.end();
+            return console.log(err + "huajiao sql3");
         }
     })
 });
