@@ -246,8 +246,8 @@ myEvents.on('update', function (room_id) {
                 var fans = $('.fans').toArray()["0"].children["0"].next.children["0"].data;
                 var online = body.substring(body.indexOf('watches') + 9, body.indexOf('"reposts"')).trim().replace(/,$/, "");
                 var owner_uid = body.substring(body.indexOf('uid') + 6, body.indexOf('uid') + 14);
-                var a = body.indexOf('uid') + 6;
-                var b = body.indexOf('uid') + 14;
+                // var a = body.indexOf('uid') + 6;
+                // var b = body.indexOf('uid') + 14;
                 //console.log(a + '\n' + b);
                 //console.log(room_name + '\n' + online + '\n' + uid);
             } catch (e) {

@@ -74,11 +74,11 @@ function acquireData(data) {
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 ' + limit_range + ' ;';
+    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 limit ' + limit_range + ' ;';
     conn.query(sql, function (err, rows) {
         if (err) {
             conn.end();
-            return console.log(err + "sixrooms sql2");
+            return console.log(err + " sixrooms sql2");
         }
         if (rows.length > 0) {
             start++;
