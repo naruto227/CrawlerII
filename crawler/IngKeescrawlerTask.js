@@ -66,8 +66,6 @@ myEvents.on('initData2', function () {
     var ingkeeApi2 = {
         method: 'GET',
         encoding: null,
-        // http://service.ingkee.com/api/live/homepage_new?proto=3&location=38  长的
-        // http://service.ingkee.com/api/live/simpleall?proto=3&multiaddr=1 短的
         url: "http://service.ingkee.com/api/live/homepage_new"
     };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
     request(ingkeeApi2, function (err, response, body) {
@@ -143,7 +141,7 @@ myEvents.on('update', function (room_id) {
                 // isMainFinish = true;
                 return;
             }
-            acquireData2(data,room_id);
+            acquireData2(data, room_id);
         } else {
             return console.log(room_id + error);
         }
@@ -151,7 +149,7 @@ myEvents.on('update', function (room_id) {
     });
 });
 
-function acquireData2(data,room_id) {
+function acquireData2(data, room_id) {
     var sql = 'UPDATE ingkee SET fans = ? WHERE room_id = ?';
     var parms = [data.num_followers, room_id];
     conn.query(sql, parms, function (err) {
