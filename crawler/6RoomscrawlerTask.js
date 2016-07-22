@@ -74,7 +74,7 @@ function acquireData(data) {
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 ORDER BY id limit ' + limit_range + ' ;';
+    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 ' + limit_range + ' ;';
     conn.query(sql, function (err, rows) {
         if (err) {
             conn.end();
