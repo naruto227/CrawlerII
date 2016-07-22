@@ -26,18 +26,17 @@ exports.SixRooms = function () {
 };
 
 myEvents.on('start', function () {
-    // rule.second = times;
-    // for (var i = 0; i < 60; i = i + 3) {
-    //     times.push(i);
-    // }
+    /*rule.second = times;
+     for (var i = 0; i < 60; i = i + 3) {
+     times.push(i);
+     }*/
     // schedule.scheduleJob(rule, function () {
-    // setTimeout(function () {
-    setTimeout(function () {
-        SixRoomscrawler.getMainData();
-        myEvents.emit('updateOther');
+    SixRoomscrawler.getMainData();
+    console.log('------sixrooms start update----------');
+    myEvents.emit('updateOther');
 
 
-    }, 10000);
+    // }, 10000);
 
     // },60000);
     console.log('-------sixrooms------爬完啦----------------');
