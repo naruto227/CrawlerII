@@ -89,7 +89,7 @@ function acquireData(data) {
     //http://img.meelive.cn/
     var param=[];
     // data.lives.forEach(function (item) {
-    //...
+    //
     // });
     for(var i=0;i<data.lives.length;i++){
         var item=data.lives[i];
