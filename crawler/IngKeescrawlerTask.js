@@ -82,23 +82,29 @@ myEvents.on('initData2', function () {
 });
 
 function acquireData(data) {
-    var sql = 'replace INTO ingkee (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES (?,?,?,?,?,?,?,?,?)';
+    var sql = 'replace INTO ingkee (room_id, room_name, owner_uid, nickname, online, game_name, fans, tags, face) VALUES ?';
     if (data.lives.length == 0) {
         return console.log('没有数据了');
     }
     //http://img.meelive.cn/
-
-    data.lives.forEach(function (item) {
+    var param=[];
+    // data.lives.forEach(function (item) {
+    //
+    // });
+    for(var i=0;i<data.lives.length;i++){
+        var item=data.lives[i];
         if (!(item.creator.portrait.includes("http"))) {
             item.creator.portrait = "http://img.meelive.cn/" + item.creator.portrait;
         }
+        // console.log(JSON.stringify(item));
         var params = [item.id, item.name, item.creator.id, item.creator.nick, item.online_users, null, 0, null, item.creator.portrait];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                conn.end();
-                return console.log(err + "ingkee sql1");
-            }
-        });
+        param.push(params);
+    }
+    conn.query(sql, [param], function (err, result) {
+        if (err) {
+            conn.end();
+            return console.log(err + "ingkee sql1");
+        }
     });
 }
 
