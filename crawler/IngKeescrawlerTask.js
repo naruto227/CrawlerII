@@ -19,7 +19,7 @@ var page = 1;
 
 exports.getMainData1 = function () {
 
-    if (page > 10) {
+    if (page > 9) {
         page = 1;
         return true;
     } else {
@@ -52,7 +52,7 @@ myEvents.on('initData1', function () {
 
 exports.getMainData2 = function () {
 
-    if (start > 10) {
+    if (start > 9) {
         start = 1;
         return true;
     } else {
@@ -123,7 +123,7 @@ exports.updateOthers = function () {
         }
         pn++;
         for (var i = 0; i < rows.length; i++) {
-            myEvents.emit('update', rows[i].room_id);
+            myEvents.emit('update', rows[i].owner_uid);
         }
     });
     if (isFinish) {
@@ -134,11 +134,11 @@ exports.updateOthers = function () {
     }
 };
 
-myEvents.on('update', function (room_id) {
+myEvents.on('update', function (uid) {
     var optionsfordetail = {
         method: 'GET',
         encoding: null,
-        url: 'http://service5.inke.tv/api/user/relation/numrelations?id=' + room_id
+        url: 'http://service5.inke.tv/api/user/relation/numrelations?id=' + uid
     };
     request(optionsfordetail, function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -147,17 +147,17 @@ myEvents.on('update', function (room_id) {
                 // isMainFinish = true;
                 return;
             }
-            acquireData2(data, room_id);
+            acquireData2(data, uid);
         } else {
-            return console.log(room_id + error);
+            return console.log(uid + error);
         }
 
     });
 });
 
-function acquireData2(data, room_id) {
-    var sql = 'UPDATE ingkee SET fans = ? WHERE room_id = ?';
-    var parms = [data.num_followers, room_id];
+function acquireData2(data, uid) {
+    var sql = 'UPDATE ingkee SET fans = ? WHERE owner_uid = ?';
+    var parms = [data.num_followers, uid];
     conn.query(sql, parms, function (err) {
         if (err) {
             conn.end();
