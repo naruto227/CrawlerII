@@ -45,7 +45,7 @@ myEvents.on('start', function () {
 
 myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 9) {
+    for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
@@ -60,7 +60,7 @@ myEvents.on('updateOther', function () {
 
 myEvents.on('updateSecond', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 9) {
+    for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
@@ -89,7 +89,7 @@ myEvents.on('updateThird', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             var time = end - mypretime;
-            console.log('花椒耗时' + time);
+            console.log('映客耗时' + time);
             myEvents.emit('gameover');
         }
     });
