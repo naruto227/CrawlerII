@@ -2,10 +2,11 @@
  * Created by hzq on 16-6-20.
  */
 var request = require('request'),
-    mysql = require('mysql'),
+// mysql = require('mysql'),
     cheerio = require('cheerio'),
-    config = require("../config.js"),
-    conn = mysql.createConnection(config.db),
+// config = require("../config.js"),
+// conn = mysql.createConnection(config.db),    
+    SqlUtils = require("../Utils/SqlUtils"),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -95,10 +96,12 @@ function acquireData(data) {
             item.creator.portrait = "http://img.meelive.cn/" + item.creator.portrait;
         }
         var params = [item.creator.id, item.name, item.creator.id, item.creator.nick, item.online_users, null, 0, null, item.creator.portrait];
-        conn.query(sql, params, function (err, result) {
-            if (err) {
-                return console.log(err);
-            }
+        SqlUtils(function (conn) {
+            conn.query(sql, params, function (err, result) {
+                if (err) {
+                    return console.log(err);
+                }
+            })
         });
     });
 }
@@ -108,17 +111,19 @@ var pn = 1;
 exports.updateOthers = function () {
     var limit_range = (pn - 1) * 10 + ',' + 10;
     var Sql = 'SELECT * FROM ingkee limit ' + limit_range + ';';
-    conn.query(Sql, function (err, rows) {
-        if (err) {
-            return console.log(err + '------------sql err--------------')
-        }
-        if (rows.length == 0) {
-            return isFinish = true;
-        }
-        pn++;
-        for (var i = 0; i < rows.length; i++) {
-            myEvents.emit('update', rows[i].room_id);
-        }
+    SqlUtils(function (conn) {
+        conn.query(Sql, function (err, rows) {
+            if (err) {
+                return console.log(err + '------------sql err--------------')
+            }
+            if (rows.length == 0) {
+                return isFinish = true;
+            }
+            pn++;
+            for (var i = 0; i < rows.length; i++) {
+                myEvents.emit('update', rows[i].room_id);
+            }
+        })
     });
     if (isFinish) {
         isFinish = false;
@@ -141,7 +146,7 @@ myEvents.on('update', function (room_id) {
                 // isMainFinish = true;
                 return;
             }
-            acquireData2(data);
+            acquireData2(data, room_id);
         } else {
             return console.log(room_id + error);
         }
@@ -149,13 +154,15 @@ myEvents.on('update', function (room_id) {
     });
 });
 
-function acquireData2(data) {
+function acquireData2(data, room_id) {
     var sql = 'UPDATE ingkee SET fans = ? WHERE room_id = ?';
     var parms = [data.num_followings, room_id];
-    conn.query(sql, parms, function (err) {
-        if (err) {
-            console.log(err + "---sql---");
-        }
+    SqlUtils(function (conn) {
+        conn.query(sql, parms, function (err) {
+            if (err) {
+                console.log(err + "---sql---");
+            }
+        })
     });
 }
 

@@ -5,19 +5,30 @@
 var EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
 // var count = 0;
-var mysql = require('mysql');
-var config = require("../config.js");
+/*var mysql = require('mysql');
+var config = require("../config.js");*/
 var schedule = require('node-schedule');
 var request = require("request");
 var rule = new schedule.RecurrenceRule();
-var conn = mysql.createConnection(config.db);
+var SqlUtils = require("../Utils/SqlUtils");
+// var conn = mysql.createConnection(config.db);
 var page = 0;
 
 exports.uploadServe = function (tablename) {
+    var sql = 'SELECT * FROM ' + tablename;
+    SqlUtils(function (conn) {
+        conn.query(sql, function (err, rows) {
+            if (err) {
+                return console.log(err);
+            }
+            console.log(rows.length + "行数" + tablename);
+        })
+    });
     if (page == 0) {
         sub(tablename);
     }
 };
+
 var isFinish = false;
 myEvents.on('upload', function (tablename) {
     var times = [];
@@ -41,32 +52,34 @@ function selectAndSend(tablename) {
     // var selectSql = 'SELECT * FROM ' + tablename + ' where room_name != ' + 0 + 'ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
     var selectSql = 'SELECT * FROM ' + tablename +
         ' ORDER BY id desc limit ' + parseInt(page) * 100 + ', 100;';
-    conn.query(selectSql, function (err, rows, fields) {
-        if (err) {
-            return console.log(err)
-        }
-        console.log(tablename + "上传json");
-        if (rows.length == 0) {
-            isFinish = true;
-            myEvents.emit("clearTable",tablename);
-            return;
-        }
-        var options = {
-            headers: {"Connection": "close"},
-            url: config.upload.uploadurl + tablename,
-            method: 'POST',
-            json: true,
-            body: {data: rows}
-        };
-
-        function callback(error, response, data) {
-            if (!error && response.statusCode == 200) {
-                console.log('----info------', data);
-
+    SqlUtils(function (conn) {
+        conn.query(selectSql, function (err, rows, fields) {
+            if (err) {
+                return console.log(err)
             }
-        }
+            console.log(tablename + "上传json");
+            if (rows.length == 0) {
+                isFinish = true;
+                myEvents.emit("clearTable", tablename);
+                return;
+            }
+            var options = {
+                headers: {"Connection": "close"},
+                url: config.upload.uploadurl + tablename,
+                method: 'POST',
+                json: true,
+                body: {data: rows}
+            };
 
-        request(options, callback);
+            function callback(error, response, data) {
+                if (!error && response.statusCode == 200) {
+                    console.log('----info------', data);
+
+                }
+            }
+
+            request(options, callback);
+        })
     });
     page++;
 };

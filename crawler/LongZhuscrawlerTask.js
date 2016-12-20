@@ -6,10 +6,12 @@
  * max-results等价于limit,start-index等价于offset
  * */
 var request = require('request'),
-    mysql = require('mysql'),
-    cheerio = require('cheerio'),
+    /*mysql = require('mysql'),
+    
     config = require("../config.js"),
-    conn = mysql.createConnection(config.db),
+    conn = mysql.createConnection(config.db),*/
+    cheerio = require('cheerio'),
+    SqlUtils = require("../Utils/SqlUtils"),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -60,10 +62,12 @@ function acquireData(data) {
         var params = [item.channel.url.substring(24), item.channel.status, item.channel.id, item.channel.name, item.viewers, item.game["0"].name, item.channel.followers, item.channel.tag, item.channel.avatar];
         values.push(params);
     });
-    conn.query(sql, [values], function (err, result) {
-        if (err) {
-            return console.log(err);
-        }
+    SqlUtils(function (conn) {
+        conn.query(sql, [values], function (err, result) {
+            if (err) {
+                return console.log(err);
+            }
+        })
     });
 }
 /**

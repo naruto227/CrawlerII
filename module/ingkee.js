@@ -2,7 +2,7 @@
  * Created by hzq on 16-6-20.
  */
 var cheerio = require('cheerio'),
-    // request = require('request'),
+// request = require('request'),
     schedule = require('node-schedule'),
     EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
@@ -32,16 +32,18 @@ myEvents.on('start', function () {
     }
     schedule.scheduleJob(rule, function () {
         if (IngKeescrawler.getMainData1()) {
-            if(IngKeescrawler.getMainData2()){
+            if (IngKeescrawler.getMainData2()) {
                 this.cancel();
                 console.log('-------------爬完啦----------------');
                 myEvents.emit('updateOther');
             }
         }
-    });
+    })
 });
 
 myEvents.on('updateOther', function () {
+
+
     rule.second = times;
     for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
@@ -57,7 +59,7 @@ myEvents.on('updateOther', function () {
             var NowSecond = Today.getSeconds();
             var end = (NowHour * 3600) + (NowMinute * 60) + NowSecond;
             var time = end - mypretime;
-            console.log('花椒耗时' + time);
+            console.log('映客耗时' + time);
             myEvents.emit('gameover');
         }
     });

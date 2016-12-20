@@ -2,10 +2,11 @@
  * Created by huangzq on 16-06-11
  */
 var request = require('request'),
-    mysql = require('mysql'),
+    // mysql = require('mysql'),
     cheerio = require('cheerio'),
-    config = require("../config.js"),
-    conn = mysql.createConnection(config.db),
+    // config = require("../config.js"),
+    // conn = mysql.createConnection(config.db),
+    SqlUtils = require("../Utils/SqlUtils"),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -59,29 +60,34 @@ function acquireData(data) {
         values.push(params);
         
     });
-    conn.query(sql, [values], function (err, result) {
-        if (err) {
-            return console.log(err);
-        }
-        // conn.end();
+    SqlUtils(function (conn) {
+        conn.query(sql, [values], function (err, result) {
+            if (err) {
+                return console.log(err);
+            }
+            // conn.end();
+        });
     });
+    
 }
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
     var sql = 'SELECT * FROM sixrooms ORDER BY id limit ' + limit_range + ' ;';
-    conn.query(sql, function (err, rows) {
-        if (err) {
-           return console.log(err);
-        }
-        if (rows.length > 0) {
-            start++;
-            for (var i = 0; i < rows.length; i++) {
-                myEvents.emit('getFans', rows[i].room_id);
+    SqlUtils(function (conn) {
+        conn.query(sql, function (err, rows) {
+            if (err) {
+                return console.log(err);
             }
-        } else {
-            isFinish = true;
-        }
+            if (rows.length > 0) {
+                start++;
+                for (var i = 0; i < rows.length; i++) {
+                    myEvents.emit('getFans', rows[i].room_id);
+                }
+            } else {
+                isFinish = true;
+            }
+        })
     });
     if (isFinish) {
         isFinish = false;
@@ -121,9 +127,12 @@ myEvents.on('getFans', function (room_id) {
 myEvents.on('updateInfo', function (room_name, fans, room_id) {
     var sql = 'UPDATE sixrooms SET room_name = ?, fans = ? WHERE room_id = ?';
     var parms = [room_name, fans, room_id];
-    conn.query(sql, parms, function (err) {
-        if (err) {
-            console.log(err + "---sql---");
-        }
-    })
+    SqlUtils(function (conn) {
+
+        conn.query(sql, parms, function (err) {
+            if (err) {
+                console.log(err + "---sql---");
+            }
+        })
+    });
 });

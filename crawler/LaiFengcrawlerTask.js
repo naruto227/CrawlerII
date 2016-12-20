@@ -2,10 +2,12 @@
  * Created by huang on 16-6-12.
  */
 var request = require('request'),
-    mysql = require('mysql'),
-    cheerio = require('cheerio'),
+    /*mysql = require('mysql'),
+    
     config = require("../config.js"),
-    conn = mysql.createConnection(config.db),
+    conn = mysql.createConnection(config.db),*/
+    SqlUtils = require("../Utils/SqlUtils"),
+    cheerio = require('cheerio'),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -92,28 +94,32 @@ function acquireData(name, data, pic) {
         var params = [room_id, roomname, 0, 0, online, 0, 0, face];
         values.push(params);
     }
-    conn.query(sql, [values], function (err, result) {
-        if (err) {
-            return console.log(err);
-        }
+    SqlUtils(function (conn) {
+        conn.query(sql, [values], function (err, result) {
+            if (err) {
+                return console.log(err);
+            }
+        })
     });
 }
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
     var sql = 'SELECT * FROM laifeng limit ' + limit_range + ';';
-    conn.query(sql, function (err, rows) {
-        if (err) {
-            return console.log(err);
-        }
-        if (rows.length > 0) {
-            start++;
-            for (var i = 0; i < rows.length; i++) {
-                myEvents.emit('getFans', rows[i].room_id);
+    SqlUtils(function (conn) {
+        conn.query(sql, function (err, rows) {
+            if (err) {
+                return console.log(err);
             }
-        } else {
-            isFinish = true;
-        }
+            if (rows.length > 0) {
+                start++;
+                for (var i = 0; i < rows.length; i++) {
+                    myEvents.emit('getFans', rows[i].room_id);
+                }
+            } else {
+                isFinish = true;
+            }
+        })
     });
     if (isFinish) {
         isFinish = false;
@@ -153,9 +159,11 @@ myEvents.on('getFans', function (room_id) {
 myEvents.on('updateInfo', function (fans, face, owner_uid, nickname, tag, room_id) {
     var sql = 'UPDATE laifeng SET fans = ?,face = ?,owner_uid = ?,nickname = ?, tags = ? WHERE room_id = ?';
     var parms = [fans, face, owner_uid, nickname, tag, room_id];
-    conn.query(sql, parms, function (err) {
-        if (err) {
-            return console.log(err + "---sql---");
-        }
-    })
+    SqlUtils(function (conn) {
+        conn.query(sql, parms, function (err) {
+            if (err) {
+                return console.log(err + "---sql---");
+            }
+        })
+    });
 });
