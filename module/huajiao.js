@@ -28,7 +28,7 @@ exports.huajiao = function () {
 
 myEvents.on('start', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 3) {
+    for (var i = 0; i < 60; i = i + 10) {
         times.push(i);
     }//getStar  http://www.huajiao.com/category/1?pageno=
     //getGodNess   http://www.huajiao.com/category/2?pageno=
@@ -40,7 +40,9 @@ myEvents.on('start', function () {
                 if (HuaJiaoscrawler.getGodMan()) {
                     if (HuaJiaoscrawler.getHLive()) {
                         this.cancel();
-                        console.log('-------------爬完啦----------------');
+                        console.log('-------huajiao------爬完啦----------------');
+                        console.log('update huajiao first start');
+
                         myEvents.emit('updateOther');
                     }
                 }
@@ -57,7 +59,37 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (HuaJiaoscrawler.updateOthers()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('update huajiao second start');
+
+            myEvents.emit('updateSecond');
+        }
+    });
+});
+
+myEvents.on('updateSecond', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (HuaJiaoscrawler.updateOthers()) {
+            this.cancel();
+            console.log('update huajiao third start');
+
+            myEvents.emit('updateThird');
+        }
+    });
+});
+
+myEvents.on('updateThird', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (HuaJiaoscrawler.updateOthers()) {
+            this.cancel();
+            console.log('-------huajiao-------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();

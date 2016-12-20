@@ -59,35 +59,35 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
+/*
 rule.minute = times;
-for (var i = 0; i < 60; i = i + 20) {
+for (var i = 0; i < 60; i = i + 15) {
     times.push(i);
 }
 var count = 0;
 var options = {
     method: 'GET',
     encoding: null,
-    url: "localhost:3002"
+    url: "localhost:3000"
 };
 schedule.scheduleJob(rule, function () {
 
-    switch (count % 3) {
-        case 2:
-            options.url = 'http://localhost:3002/longzhu';
-            break;
-        case 3:
-            options.url = 'http://localhost:3002/sixrooms';
-            break;
+    switch (count % 4) {
         case 0:
-            options.url = 'http://localhost:3002/huajiao';
+            options.url = 'http://localhost:3000/longzhu';
             break;
         case 1:
-            options.url = 'http://localhost:3002/laifeng';
+            options.url = 'http://localhost:3000/sixrooms';
             break;
-        case 4:
-         options.url = 'http://localhost:3000/ingkee';
-         break;
+        case 2:
+            options.url = 'http://localhost:3000/huajiao';
+            break;
+        case 3:
+            options.url = 'http://localhost:3000/laifeng';
+            break;
+        /!*case 4:
+         options.url = 'http://localhost:3000/6rooms';
+         break;*!/
         default:
             break;
     }
@@ -102,6 +102,7 @@ schedule.scheduleJob(rule, function () {
         console.log(count);
         count = 0;
     }
-});
+});*/
+
 
 module.exports = app;

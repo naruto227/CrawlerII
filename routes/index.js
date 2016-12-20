@@ -51,4 +51,44 @@ router.get('/ingkee', function (req, res) {
     }
 });
 
+router.get('/douyu', function (req, res, next) {
+    if (douyu.DouYu()) {
+        res.render('index', {title: '斗鱼 start running'});
+    } else {
+        res.render('index', {title: '斗鱼 already running'});
+    }
+});
+
+router.get('/Panda', function (req, res, next) {
+    if (panda.Panda()) {
+        res.render('index', {title: '熊猫 start running'});
+    } else {
+        res.render('index', {title: '熊猫 already running'});
+    }
+});
+
+router.get('/bilibli', function (req, res, next) {
+    if (Bilibli.Bilibli()) {
+        res.render('index', {title: '哔哩哔哩 start running'});
+    } else {
+        res.render('index', {title: '哔哩哔哩 already running'});
+    }
+});
+
+router.get('/huya', function (req, res, next) {
+    if (huya.HuYa()) {
+        res.render('index', {title: '虎牙 start running'});
+    } else {
+        res.render('index', {title: '虎牙 already running'});
+    }
+});
+
+router.get('/yy', function (req, res, next) {
+    if (YY.YY()) {
+        res.render('index', {title: 'YY start running'});
+    } else {
+        res.render('index', {title: 'YY already running'});
+    }
+});
+
 module.exports = router;

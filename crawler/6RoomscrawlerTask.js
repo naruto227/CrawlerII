@@ -2,11 +2,10 @@
  * Created by huangzq on 16-06-11
  */
 var request = require('request'),
-    // mysql = require('mysql'),
+    mysql = require('mysql'),
     cheerio = require('cheerio'),
-    // config = require("../config.js"),
-    // conn = mysql.createConnection(config.db),
-    SqlUtils = require("../Utils/SqlUtils"),
+    config = require("../config.js"),
+    conn = mysql.createConnection(config.db),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -30,23 +29,27 @@ exports.getMainData = function () {
 };
 
 myEvents.on('initData', function () {
-    var sixroomsApi = {
-        method: 'GET',
-        encoding: null,
-        url: "http://www.6.cn/liveAjax.html"
-    };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
-    request(sixroomsApi, function (err, response, body) {
-        if (err) {
-            return console.log(err);
-        }
-        var data = JSON.parse(body);
-        /** @namespace data.roomList */
-        if (data.roomList.length == 0) {
-            isMainFinish = true;
-            return;
-        }
-        acquireData(data);
-    })
+    setTimeout(function () {
+        var sixroomsApi = {
+            method: 'GET',
+            encoding: null,
+            url: "http://www.6.cn/liveAjax.html"
+        };//fans:http://v.6.cn/profile/index.php?rid=room_id    <b class="js_followNum" id="ipbzcwoz">182987</b>
+        request(sixroomsApi, function (err, response, body) {
+            if (err) {
+                return console.log(err);
+            }
+            var data = JSON.parse(body);
+            // console.log(JSON.stringify(data));
+            /** @namespace data.roomList */
+            // if (data.roomList.length == 0) {
+                isMainFinish = true;
+                // return;
+            // }
+            acquireData(data);
+        })
+    },10000);
+   
 });
 function acquireData(data) {
     var sql = 'replace INTO sixrooms (room_id, room_name, owner_uid, nickname, online, fans, face) VALUES ?';
@@ -56,38 +59,35 @@ function acquireData(data) {
     var values = [];
     data.roomList.forEach(function (item) {
         /** @namespace item.rtype */
-        var params = [item.rid, 0, item.uid, item.username, item.count, 0, item.pic];
+        var params = [item.rid, item.username, item.uid, item.username, item.count, 0, item.pic];
         values.push(params);
         
     });
-    SqlUtils(function (conn) {
-        conn.query(sql, [values], function (err, result) {
-            if (err) {
-                return console.log(err);
-            }
-            // conn.end();
-        });
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            conn.end();
+            return console.log(err + "sixrooms sql1");
+        }
+        // conn.end();
     });
-    
 }
 
 exports.updateFans = function () {
     var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM sixrooms ORDER BY id limit ' + limit_range + ' ;';
-    SqlUtils(function (conn) {
-        conn.query(sql, function (err, rows) {
-            if (err) {
-                return console.log(err);
+    var sql = 'SELECT * FROM sixrooms WHERE fans = 0 limit ' + limit_range + ' ;';
+    conn.query(sql, function (err, rows) {
+        if (err) {
+            conn.end();
+            return console.log(err + " sixrooms sql2");
+        }
+        if (rows.length > 0) {
+            start++;
+            for (var i = 0; i < rows.length; i++) {
+                myEvents.emit('getFans', rows[i].room_id);
             }
-            if (rows.length > 0) {
-                start++;
-                for (var i = 0; i < rows.length; i++) {
-                    myEvents.emit('getFans', rows[i].room_id);
-                }
-            } else {
-                isFinish = true;
-            }
-        })
+        } else {
+            isFinish = true;
+        }
     });
     if (isFinish) {
         isFinish = false;
@@ -115,24 +115,22 @@ myEvents.on('getFans', function (room_id) {
         try {
             var $ = cheerio.load(body);
             //fans = $('.js_followNum').toArray();
-            var room_name = $('head title').toArray()["0"].children["0"].data;
+            // var room_name = $('head title').toArray()["0"].children["0"].data;
             fans = $('.js_followNum').toArray()["0"].children["0"].data;
         } catch (e) {
             console.log(e + room_id + "----net---");
         }
-        myEvents.emit('updateInfo', room_name, fans, room_id);
+        myEvents.emit('updateInfo', fans, room_id);
     });
 });
 
-myEvents.on('updateInfo', function (room_name, fans, room_id) {
-    var sql = 'UPDATE sixrooms SET room_name = ?, fans = ? WHERE room_id = ?';
-    var parms = [room_name, fans, room_id];
-    SqlUtils(function (conn) {
-
-        conn.query(sql, parms, function (err) {
-            if (err) {
-                console.log(err + "---sql---");
-            }
-        })
-    });
+myEvents.on('updateInfo', function (fans, room_id) {
+    var sql = 'UPDATE sixrooms SET fans = ? WHERE room_id = ?';
+    var parms = [fans, room_id];
+    conn.query(sql, parms, function (err) {
+        if (err) {
+            conn.end();
+            return console.log(err + "sixrooms sql3");
+        }
+    })
 });

@@ -34,7 +34,9 @@ myEvents.on('start', function () {
         if (IngKeescrawler.getMainData1()) {
             if (IngKeescrawler.getMainData2()) {
                 this.cancel();
-                console.log('-------------爬完啦----------------');
+                console.log('-------ingkee------爬完啦----------------');
+                console.log('update ingkee first start');
+
                 myEvents.emit('updateOther');
             }
         }
@@ -51,7 +53,37 @@ myEvents.on('updateOther', function () {
     schedule.scheduleJob(rule, function () {
         if (IngKeescrawler.updateOthers()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+            console.log('update ingkee second start');
+
+            myEvents.emit('updateSecond');
+        }
+    });
+});
+
+myEvents.on('updateSecond', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 10) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (IngKeescrawler.updateOthers()) {
+            this.cancel();
+            console.log('update ingkee third start');
+
+            myEvents.emit('updateThird');
+        }
+    });
+});
+
+myEvents.on('updateThird', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 9) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (IngKeescrawler.updateOthers()) {
+            this.cancel();
+            console.log('-------ingkee-------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();

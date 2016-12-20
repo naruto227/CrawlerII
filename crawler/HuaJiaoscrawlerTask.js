@@ -2,11 +2,10 @@
  * Created by huang on 16-6-12.
  */
 var request = require('request'),
-// mysql = require('mysql'),
+    mysql = require('mysql'),
     cheerio = require('cheerio'),
-// config = require("../config.js"),
-// conn = mysql.createConnection(config.db),
-    SqlUtils = require("../Utils/SqlUtils"),
+    config = require("../config.js"),
+    conn = mysql.createConnection(config.db),
     EventEmitter = require('events').EventEmitter;
 
 var myEvents = new EventEmitter();
@@ -189,14 +188,11 @@ function acquireData(room_id, username, tag, face) {
         values.push(params);
 
     }
-    SqlUtils(function (conn) {
-
-        conn.query(sql, [values], function (err, result) {
-            if (err) {
-                return console.log('sql' + err);
-            }
-            // conn.end();
-        })
+    conn.query(sql, [values], function (err, result) {
+        if (err) {
+            return console.log('sql' + err);
+        }
+        // conn.end();
     });
 }
 
@@ -205,19 +201,17 @@ var page = 1;
 exports.updateOthers = function () {
     var limit_range = (page - 1) * 10 + ',' + 10;
     var Sql = 'SELECT * FROM huajiao limit ' + limit_range + ';';
-    SqlUtils(function (conn) {
-        conn.query(Sql, function (err, rows) {
-            if (err) {
-                return console.log(err + '------------sql err--------------')
-            }
-            if (rows.length == 0) {
-                return isFinish = true;
-            }
-            page++;
-            for (var i = 0; i < rows.length; i++) {
-                myEvents.emit('update', rows[i].room_id);
-            }
-        })
+    conn.query(Sql, function (err, rows) {
+        if (err) {
+            return console.log(err + '------------sql err--------------')
+        }
+        if (rows.length == 0) {
+            return isFinish = true;
+        }
+        page++;
+        for (var i = 0; i < rows.length; i++) {
+            myEvents.emit('update', rows[i].room_id);
+        }
     });
     if (isFinish) {
         isFinish = false;
@@ -263,13 +257,11 @@ myEvents.on('update', function (room_id) {
 myEvents.on('updateInfo', function (room_name, fans, online, owner_uid, room_id) {
     var sql = 'UPDATE huajiao SET room_name = ?, fans = ?, online = ?, owner_uid = ? WHERE room_id = ?';
     var parms = [room_name, fans, online, owner_uid, room_id];
-    SqlUtils(function (conn) {
-        conn.query(sql, parms, function (err) {
-            if (err) {
-                console.log(err + "---sql---");
-            }
-        })
-    });
+    conn.query(sql, parms, function (err) {
+        if (err) {
+            console.log(err + "---sql---");
+        }
+    })
 });
 
 

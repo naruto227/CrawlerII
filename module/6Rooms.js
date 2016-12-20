@@ -2,7 +2,7 @@
  * Created by huang on 16-6-11.
  */
 var cheerio = require('cheerio'),
-    // request = require('request'),
+// request = require('request'),
     schedule = require('node-schedule'),
     EventEmitter = require('events').EventEmitter;
 var myEvents = new EventEmitter();
@@ -26,30 +26,47 @@ exports.SixRooms = function () {
 };
 
 myEvents.on('start', function () {
-    // rule.second = times;
-    // for (var i = 0; i < 60; i = i + 3) {
-    //     times.push(i);
-    // }
+    /*rule.second = times;
+     for (var i = 0; i < 60; i = i + 3) {
+     times.push(i);
+     }*/
     // schedule.scheduleJob(rule, function () {
-    // setTimeout(function () {
-        SixRoomscrawler.getMainData();
+    SixRoomscrawler.getMainData();
+    console.log('------sixrooms start update----------');
+    myEvents.emit('updateOther');
+
+
+    // }, 10000);
 
     // },60000);
-    console.log('-------------爬完啦----------------');
-    myEvents.emit('updateOther');
+    console.log('-------sixrooms------爬完啦----------------');
 
     // });
 });
 
 myEvents.on('updateOther', function () {
     rule.second = times;
-    for (var i = 0; i < 60; i = i + 15) {
+    for (var i = 0; i < 60; i = i + 6) {
         times.push(i);
     }
     schedule.scheduleJob(rule, function () {
         if (SixRoomscrawler.updateFans()) {
             this.cancel();
-            console.log('------------更新完了---------------');
+
+            myEvents.emit('updateSecond');
+        }
+    });
+});
+
+myEvents.on('updateSecond', function () {
+    rule.second = times;
+    for (var i = 0; i < 60; i = i + 6) {
+        times.push(i);
+    }
+    schedule.scheduleJob(rule, function () {
+        if (SixRoomscrawler.updateFans()) {
+            this.cancel();
+            console.log('------sixrooms------更新完了---------------');
             isRunning = false;
             var Today = new Date();
             var NowHour = Today.getHours();
